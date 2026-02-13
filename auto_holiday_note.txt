@@ -1,0 +1,157 @@
+# file: auto_holiday_notes.py
+# Reads holiday Excel, filters next week (Mon→Sun) + removes "regional",
+# then for each (Country, Holiday Date, Holiday Name) posts one note to the
+# matching autocalendar record found by Country+Date.
+
+import re
+from datetime import datetime, date, timedelta
+import pyodbc
+import pandas as pd
+
+# ====== CONFIG ======
+EXCEL_PATH = r"F:\intdaily\QPP\Q++ Worldwide Public Holidays ISO-2025.XLS"  # <-- set your file here
+DRY_RUN = True   # set to False to actually write notes
+NOTE_PREFIX = "AUTOHOL: "
+
+DB_SERVER = "10.1.4.6"
+DB_PORT = 3306
+DB_NAME = "autocalendar"
+DB_UID = "autocal"
+DB_PWD = "AutoCal_Pwd"
+
+# ====== DB helpers ======
+def get_odbc_driver():
+    drivers = pyodbc.drivers()
+    version = 0.0
+    latest = None
+    for d in drivers:
+        m = re.search(r"MySQL ODBC (\d+\.\d+).* Driver", d)
+        if m and float(m[1]) > version:
+            version = float(m[1]); latest = m[0]
+    if not latest:
+        raise RuntimeError("MySQL ODBC driver not found.")
+    return latest
+
+def connect():
+    driver = get_odbc_driver()
+    conn = pyodbc.connect(
+        f"DRIVER={{{driver}}};SERVER={DB_SERVER};PORT={DB_PORT};DATABASE={DB_NAME};UID={DB_UID};PWD={DB_PWD}",
+        ansi=True
+    )
+    return conn, conn.cursor()
+
+def find_record_by_country_and_date(cur, country: str, target_date: date):
+    """Find earliest not-done record for (country, date)."""
+    cur.execute("""
+        SELECT *
+        FROM tblcalendar_dw_templates dwt
+        JOIN tblcalendar_countries cnt ON cnt.fdCountryID = dwt.fdCountryID
+        JOIN tblcalendar_dw_records   dwr ON dwt.fdTemplateID = dwr.fdTemplateID
+        JOIN tblcalendar_dw_database  dwdb ON dwdb.fdDatabaseID = dwt.fdDatabaseID
+        WHERE dwr.fdDone = 0
+          AND cnt.fdCountryName = ?
+          AND DATE(dwr.fddDate2Show) = ?;
+    """, (country, target_date.strftime("%Y-%m-%d")))
+    rows = cur.fetchall()
+    if not rows:
+        return None
+    rows.sort(key=lambda r: r.fddDate2Show)
+    return rows[0]
+
+def format_note(old_note, new_note, separator=" | "):
+    """Keep non-R2D2 segments, append the new one, cap at 200 chars."""
+    if not old_note:
+        return new_note[:200]
+    parts = str(old_note).split(separator)
+    kept = [p.strip() for p in parts if p.strip()[:4] != "R2D2"]
+    kept.append(new_note)
+    return separator.join(kept)[:200]
+
+def write_note(cur, conn, record, note_text: str):
+    final = format_note(record.fdNotes, note_text)
+    cur.execute("UPDATE tblcalendar_dw_records SET fdNotes=? WHERE fdRecID=?;", (final, record.fdRecID))
+    conn.commit()
+    return final
+
+# ====== Dates & Excel ======
+def next_week_window(today=None):
+    """Next Monday → next Sunday (inclusive)."""
+    today = today or datetime.now().date()
+    days_ahead = (0 - today.weekday() + 7) % 7  # Monday=0
+    if days_ahead == 0:
+        days_ahead = 7
+    start = today + timedelta(days=days_ahead)
+    end = start + timedelta(days=6)
+    return start, end
+
+def load_holidays_from_excel(excel_path: str, start: date, end: date):
+    """
+    Reads Excel, removes rows where 'Holiday Observance' contains 'regional' (case-insensitive),
+    cleans columns, and returns rows within [start, end].
+    Expected columns: Country Name, Holiday Date, Holiday Name, Holiday Observance
+    """
+    try:
+        df = pd.read_excel(excel_path)
+    except Exception:
+        df = pd.read_excel(excel_path, engine="xlrd")
+
+    # Drop 'regional' rows
+    df = df.loc[~df["Holiday Observance"].astype(str).str.contains("regional", case=False, na=False)].copy()
+
+    # Clean types/whitespace
+    df["Holiday Date"] = pd.to_datetime(df["Holiday Date"], errors="coerce").dt.date
+    df["Country Name"] = df["Country Name"].astype(str).str.strip()
+    df["Holiday Name"] = df["Holiday Name"].astype(str).str.strip()
+
+    # Valid dates in window
+    df = df.dropna(subset=["Holiday Date"])
+    mask = (df["Holiday Date"] >= start) & (df["Holiday Date"] <= end)
+    week = df.loc[mask, ["Country Name", "Holiday Date", "Holiday Name"]].drop_duplicates().copy()
+
+    # Deterministic order
+    return week.sort_values(["Country Name", "Holiday Date", "Holiday Name"])
+
+# ====== Main ======
+def main():
+    start, end = next_week_window()
+    print(f"Checking holidays between {start} and {end}")
+    week = load_holidays_from_excel(EXCEL_PATH, start, end)
+
+    if week.empty:
+        print("No non-regional holidays next week.")
+        return
+
+    print("Countries with holidays:", sorted(week["Country Name"].unique()))
+
+    conn, cur = connect()
+    successes = 0
+    misses = 0
+    try:
+        for _, row in week.iterrows():
+            country = row["Country Name"]
+            hdate   = row["Holiday Date"]
+            hname   = row["Holiday Name"]
+
+            rec = find_record_by_country_and_date(cur, country, hdate)
+            if not rec:
+                print(f"No not-done record for {country} on {hdate}")
+                misses += 1
+                continue
+
+            note = f"{NOTE_PREFIX}{hname} — {hdate:%Y-%m-%d}"
+            if DRY_RUN:
+                print(f"Would write to fdRecID={rec.fdRecID}: {note}")
+            else:
+                final = write_note(cur, conn, rec, note)
+                print(f"{country}: {hname} ({hdate}) → {final}")
+            successes += 1
+    finally:
+        try: cur.close()
+        except: pass
+        try: conn.close()
+        except: pass
+
+    print(f"\nNotes posted: {successes} | Skipped/Missed: {misses}")
+
+if __name__ == "__main__":
+    main()

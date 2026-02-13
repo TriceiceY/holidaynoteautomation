@@ -1,0 +1,116 @@
+1	China	2026-02-15	fdRecID=6454804	fddDate2Show=2026-02-15	db=INTDAILY	group=R79	update=Exchange Rates
+2	China	2026-02-15	fdRecID=6454805	fddDate2Show=2026-02-15	db=INTDAILY	group=S99	update=PBC: Open Market Operations
+3	China	2026-02-15	fdRecID=6454822	fddDate2Show=2026-02-15	db=INTDAILY	group=J02	update=Shibor
+4	China	2026-02-15	fdRecID=6454889	fddDate2Show=2026-02-15	db=INTDAILY	group=V90	update=Margin Transactions
+5	China	2026-02-15	fdRecID=6454890	fddDate2Show=2026-02-15	db=INTWKLY	group=T21	update=Margin Transactions Aggregation
+6	China	2026-02-15	fdRecID=6454896	fddDate2Show=2026-02-15	db=INTDAILY	group=S99	update=PBC: OMO Zero
+7	China	2026-02-15	fdRecID=6454897	fddDate2Show=2026-02-15	db=INTDAILY	group=V96	update=PBC: OMO Calculation
+8	China	2026-02-15	fdRecID=6454899	fddDate2Show=2026-02-15	db=INTDAILY	group=V98	update=PBC: SLO
+9	China	2026-02-15	fdRecID=6454903	fddDate2Show=2026-02-15	db=EMERGEPR	group=Various	update=CHINA to EMERGEPR Compare
+10	China	2026-02-15	fdRecID=6454915	fddDate2Show=2026-02-15	db=INTDAILY	group=X11	update=PBC: Cash Management Operations
+11	China	2026-02-15	fdRecID=6454934	fddDate2Show=2026-02-15	db=INTDAILY	group=T84	update=PBC: Targeted Term Lending Facility [TMLF]
+12	China	2026-02-15	fdRecID=6454936	fddDate2Show=2026-02-15	db=INTDAILY	group=V08	update=PBC: OMO: [CBS] Swaps
+13	China	2026-02-15	fdRecID=6454956	fddDate2Show=2026-02-15	db=TRANSPRT	group=T96, T97, T98	update=Subway Passenger Volume for Selected Transit Agencies
+14	China	2026-02-15	fdRecID=6454957	fddDate2Show=2026-02-15	db=TRANSPRT	group=U02, U03, U04	update=Subway Passenger Volume for Selected Transit Agencies - Eviews
+15	China	2026-02-15	fdRecID=6454987	fddDate2Show=2026-02-15	db=TRANSPRT	group=B12, B13, B14	update=China Subway Volume
+16	China	2026-02-15	fdRecID=6454988	fddDate2Show=2026-02-15	db=TRANSPRT	group=B15	update=China Subway Volume Aggregation
+17	China	2026-02-15	fdRecID=6454990	fddDate2Show=2026-02-15	db=TRANSPRT	group=U05, U06, U07	update=Baidu Congestion Index
+18	China	2026-02-15	fdRecID=6454995	fddDate2Show=2026-02-15	db=GLSECTOR	group=F65, F66, F67	update=Maoyan Box
+19	China	2026-02-15	fdRecID=6454996	fddDate2Show=2026-02-15	db=CNSECTOR	group=I65,I66,I67	update=Maoyan Box CMP to CNSECTOR
+20	China	2026-02-15	fdRecID=6455010	fddDate2Show=2026-02-15	db=INTDAILY	group=T86	update=Repeating Term Lending Facility
+21	China	2026-02-15	fdRecID=6455011	fddDate2Show=2026-02-15	db=INTWKLY	group=R92	update=CFETS RMB Indexes
+22	China	2026-02-15	fdRecID=6455013	fddDate2Show=2026-02-15	db=INTDAILY	group=F82	update=Interbank Repo Rates
+23	China	2026-02-15	fdRecID=6455028	fddDate2Show=2026-02-15	db=INTDAILY	group=U17, U18, U19	update=Alipay Tianhong Yue Bao Fund
+24	China	2026-02-15	fdRecID=6455030	fddDate2Show=2026-02-15	db=INTDAILY	group=S99, V96, U01, U02, U23, U24	update=PBC: Open Market Operations - Sunday Check
+25	China	2026-02-15	fdRecID=6455076	fddDate2Show=2026-02-15	db=CNSECTOR	group=U05, U06, U07	update=Baidu Congestion Index
+26	China	2026-02-15	fdRecID=6455077	fddDate2Show=2026-02-15	db=CNSECTOR	group=T96, T97, T98, U02, U03, U04	update=Subway Passenger Volume for Selected Transit Agencies CNSECTOR
+27	China	2026-02-15	fdRecID=6455078	fddDate2Show=2026-02-15	db=TRANSPRT	group=U59, U66, U67	update=Baidu Migration Scale Index
+28	China	2026-02-15	fdRecID=6455079	fddDate2Show=2026-02-15	db=CNSECTOR	group=U59, U66, U67	update=Baidu Migration Scale Index Comp
+29	China	2026-02-15	fdRecID=6455092	fddDate2Show=2026-02-15	db=CHINAR	group=D97	update=Air Quality Index Province SUNDAY[Eviews]
+30	China	2026-02-15	fdRecID=6455093	fddDate2Show=2026-02-15	db=INTDAILY	group=H96	update=Air Quality Index SUNDAY COMP to INTDAILY
+31	China	2026-02-15	fdRecID=6455100	fddDate2Show=2026-02-15	db=CHINAR	group=D99	update=Air Quality Index SUNDAY
+32	China	2026-02-15	fdRecID=6455112	fddDate2Show=2026-02-15	db=TRANSPRT	group=T62, T63, T72	update=Yangtze Water Level - AM Comp
+33	China	2026-02-15	fdRecID=6455113	fddDate2Show=2026-02-15	db=GLSECTOR	group=V61, V62, V63	update=Yangtze Water Level - PM
+34	China	2026-02-15	fdRecID=6455114	fddDate2Show=2026-02-15	db=TRANSPRT	group=W66, W67, W68	update=Yangtze Water Level - PM Comp
+35	China	2026-02-15	fdRecID=6455115	fddDate2Show=2026-02-15	db=GLSECTOR	group=V67, V68, V69	update=Yangtze Water Level - AM
+36	JAPAN	2026-02-11	fdRecID=6459112	fddDate2Show=2026-02-11	db=INTDAILY	group=U92	update=Uncollateralized Call Rate
+37	JAPAN	2026-02-11	fdRecID=6459216	fddDate2Show=2026-02-11	db=INTDAILY	group=R45	update=Japan Exchange Rates - Press
+38	JAPAN	2026-02-11	fdRecID=6459217	fddDate2Show=2026-02-11	db=INTDAILY	group=F93	update=Tokyo Repo Rate
+39	JAPAN	2026-02-11	fdRecID=6459355	fddDate2Show=2026-02-11	db=INTDAILY	group=J22	update=Japan Government Bond Yields
+40	JAPAN	2026-02-11	fdRecID=6459364	fddDate2Show=2026-02-11	db=INTDAILY	group=H01	update=Japan Total Return Calculation
+41	JAPAN	2026-02-11	fdRecID=6459416	fddDate2Show=2026-02-11	db=INTWKLY	group=P59	update=Gas Prices
+42	JAPAN	2026-02-11	fdRecID=6459455	fddDate2Show=2026-02-11	db=INTDAILY	group=W17	update=Daiwa Stock Indexes
+43	JAPAN	2026-02-11	fdRecID=6459508	fddDate2Show=2026-02-11	db=BONDINDX	group=D01	update=Daiwa Bond Indexes
+44	JAPAN	2026-02-11	fdRecID=6459522	fddDate2Show=2026-02-11	db=INTWKLY	group=I60	update=International Transactions in Securities
+45	JAPAN	2026-02-11	fdRecID=6459538	fddDate2Show=2026-02-11	db=INTDAILY	group=V51	update=Asian Stock Market V51
+46	JAPAN	2026-02-11	fdRecID=6459679	fddDate2Show=2026-02-11	db=INTWKLY	group=V98	update=T-bills Purchased by the Bank of Japan
+47	JAPAN	2026-02-11	fdRecID=6459680	fddDate2Show=2026-02-11	db=INTWKLY	group=V27	update=JBG's Held by the Bank of Japan
+48	JAPAN	2026-02-11	fdRecID=6459746	fddDate2Show=2026-02-11	db=INTDAILY	group=R45, W07	update=Japan Exchange Rates - Full
+49	JAPAN	2026-02-11	fdRecID=6459995	fddDate2Show=2026-02-11	db=INTDAILY	group=Y27,Y70-Y77	update=Japan OMOs
+50	JAPAN	2026-02-11	fdRecID=6460003	fddDate2Show=2026-02-11	db=INTDAILY	group=Y85	update=Repo Transactions
+51	JAPAN	2026-02-11	fdRecID=6460004	fddDate2Show=2026-02-11	db=INTWKLY	group=Y85	update=Repo Transactions Agg
+52	JAPAN	2026-02-11	fdRecID=6460040	fddDate2Show=2026-02-11	db=BONDINDX	group=D34	update=JSDA Daily Corporate Bond Statistics
+53	JAPAN	2026-02-11	fdRecID=6460063	fddDate2Show=2026-02-11	db=INTDAILY	group=H02	update=Sources of Changes in Current Account Balances
+54	JAPAN	2026-02-11	fdRecID=6460066	fddDate2Show=2026-02-11	db=INTWKLY	group=O05	update=Margin Transactions
+55	JAPAN	2026-02-11	fdRecID=6460067	fddDate2Show=2026-02-11	db=INTWKLY	group=S35	update=Program Trading
+56	JAPAN	2026-02-11	fdRecID=6460081	fddDate2Show=2026-02-11	db=INTDAILY	group=H22	update=Call Money Market
+57	JAPAN	2026-02-11	fdRecID=6460086	fddDate2Show=2026-02-11	db=INTDAILY	group=I12	update=Postal Savings Certificates
+58	JAPAN	2026-02-11	fdRecID=6460088	fddDate2Show=2026-02-11	db=INTDAILY	group=S38	update=JPX Stock Indexes:   Closings
+59	JAPAN	2026-02-11	fdRecID=6460098	fddDate2Show=2026-02-11	db=INTDAILY	group=S30	update=JPX Stock Indexes: Market Values
+60	JAPAN	2026-02-11	fdRecID=6460239	fddDate2Show=2026-02-11	db=ENERGY	group=C57	update=Gas Prices
+61	JAPAN	2026-02-11	fdRecID=6460313	fddDate2Show=2026-02-11	db=INTDAILY	group=Y77, U20	update=Special Financing Ops
+62	JAPAN	2026-02-11	fdRecID=6460341	fddDate2Show=2026-02-11	db=INTDAILY	group=K30	update=Average Rates of Issuance for Short-Term Corporate Bonds
+63	JAPAN	2026-02-11	fdRecID=6460357	fddDate2Show=2026-02-11	db=INTDAILY	group=F57	update=Sources of Changes BoJ CA (Projection)
+64	JAPAN	2026-02-11	fdRecID=6460358	fddDate2Show=2026-02-11	db=INTDAILY	group=F58	update=Sources of Changes BoJ CA (Provisional)
+65	JAPAN	2026-02-11	fdRecID=6460433	fddDate2Show=2026-02-11	db=INTWKLY	group=V33	update=[Eviews] JGB's Held by the Bank of Japan
+66	JAPAN	2026-02-11	fdRecID=6460509	fddDate2Show=2026-02-11	db=INTWKLY	group=V28	update=JBG's Held by the BoJ by Issue
+67	JAPAN	2026-02-11	fdRecID=6460510	fddDate2Show=2026-02-11	db=INTWKLY	group=V45	update=T-Bills Purchsed by BoJ by Issue
+68	JAPAN	2026-02-11	fdRecID=6460519	fddDate2Show=2026-02-11	db=INTDAILY	group=K07	update=Japan OTC Bond Transactions Reference Prices/Yields
+69	JAPAN	2026-02-11	fdRecID=6460554	fddDate2Show=2026-02-11	db=INTDAILY	group=K24	update=JGBs Nominal/Real Yields Calculation
+70	JAPAN	2026-02-11	fdRecID=6460555	fddDate2Show=2026-02-11	db=INTDAILY	group=K48	update=Japan Breakeven Inflation
+71	JAPAN	2026-02-11	fdRecID=6460596	fddDate2Show=2026-02-11	db=INTDAILY	group=K60	update=Japan On & Off The Run Yields
+72	JAPAN	2026-02-11	fdRecID=6460649	fddDate2Show=2026-02-11	db=ESGC	group=C91, C92, C93	update=Japan Climate Data
+73	JAPAN	2026-02-11	fdRecID=6460687	fddDate2Show=2026-02-11	db=INTDAILY	group=K56	update=JPX Index Arbitrage
+74	JAPAN	2026-02-11	fdRecID=6460692	fddDate2Show=2026-02-11	db=INTDAILY	group=K74, K75	update=JPX Off-Auction Own Share Repo
+75	JAPAN	2026-02-11	fdRecID=6460744	fddDate2Show=2026-02-11	db=ENERGY	group=G53, G54, G55	update=Daily Wholesale Spot Electricity Market Trading
+76	Vietnam	2026-02-15	fdRecID=6454904	fddDate2Show=2026-02-15	db=INTDAILY	group=W19, W20	update=State Bank Exchange Rates
+77	Vietnam	2026-02-15	fdRecID=6454905	fddDate2Show=2026-02-15	db=INTDAILY	group=H07	update=State Bank Exchange Rates Mid-Rates Calculation
+78	Vietnam	2026-02-15	fdRecID=6455004	fddDate2Show=2026-02-15	db=INTDAILY	group=H94	update=Government Bond Auctions
+79	Lebanon	2026-02-09	fdRecID=6450783	fddDate2Show=2026-02-09	db=INTDAILY	group=R94	update=Spot Exchange
+80	Lebanon	2026-02-09	fdRecID=6451514	fddDate2Show=2026-02-09	db=INTDAILY	group=V25	update=Bi-Weekly Interim Balance sheet
+81	Lebanon	2026-02-09	fdRecID=6451588	fddDate2Show=2026-02-09	db=INTWKLY	group=C57	update=Lebanon Primary Market Treasury Bills
+82	Lebanon	2026-02-09	fdRecID=6451594	fddDate2Show=2026-02-09	db=INTWKLY	group=C58	update=Auction Results
+83	Lebanon	2026-02-09	fdRecID=6451630	fddDate2Show=2026-02-09	db=INTDAILY	group=T23	update=Lebanon Blom Index
+84	Lebanon	2026-02-09	fdRecID=6451780	fddDate2Show=2026-02-09	db=INTWKLY	group=R94	update=Spot Exchange Aggregation
+85	Malta	2026-02-10	fdRecID=6460971	fddDate2Show=2026-02-10	db=INTDAILY	group=G65	update=Stock Market Indices
+86	Iran	2026-02-11	fdRecID=6459274	fddDate2Show=2026-02-11	db=INTDAILY	group=R54	update=Exchange
+87	Iran	2026-02-11	fdRecID=6459319	fddDate2Show=2026-02-11	db=INTDAILY	group=V07	update=Stock Indicators
+88	Iran	2026-02-11	fdRecID=6459335	fddDate2Show=2026-02-11	db=INTWKLY	group=T14	update=Stock Market Aggregation
+89	Iran	2026-02-11	fdRecID=6460575	fddDate2Show=2026-02-11	db=INTDAILY	group=A16	update=Iran Parallel Exchange Rates: Mid Rate
+90	Iran	2026-02-11	fdRecID=6460780	fddDate2Show=2026-02-11	db=INTDAILY	group=A37, A45, A47	update=Parallel Exchange Rates
+91	Taiwan	2026-02-15	fdRecID=6454830	fddDate2Show=2026-02-15	db=INTDAILY	group=J13	update=3 Month Deposit Rate
+92	Taiwan	2026-02-15	fdRecID=6454925	fddDate2Show=2026-02-15	db=INTDAILY	group=X60	update=Taiwan Interbank Rates [TAIBOR]
+93	Taiwan	2026-02-15	fdRecID=6454953	fddDate2Show=2026-02-15	db=INTDAILY	group=J90	update=TAIBIR
+94	Taiwan	2026-02-15	fdRecID=6455133	fddDate2Show=2026-02-15	db=ENERGY	group=K77	update=Taiwan Fuel Prices
+95	Taiwan	2026-02-15	fdRecID=6455144	fddDate2Show=2026-02-15	db=INTWKLY	group=K77	update=Taiwan Fuel Prices Transfer
+96	Sri Lanka	2026-02-15	fdRecID=6455128	fddDate2Show=2026-02-15	db=ENERGY	group=K66, K67, K68, K74, K75, K76	update=Sri Lanka Electricity Generation
+97	Sri Lanka	2026-02-15	fdRecID=6455129	fddDate2Show=2026-02-15	db=GLSECTOR	group=K71, K72, K73	update=Sri Lanka Electricity Transfer to GLSECTOR
+98	Qatar	2026-02-10	fdRecID=6461482	fddDate2Show=2026-02-10	db=INTDAILY	group=W86	update=Qatar Stock Exchange Indicators
+99	Qatar	2026-02-10	fdRecID=6462322	fddDate2Show=2026-02-10	db=INTDAILY	group=G67	update=Exchange Rate
+100	Myanmar	2026-02-12	fdRecID=6458056	fddDate2Show=2026-02-12	db=INTDAILY	group=X39	update=Stock Market Indicators
+101	Myanmar	2026-02-12	fdRecID=6458059	fddDate2Show=2026-02-12	db=INTDAILY	group=X38	update=Exchange
+102	Myanmar	2026-02-12	fdRecID=6458758	fddDate2Show=2026-02-12	db=INTDAILY	group=N15	update=Forex Market Trade Rates & Volume
+103	Myanmar	2026-02-12	fdRecID=6458834	fddDate2Show=2026-02-12	db=INTDAILY	group=O10	update=Daily Activities of FX Market
+104	Myanmar	2026-02-13	fdRecID=6456146	fddDate2Show=2026-02-13	db=INTDAILY	group=X39	update=Stock Market Indicators
+105	Myanmar	2026-02-13	fdRecID=6456149	fddDate2Show=2026-02-13	db=INTDAILY	group=X38	update=Exchange
+106	Myanmar	2026-02-13	fdRecID=6456150	fddDate2Show=2026-02-13	db=INTWKLY	group=T80	update=Exchange Rate Agg
+107	Myanmar	2026-02-13	fdRecID=6456253	fddDate2Show=2026-02-13	db=INTWKLY	group=H43	update=Aggregation: Stock Market Indicators
+108	Myanmar	2026-02-13	fdRecID=6456937	fddDate2Show=2026-02-13	db=INTDAILY	group=N15	update=Forex Market Trade Rates & Volume
+109	Myanmar	2026-02-13	fdRecID=6456938	fddDate2Show=2026-02-13	db=INTWKLY	group=N16	update=Forex Mkt Trade Rates & Vol [Agg]
+110	Myanmar	2026-02-13	fdRecID=6457009	fddDate2Show=2026-02-13	db=INTDAILY	group=O10	update=Daily Activities of FX Market
+111	Myanmar	2026-02-13	fdRecID=6457010	fddDate2Show=2026-02-13	db=INTWKLY	group=O10	update=Daily Activites of FX Market Agg
+112	Nepal	2026-02-15	fdRecID=6454979	fddDate2Show=2026-02-15	db=INTDAILY	group=M72	update=Nepal Stock Exchange
+113	Nepal	2026-02-15	fdRecID=6454980	fddDate2Show=2026-02-15	db=INTDAILY	group=M81	update=Exchange Rates Sunday
+114	Nepal	2026-02-15	fdRecID=6454981	fddDate2Show=2026-02-15	db=INTDAILY	group=M82	update=Exchange Rates Sunday Mid
+115	Liberia	2026-02-11	fdRecID=6460708	fddDate2Show=2026-02-11	db=INTDAILY	group=E89	update=Exchange Rates
+116	Liberia	2026-02-11	fdRecID=6460709	fddDate2Show=2026-02-11	db=INTDAILY	group=E92	update=[Mid-Rate Calculation] Exchange Rates
