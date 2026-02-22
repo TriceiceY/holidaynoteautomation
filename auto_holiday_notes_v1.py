@@ -1,4 +1,5 @@
 # file: auto_holiday_notes.py
+# written by: Jiebing Yin 2/10/2026
 # Reads holiday json file from F:\ drive, filters next week (Mon→Sun),
 # then posts one note to the matching autocalendar record found by Country+Date.
 
@@ -147,32 +148,6 @@ def plan_actions(records, country, hdate, note_text):
     return actions
 
 
-# def apply_actions(actions, dry_run):
-#     wrote = 0
-#     for a in actions:
-#         if a["action_type"] != "UPDATE_NOTE":
-#             a["result"] = "SKIP_NO_CHANGE"
-#             continue
-
-#         if dry_run:
-#             a["result"] = "DRY_RUN"
-#             continue
-
-#         try:
-#             cursor.execute(
-#                 "UPDATE tblcalendar_dw_records SET fdNotes=? WHERE fdRecID=?;",
-#                 (a["new_note"], a["fdRecID"])
-#             )
-#             a["result"] = "WROTE"
-#             wrote += 1
-#         except Exception as e:
-#             a["result"] = "ERROR"
-#             continue
-
-#     if not dry_run and wrote > 0:
-#         con.commit()
-
-#     return wrote
 
 def apply_actions(actions, dry_run, country_filter=None):
     wrote = 0
