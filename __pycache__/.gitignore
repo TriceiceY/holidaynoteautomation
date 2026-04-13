@@ -1,9 +1,20 @@
-.venv/
+.venv311/
 __pycache__/
+
 *.pyc
+auto_holiday_notes*.py
+dwcalendar.py
+executehol.py
+makeexcelhol.py
+test.py
+
+autocal/
 
 data/records_next_week.csv
 data/plan.jsonl
 data/logs/
+
+ui/ui_tk_demo.py
+
 *.log
 *.csv

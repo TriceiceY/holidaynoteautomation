@@ -148,10 +148,7 @@ class PlannerWindow(QMainWindow):
         self.setWindowTitle("AutoHoliday Planner")
         self.resize(1400, 900)
 
-        self.default_holiday_path = r"data/Q++ Worldwide Public Holidays ISO-2026.CSV"
-        self.custom_holiday_path = r"data/custom_holidays.json"
-        self.output_json_path = r"data/planner_logs/planner_log.json"
-        self.output_csv_path = r"data/planner_logs/planner_log.csv"
+        self.default_holiday_path = r"F:/intdaily/autohol/Q++ Worldwide Public Holidays ISO-2026.CSV"
 
         self.planner_rows = []
         self.filtered_planner_rows = []
@@ -729,37 +726,93 @@ class PlannerWindow(QMainWindow):
     # ----------------------------
     # Custom holiday helpers
     # ----------------------------
+
     def normalize_country(self, country: str) -> str:
         return (country or "").strip().lower()
+    
+    
+    def require_planner_user_for_custom_holidays(self):
+        planner_user = self.user_input.text().strip()
+        if not planner_user:
+            QMessageBox.warning(
+                self,
+                "Missing user",
+                "Please enter Planner User before adding or importing custom holidays."
+            )
+            return False
+        return True
+    
+    
+    def get_custom_holiday_path(self):
+        planner_user = self.user_input.text().strip().lower()
+
+        base_folder = r"F:\intdaily\autohol\custom_hol"
+        os.makedirs(base_folder, exist_ok=True)
+
+        if not planner_user:
+            return os.path.join(base_folder, "custom_holidays_default.json")
+
+        return os.path.join(base_folder, f"custom_holidays_{planner_user}.json")
+    
+
+    
+    def custom_holiday_file_exists(self):
+        return os.path.exists(self.get_custom_holiday_path())
+    
 
     def load_custom_holidays(self):
-        if not os.path.exists(self.custom_holiday_path):
+        path = self.get_custom_holiday_path()
+
+        if not os.path.exists(path):
             return []
 
         try:
-            with open(self.custom_holiday_path, "r", encoding="utf-8") as f:
+            with open(path, "r", encoding="utf-8") as f:
                 data = json.load(f)
                 return data if isinstance(data, list) else []
         except Exception as e:
-            QMessageBox.critical(self, "Load error", f"Failed to load custom holidays:\n{e}")
+            QMessageBox.critical(
+                self,
+                "Load Error",
+                f"Failed to load custom holidays:\n{e}"
+            )
             return []
+        
 
     def save_custom_holidays(self, holidays):
-        folder = os.path.dirname(self.custom_holiday_path)
-        if folder:
-            os.makedirs(folder, exist_ok=True)
+        path = self.get_custom_holiday_path()
+        folder = os.path.dirname(path)
+        os.makedirs(folder, exist_ok=True)
 
-        with open(self.custom_holiday_path, "w", encoding="utf-8") as f:
+        with open(path, "w", encoding="utf-8") as f:
             json.dump(holidays, f, ensure_ascii=False, indent=2)
 
+
     def add_custom_holiday(self):
+        if not self.require_planner_user_for_custom_holidays():
+            return
+
         country = self.custom_country_input.text().strip()
-        holiday_name = self.custom_name_input.text().strip()
         holiday_date = self.custom_date_input.date().toString("yyyy-MM-dd")
+        holiday_name = self.custom_name_input.text().strip()
         holiday_observance = self.custom_observance_combo.currentText().strip()
 
-        if not country or not holiday_name:
-            QMessageBox.warning(self, "Missing fields", "Please enter country name and holiday name.")
+        if not country or not holiday_name or not holiday_observance:
+            QMessageBox.warning(
+                self,
+                "Missing fields",
+                "Please enter Country, Holiday Name, and Holiday Observance."
+            )
+            return
+
+        try:
+            datetime.strptime(holiday_date, "%Y-%m-%d")
+        except ValueError:
+            QMessageBox.warning(
+                self,
+                "Invalid date",
+                "Holiday Date must be in yyyy-MM-dd format."
+            )
             return
 
         new_country = self.normalize_country(country)
@@ -775,26 +828,17 @@ class PlannerWindow(QMainWindow):
                 and existing_date == holiday_date
                 and existing_name == holiday_name
             ):
-                QMessageBox.warning(self, "Duplicate holiday", "This exact custom holiday already exists.")
-                return
-
-            if (
-                existing_country == new_country
-                and existing_date == holiday_date
-                and existing_name != holiday_name
-            ):
                 QMessageBox.warning(
                     self,
-                    "Duplicate country/date",
-                    f"A custom holiday already exists for {country} on {holiday_date}.\n"
-                    f"Existing holiday name: {existing_name}"
+                    "Duplicate holiday",
+                    "This exact custom holiday already exists for this user."
                 )
                 return
 
         holidays.append({
-            "country": country.strip(),
+            "country": country,
             "holiday_date": holiday_date,
-            "holiday_name": holiday_name.strip(),
+            "holiday_name": holiday_name,
             "holiday_observance": holiday_observance,
             "source": "custom",
             "created_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
@@ -802,40 +846,51 @@ class PlannerWindow(QMainWindow):
 
         try:
             self.save_custom_holidays(holidays)
+
             QMessageBox.information(
                 self,
-                "Custom holiday added",
+                "Custom Holiday Added",
                 f"Added custom holiday:\n{country} | {holiday_date} | {holiday_name} | {holiday_observance}"
             )
-            self.custom_country_input.setText("")
-            self.custom_name_input.setText("")
+
+            self.custom_country_input.clear()
+            self.custom_name_input.clear()
             self.custom_observance_combo.setCurrentIndex(0)
 
         except Exception as e:
-            QMessageBox.critical(self, "Save error", f"Failed to save custom holiday:\n{e}")
+            QMessageBox.critical(
+                self,
+                "Save Error",
+                f"Failed to save custom holiday:\n{e}"
+            )
 
 
     def load_merged_holidays(self):
         holiday_dict = load_holiday_records(self.default_holiday_path)
+
         custom_holidays = self.load_custom_holidays()
         for item in custom_holidays:
-            country = item.get("country", "")
+            country = self.normalize_country(item.get("country", ""))
             holiday_date = (item.get("holiday_date") or "").strip()
-            holiday_name = item.get("holiday_name", "")
-            holiday_observance = item.get("holiday_observance", "")
+            holiday_name = (item.get("holiday_name") or "").strip()
+            holiday_observance = (item.get("holiday_observance") or "").strip()
+
             if not country or not holiday_date:
                 continue
+
             try:
                 hdate = datetime.strptime(holiday_date, "%Y-%m-%d").date()
             except ValueError:
                 continue
-            add_holiday_record(
-                holiday_dict,
-                country,
-                hdate,
-                holiday_name,
-                holiday_observance,
-            )
+
+            holiday_dict.setdefault(country, [])
+            holiday_dict[country].append({
+                "date": hdate,
+                "holiday_name": holiday_name,
+                "holiday_observance": holiday_observance,
+                "source": "custom",
+            })
+
         return holiday_dict
     
 
@@ -892,6 +947,9 @@ class PlannerWindow(QMainWindow):
 
 
     def import_custom_holiday_csv(self):
+        if not self.require_planner_user_for_custom_holidays():
+            return
+
         file_path, _ = QFileDialog.getOpenFileName(
             self,
             "Select Custom Holiday CSV",
@@ -903,67 +961,95 @@ class PlannerWindow(QMainWindow):
             return
 
         try:
-            existing_holidays = self.load_custom_holidays()
-            imported_count = 0
-            skipped_duplicates = 0
-            skipped_invalid = 0
-
+            imported_rows = []
             with open(file_path, "r", encoding="utf-8-sig", newline="") as f:
                 reader = csv.DictReader(f)
 
-                required_columns = {"country", "holiday_date", "holiday_name", "holiday_observance"}
-                file_columns = {c.strip() for c in (reader.fieldnames or [])}
+                required_columns = {
+                    "country",
+                    "holiday_date",
+                    "holiday_name",
+                    "holiday_observance",
+                }
 
-                if not required_columns.issubset(file_columns):
+                csv_columns = {col.strip() for col in (reader.fieldnames or [])}
+                missing_columns = required_columns - csv_columns
+                if missing_columns:
                     QMessageBox.warning(
                         self,
-                        "Invalid CSV",
-                        "CSV must contain columns: country, holiday_date, holiday_name, holiday_observance"
+                        "Invalid CSV Format",
+                        "CSV is missing required columns:\n"
+                        + ", ".join(sorted(missing_columns))
                     )
                     return
 
-                for raw_row in reader:
-                    row = {
-                        "country": raw_row.get("country", ""),
-                        "holiday_date": raw_row.get("holiday_date", ""),
-                        "holiday_name": raw_row.get("holiday_name", ""),
-                        "holiday_observance": raw_row.get("holiday_observance", ""),
-                    }
+                for row in reader:
+                    country = (row.get("country") or "").strip()
+                    holiday_date = (row.get("holiday_date") or "").strip()
+                    holiday_name = (row.get("holiday_name") or "").strip()
+                    holiday_observance = (row.get("holiday_observance") or "").strip()
 
-                    cleaned_row, error = self.validate_custom_holiday_row(row)
-                    if error:
-                        skipped_invalid += 1
+                    if not country or not holiday_date or not holiday_name or not holiday_observance:
                         continue
 
-                    exists, reason = self.custom_holiday_exists(existing_holidays, cleaned_row)
-                    if exists:
-                        skipped_duplicates += 1
+                    try:
+                        datetime.strptime(holiday_date, "%Y-%m-%d")
+                    except ValueError:
                         continue
 
-                    existing_holidays.append({
-                        "country": cleaned_row["country"],
-                        "holiday_date": cleaned_row["holiday_date"],
-                        "holiday_name": cleaned_row["holiday_name"],
-                        "holiday_observance": cleaned_row["holiday_observance"],
-                        "source": "custom_csv",
+                    imported_rows.append({
+                        "country": country,
+                        "holiday_date": holiday_date,
+                        "holiday_name": holiday_name,
+                        "holiday_observance": holiday_observance,
+                        "source": "custom_import",
                         "created_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
                     })
-                    imported_count += 1
+
+            if not imported_rows:
+                QMessageBox.information(
+                    self,
+                    "No Valid Rows",
+                    "No valid custom holiday rows were found in the CSV."
+                )
+                return
+
+            existing_holidays = self.load_custom_holidays()
+            existing_keys = {
+                (
+                    self.normalize_country(item.get("country", "")),
+                    (item.get("holiday_date") or "").strip(),
+                    (item.get("holiday_name") or "").strip(),
+                )
+                for item in existing_holidays
+            }
+
+            added_count = 0
+            for row in imported_rows:
+                row_key = (
+                    self.normalize_country(row.get("country", "")),
+                    row.get("holiday_date", "").strip(),
+                    row.get("holiday_name", "").strip(),
+                )
+                if row_key not in existing_keys:
+                    existing_holidays.append(row)
+                    existing_keys.add(row_key)
+                    added_count += 1
 
             self.save_custom_holidays(existing_holidays)
 
             QMessageBox.information(
                 self,
-                "Custom Holiday Import Complete",
-                (
-                    f"Imported: {imported_count}\n"
-                    f"Skipped duplicates: {skipped_duplicates}\n"
-                    f"Skipped invalid rows: {skipped_invalid}"
-                )
+                "Import Complete",
+                f"Imported {added_count} new custom holiday rows."
             )
 
         except Exception as e:
-            QMessageBox.critical(self, "Import failed", str(e))
+            QMessageBox.critical(
+                self,
+                "Import Error",
+                f"Failed to import custom holiday CSV:\n{e}"
+            )
 
 
     def show_custom_holiday_csv_help(self):
@@ -1339,6 +1425,7 @@ class PlannerWindow(QMainWindow):
             row for row in self.planner_rows
             if (row.get("planned_action") or "").strip()
         ]
+
         if not action_rows:
             QMessageBox.information(
                 self,
@@ -1346,10 +1433,13 @@ class PlannerWindow(QMainWindow):
                 "There are no planner rows with actions to save."
             )
             return
+
         try:
             json_path, csv_path = self.get_output_log_paths()
+
             json_count = write_planner_log_json(json_path, action_rows)
             csv_count = write_planner_log_csv(csv_path, action_rows)
+
             QMessageBox.information(
                 self,
                 "Planner Log Saved",
@@ -1358,6 +1448,7 @@ class PlannerWindow(QMainWindow):
                     f"Saved {csv_count} rows to CSV:\n{csv_path}"
                 )
             )
+
         except Exception as e:
             QMessageBox.critical(self, "Save failed", str(e))
 
@@ -1365,16 +1456,16 @@ class PlannerWindow(QMainWindow):
     def get_output_log_paths(self):
         planner_user = self.user_input.text().strip()
         user_part = planner_user.lower() if planner_user else "all_users"
-        json_path = os.path.join(
-            "data",
-            "planner_logs",
-            f"autohol_planner_log_{user_part}.json",
-        )
-        csv_path = os.path.join(
-            "data",
-            "planner_logs",
-            f"autohol_planner_log_{user_part}.csv",
-        )
+
+        json_dir = r"F:\intdaily\autohol\planner\json"
+        csv_dir = r"F:\intdaily\autohol\planner\csv"
+
+        os.makedirs(json_dir, exist_ok=True)
+        os.makedirs(csv_dir, exist_ok=True)
+
+        json_path = os.path.join(json_dir, f"autohol_planner_log_{user_part}.json")
+        csv_path = os.path.join(csv_dir, f"autohol_planner_log_{user_part}.csv")
+
         return json_path, csv_path
 
 
