@@ -1,6 +1,9 @@
 .venv/
 __pycache__/
 *.pyc
+
+data/records_next_week.csv
+data/plan.jsonl
+data/logs/
 *.log
 *.csv
-.DS_Store

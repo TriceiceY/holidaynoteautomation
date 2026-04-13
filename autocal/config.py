@@ -3,8 +3,8 @@
 import pyodbc
 import re
 
-DEFAULT_JSON_PATH = r"C:\Users\JiebingYin\OneDrive - Haver Analytics\python files\HolidayNoteAutomation\QppHolidays.json"
-DEFAULT_LOG_PATH  = r"C:\Users\JiebingYin\OneDrive - Haver Analytics\python files\HolidayNoteAutomation\holiday_notes_match_log.csv"
+DEFAULT_CSV_PATH = r"C:\Users\JiebingYin\OneDrive - Haver Analytics\python files\HolidayNoteAutomation\data\Q++ Worldwide Public Holidays ISO-2026.CSV"
+DEFAULT_LOG_PATH  = r"C:\Users\JiebingYin\OneDrive - Haver Analytics\python files\HolidayNoteAutomation\data\logs\holiday_notes_match_log.csv"
 
 def get_odbc_driver():
     drivers = pyodbc.drivers()

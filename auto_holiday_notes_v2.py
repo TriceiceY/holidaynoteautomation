@@ -7,58 +7,9 @@ import re
 import sys
 import argparse
 from datetime import datetime, date, timedelta
-import json
 import csv
 import os
 
-
-
-def load_holiday_dict_from_csv(csv_path):
-    """
-    Build a dict like:
-      {
-        "country1": [date(2026,2,16), date(2026,2,17), ...],
-        "country2": [...]
-      }
-
-    Rules:
-    - Reads QPP holidays CSV file
-    - Converts 'Holiday Date' Excel serial -> Python date
-    - Ignores rows where Holiday Observance == 'Regional' (case-insensitive exact match)
-    """
-    holiday_dict = {}
-
-    with open(csv_path, "r", encoding="latin1", newline="") as f:
-        reader = csv.DictReader(f, delimiter=";")
-
-        for row in reader:
-            country = (row.get("Country Name") or "").strip()
-            observance = (row.get("Holiday Observance") or "").strip()
-
-            if not country:
-                continue
-
-            # Ignore only exact "Regional" (case-insensitive)
-            if observance.lower() == "regional":
-                continue
-
-            raw_date = (row.get("Holiday Date") or "").strip()
-            if not raw_date:
-                continue
-
-            try:
-                # CSV stores Excel serial dates (e.g., 46023)
-                serial = int(float(raw_date))
-                # Excel serial origin (Windows Excel)
-                hdate = (datetime(1899, 12, 30) + timedelta(days=serial)).date()
-            except Exception:
-                continue
-
-            key = country.lower()
-            holiday_dict.setdefault(key, set()).add(hdate)
-
-    # convert sets to sorted lists
-    return {k: sorted(v) for k, v in holiday_dict.items()}
 
 
 def get_odbc_driver():
@@ -110,6 +61,55 @@ def find_records_by_country_and_date(country: str, target_date: date):
     return rows
 
 
+def load_holiday_dict_from_csv(csv_path):
+    """
+    Build a dict like:
+      {
+        "country1": [date(2026,2,16), date(2026,2,17), ...],
+        "country2": [...]
+      }
+
+    Rules:
+    - Reads QPP holidays CSV file
+    - Converts 'Holiday Date' Excel serial -> Python date
+    - Ignores rows where Holiday Observance == 'Regional' (case-insensitive exact match)
+    """
+    holiday_dict = {}
+
+    with open(csv_path, "r", encoding="latin1", newline="") as f:
+        reader = csv.DictReader(f, delimiter=";")
+
+        for row in reader:
+            country = (row.get("Country Name") or "").strip()
+            observance = (row.get("Holiday Observance") or "").strip()
+
+            if not country:
+                continue
+
+            # Ignore only exact "Regional" (case-insensitive)
+            if observance.lower() == "regional":
+                continue
+
+            raw_date = (row.get("Holiday Date") or "").strip()
+            if not raw_date:
+                continue
+
+            try:
+                # CSV stores Excel serial dates (e.g., 46023)
+                serial = int(float(raw_date))
+                # Excel serial origin (Windows Excel)
+                hdate = (datetime(1899, 12, 30) + timedelta(days=serial)).date()
+            except Exception:
+                continue
+
+            key = country.lower()
+            holiday_dict.setdefault(key, set()).add(hdate)
+
+    # convert sets to sorted lists
+    return {k: sorted(v) for k, v in holiday_dict.items()}
+
+
+
 def log_matches_csv(log_path, matches):
     folder = os.path.dirname(log_path)
     if folder:
@@ -124,7 +124,7 @@ def log_matches_csv(log_path, matches):
 
     file_exists = os.path.exists(log_path) and os.path.getsize(log_path) > 0
 
-    with open(log_path, "a", newline="", encoding="utf-8-sig") as f:
+    with open(log_path, "a", newline="", encoding="latin1") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
         if not file_exists:
             writer.writeheader()
@@ -164,8 +164,9 @@ def next_week_window(today=None):
     days_ahead = (0 - today.weekday() + 7) % 7
     if days_ahead == 0:
         days_ahead = 7
-    start = today + timedelta(days=days_ahead)
-    end = start + timedelta(days=6)
+    #start = today + timedelta(days=days_ahead)
+    start = today
+    end = start + timedelta(days=30)
     return start, end
 
 
