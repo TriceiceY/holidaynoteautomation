@@ -9,12 +9,10 @@ makeexcelhol.py
 test.py
 
 autocal/
-
-data/records_next_week.csv
-data/plan.jsonl
-data/logs/
+data/
 
 ui/ui_tk_demo.py
+ui/ui_demo.py
 
 *.log
 *.csv
