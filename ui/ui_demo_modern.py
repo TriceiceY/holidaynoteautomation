@@ -78,6 +78,22 @@ class ModernPlannerWindow(PlannerWindow):
             for row_idx in selected_rows
         ]
 
+    def ensure_autohol_prefix(self, text: str) -> str:
+        text = (text or "").strip()
+
+        if not text:
+            return "AUTOHOL:"
+        if text.startswith("AUTOHOL:"):
+            return text
+        return f"AUTOHOL:{text}"
+
+    def get_user_note_text(self) -> str:
+        return self.ensure_autohol_prefix(self.note_input.toPlainText())
+
+    def has_custom_note_text(self, note_text: str) -> bool:
+        normalized = (note_text or "").strip()
+        return normalized not in {"", "AUTOHOL:"}
+
     def summarize_rows_for_dialog(self, rows, include_existing_action=False):
         if not rows:
             return "No rows selected."
