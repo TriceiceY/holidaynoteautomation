@@ -1,13 +1,15 @@
 .venv311/
+.vscode/
 __pycache__/
 
 *.pyc
-auto_holiday_notes*.py
+auto_holiday_note_v3.py
 dwcalendar.py
 executehol.py
 makeexcelhol.py
 test.py
 
+autohol/_pycache_
 autocal/
 data/
 
