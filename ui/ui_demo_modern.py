@@ -1,5 +1,6 @@
-from PyQt6.QtWidgets import QApplication, QCalendarWidget
 import sys
+
+from PyQt6.QtWidgets import QApplication, QCalendarWidget, QMessageBox
 
 try:
     # import the existing PlannerWindow without modifying ui_demo.py
@@ -45,10 +46,6 @@ QScrollBar:vertical { width: 10px; }
 '''
 
 
-def apply_modern_style(window):
-    window.setStyleSheet(MODERN_STYLE)
-
-
 CALENDAR_QSS = '''
 QCalendarWidget {
     background: white;
@@ -71,6 +68,250 @@ QCalendarWidget QTableView { border: none; }
 QCalendarWidget QTableView::item { border-radius: 6px; }
 QCalendarWidget::navigation { background: transparent; }
 '''
+
+
+class ModernPlannerWindow(PlannerWindow):
+    def get_selected_row_ids(self):
+        selected_rows = self.get_selected_row_indexes()
+        return [
+            self.current_page_rows[row_idx]["_row_id"]
+            for row_idx in selected_rows
+        ]
+
+    def summarize_rows_for_dialog(self, rows, include_existing_action=False):
+        if not rows:
+            return "No rows selected."
+
+        lines = [f"Selected rows: {len(rows)}"]
+
+        unique_dates = sorted({
+            row.get("target_date", "").strip()
+            for row in rows
+            if row.get("target_date", "").strip()
+        })
+        if unique_dates:
+            preview_dates = ", ".join(unique_dates[:5])
+            if len(unique_dates) > 5:
+                preview_dates += ", ..."
+            lines.append(f"Dates: {preview_dates}")
+
+        unique_countries = sorted({
+            row.get("country", "").strip()
+            for row in rows
+            if row.get("country", "").strip()
+        })
+        if unique_countries:
+            preview_countries = ", ".join(unique_countries[:5])
+            if len(unique_countries) > 5:
+                preview_countries += ", ..."
+            lines.append(f"Countries: {preview_countries}")
+
+        if include_existing_action:
+            action_counts = {}
+            for row in rows:
+                action = (row.get("planned_action") or "").strip()
+                if not action:
+                    continue
+                action_counts[action] = action_counts.get(action, 0) + 1
+
+            if action_counts:
+                lines.append("Existing actions:")
+                for action in sorted(action_counts):
+                    lines.append(f"  {action}: {action_counts[action]}")
+
+        return "\n".join(lines)
+
+    def confirm_mark_done_action(self, selected_rows):
+        message = (
+            "You are about to mark the selected rows as done.\n\n"
+            f"{self.summarize_rows_for_dialog(selected_rows)}\n\n"
+            "Do you want to continue?"
+        )
+        result = QMessageBox.question(
+            self,
+            "Confirm Mark Done",
+            message,
+            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.Cancel,
+            QMessageBox.StandardButton.Cancel,
+        )
+        return result == QMessageBox.StandardButton.Yes
+
+    def confirm_overwrite_actions(self, selected_rows, new_action):
+        conflicting_rows = [
+            row for row in selected_rows
+            if (row.get("planned_action") or "").strip()
+            and (row.get("planned_action") or "").strip() != new_action
+        ]
+        if not conflicting_rows:
+            return True
+
+        message = (
+            f"The selected rows already have different planned actions and will be overwritten by {new_action}.\n\n"
+            f"{self.summarize_rows_for_dialog(conflicting_rows, include_existing_action=True)}\n\n"
+            "Do you want to continue?"
+        )
+        result = QMessageBox.question(
+            self,
+            "Overwrite Planned Actions",
+            message,
+            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.Cancel,
+            QMessageBox.StandardButton.Cancel,
+        )
+        return result == QMessageBox.StandardButton.Yes
+
+    def confirm_save_summary(self, action_rows):
+        action_order = ["ADD_NOTE", "MARK_DONE", "MOVE_DATE", "MOVE_TIME"]
+        action_counts = {action: 0 for action in action_order}
+
+        for row in action_rows:
+            action = (row.get("planned_action") or "").strip()
+            if action in action_counts:
+                action_counts[action] += 1
+
+        summary_lines = [
+            "Review the planner actions before saving.",
+            "",
+            f"Total rows to save: {len(action_rows)}",
+        ]
+        for action in action_order:
+            summary_lines.append(f"{action}: {action_counts[action]}")
+
+        result = QMessageBox.question(
+            self,
+            "Confirm Save Planner Log",
+            "\n".join(summary_lines),
+            QMessageBox.StandardButton.Save | QMessageBox.StandardButton.Cancel,
+            QMessageBox.StandardButton.Cancel,
+        )
+        return result == QMessageBox.StandardButton.Save
+
+    def apply_action_to_selected_rows(self):
+        selected_rows = self.get_selected_row_indexes()
+        self.summary_selected.setText(f"Rows Selected: {len(selected_rows)}")
+
+        if not selected_rows:
+            QMessageBox.warning(self, "No selection", "Please select one or more rows.")
+            return
+
+        planned_action = self.action_combo.currentText().strip()
+        planned_note = self.get_user_note_text()
+        move_mode = self.move_mode_combo.currentText().strip()
+        move_to_date = self.move_date_input.date().toString("yyyy-MM-dd")
+        move_to_time = self.move_time_input.time().toString("hh:mm:ss AP")
+        action_date = self.get_today_string()
+
+        if not planned_action:
+            QMessageBox.warning(self, "Missing action", "Please choose a planned action.")
+            return
+
+        if planned_action == "ADD_NOTE":
+            if not self.has_custom_note_text(planned_note):
+                QMessageBox.warning(
+                    self,
+                    "Missing note",
+                    "ADD_NOTE requires note text after 'AUTOHOL:'."
+                )
+                return
+
+        elif planned_action == "MARK_DONE":
+            if not self.has_custom_note_text(planned_note):
+                planned_note = f"AUTOHOL: Marked as Done {action_date}"
+
+        elif planned_action == "MOVE_DATE":
+            if not move_mode:
+                QMessageBox.warning(self, "Missing move mode", "MOVE_DATE requires a move mode.")
+                return
+
+            if move_mode == "specific_date":
+                if not move_to_date:
+                    QMessageBox.warning(self, "Missing move date", "Please choose a specific move date.")
+                    return
+                default_move_note = f"AUTOHOL: Moved to {move_to_date}"
+            else:
+                default_move_note = f"AUTOHOL: Moved to {action_date}"
+
+            if not self.has_custom_note_text(planned_note):
+                planned_note = default_move_note
+
+        elif planned_action == "MOVE_TIME":
+            if not move_to_time:
+                QMessageBox.warning(self, "Missing move time", "Please choose a new time.")
+                return
+
+            if not self.has_custom_note_text(planned_note):
+                planned_note = f"AUTOHOL: Moved to {move_to_time}"
+
+        selected_row_ids = self.get_selected_row_ids()
+        selected_row_data = [
+            row for row in self.current_page_rows
+            if row.get("_row_id") in selected_row_ids
+        ]
+
+        if not self.confirm_overwrite_actions(selected_row_data, planned_action):
+            return
+
+        if planned_action == "MARK_DONE":
+            if not self.confirm_mark_done_action(selected_row_data):
+                return
+
+        for row in self.filtered_planner_rows:
+            if row.get("_row_id") in selected_row_ids:
+                row["planned_action"] = planned_action
+                row["planned_note"] = planned_note
+                row["move_mode"] = move_mode if planned_action == "MOVE_DATE" else ""
+                row["move_to_date"] = move_to_date if planned_action == "MOVE_DATE" else ""
+                row["move_to_time"] = move_to_time if planned_action == "MOVE_TIME" else ""
+
+        self.load_current_page()
+        self.update_action_count()
+        self.note_input.setPlainText("AUTOHOL: ")
+
+    def clear_action_for_selected_rows(self):
+        selected_rows = self.get_selected_row_indexes()
+        self.summary_selected.setText(f"Rows Selected: {len(selected_rows)}")
+
+        if not selected_rows:
+            QMessageBox.warning(self, "No selection", "Please select one or more rows.")
+            return
+
+        selected_row_ids = self.get_selected_row_ids()
+
+        for row in self.filtered_planner_rows:
+            if row.get("_row_id") in selected_row_ids:
+                row["planned_action"] = ""
+                row["planned_note"] = ""
+                row["move_mode"] = ""
+                row["move_to_date"] = ""
+                row["move_to_time"] = ""
+
+        self.load_current_page()
+        self.update_action_count()
+        self.note_input.setPlainText("AUTOHOL: ")
+
+    def save_planner_log(self):
+        action_rows = [
+            row for row in self.planner_rows
+            if (row.get("planned_action") or "").strip()
+        ]
+        if not action_rows:
+            QMessageBox.information(
+                self,
+                "No actions to save",
+                "There are no planner rows with actions to save."
+            )
+            return
+        if not self.confirm_save_summary(action_rows):
+            return
+        super().save_planner_log()
+
+    def get_today_string(self):
+        from datetime import datetime
+
+        return datetime.now().strftime("%Y-%m-%d")
+
+
+def apply_modern_style(window):
+    window.setStyleSheet(MODERN_STYLE)
 
 
 def apply_modern_calendar(window):
@@ -99,7 +340,7 @@ def apply_modern_calendar(window):
 
 def main():
     app = QApplication(sys.argv)
-    win = PlannerWindow()
+    win = ModernPlannerWindow()
     apply_modern_style(win)
     apply_modern_calendar(win)
     win.show()
