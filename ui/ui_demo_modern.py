@@ -94,53 +94,29 @@ class ModernPlannerWindow(PlannerWindow):
         normalized = (note_text or "").strip()
         return normalized not in {"", "AUTOHOL:"}
 
-    def summarize_rows_for_dialog(self, rows, include_existing_action=False):
+    def format_warning_row_details(self, rows):
         if not rows:
             return "No rows selected."
 
-        lines = [f"Selected rows: {len(rows)}"]
-
-        unique_dates = sorted({
-            row.get("target_date", "").strip()
-            for row in rows
-            if row.get("target_date", "").strip()
-        })
-        if unique_dates:
-            preview_dates = ", ".join(unique_dates[:5])
-            if len(unique_dates) > 5:
-                preview_dates += ", ..."
-            lines.append(f"Dates: {preview_dates}")
-
-        unique_countries = sorted({
-            row.get("country", "").strip()
-            for row in rows
-            if row.get("country", "").strip()
-        })
-        if unique_countries:
-            preview_countries = ", ".join(unique_countries[:5])
-            if len(unique_countries) > 5:
-                preview_countries += ", ..."
-            lines.append(f"Countries: {preview_countries}")
-
-        if include_existing_action:
-            action_counts = {}
-            for row in rows:
-                action = (row.get("planned_action") or "").strip()
-                if not action:
-                    continue
-                action_counts[action] = action_counts.get(action, 0) + 1
-
-            if action_counts:
-                lines.append("Existing actions:")
-                for action in sorted(action_counts):
-                    lines.append(f"  {action}: {action_counts[action]}")
+        lines = []
+        for row in rows:
+            target_date = (row.get("target_date") or "").strip() or "-"
+            database = (row.get("database") or "").strip() or "-"
+            country = (row.get("country") or "").strip() or "-"
+            group = (row.get("group") or "").strip() or "-"
+            update = (row.get("update") or "").strip() or "-"
+            lines.append(
+                f"{target_date} | {database} | {country} | {group} | {update}"
+            )
 
         return "\n".join(lines)
 
     def confirm_mark_done_action(self, selected_rows):
         message = (
             "You are about to mark the selected rows as done.\n\n"
-            f"{self.summarize_rows_for_dialog(selected_rows)}\n\n"
+            f"Selected rows: {len(selected_rows)}\n"
+            "date | database | country | group | update\n"
+            f"{self.format_warning_row_details(selected_rows)}\n\n"
             "Do you want to continue?"
         )
         result = QMessageBox.question(
@@ -161,9 +137,27 @@ class ModernPlannerWindow(PlannerWindow):
         if not conflicting_rows:
             return True
 
+        action_counts = {}
+        for row in conflicting_rows:
+            action = (row.get("planned_action") or "").strip()
+            if not action:
+                continue
+            action_counts[action] = action_counts.get(action, 0) + 1
+
+        existing_action_lines = []
+        if action_counts:
+            existing_action_lines.append("Existing actions:")
+            for action in sorted(action_counts):
+                existing_action_lines.append(f"  {action}: {action_counts[action]}")
+            existing_action_lines.append("")
+        existing_actions_text = "\n".join(existing_action_lines)
+
         message = (
             f"The selected rows already have different planned actions and will be overwritten by {new_action}.\n\n"
-            f"{self.summarize_rows_for_dialog(conflicting_rows, include_existing_action=True)}\n\n"
+            f"Selected rows: {len(conflicting_rows)}\n"
+            f"{existing_actions_text}"
+            "date | database | country | group | update\n"
+            f"{self.format_warning_row_details(conflicting_rows)}\n\n"
             "Do you want to continue?"
         )
         result = QMessageBox.question(
