@@ -40,7 +40,7 @@ from PyQt6.QtWidgets import (
     QWidget,
 )
 
-from autohol.holidays import load_holiday_records
+from autohol.holidays import add_holiday_record, load_holiday_records
 from autohol.future_holiday_planner import (
     annotate_holiday_context,
     build_planner_rows,
@@ -912,15 +912,12 @@ class PlannerWindow(QMainWindow):
             except ValueError:
                 continue
 
-            holiday_dict.setdefault(country, [])
-            holiday_dict[country].append(
-                {
-                    "date": hdate,
-                    "holiday_name": holiday_name,
-                    "holiday_type": holiday_observance,
-                    "holiday_observance": holiday_observance,
-                    "source": "custom",
-                }
+            add_holiday_record(
+                holiday_dict,
+                country,
+                hdate,
+                holiday_name,
+                holiday_observance,
             )
 
         return holiday_dict
@@ -1070,13 +1067,12 @@ class PlannerWindow(QMainWindow):
         matches = []
 
         for country in relevant_countries:
-            for holiday in holiday_dict.get(country, []):
-                if holiday.get("date") != selected_date:
-                    continue
+            country_records = holiday_dict.get(country, {})
+            for holiday in country_records.get(selected_date, []):
                 matches.append({
                     "country": country,
                     "holiday_name": (holiday.get("holiday_name") or "").strip() or "-",
-                    "holiday_type": (holiday.get("holiday_type") or holiday.get("holiday_observance") or "").strip() or "-",
+                    "holiday_type": (holiday.get("holiday_type") or "").strip() or "-",
                 })
 
         matches.sort(key=lambda item: (item["country"], item["holiday_name"], item["holiday_type"]))
@@ -1088,15 +1084,16 @@ class PlannerWindow(QMainWindow):
         matches_by_date = defaultdict(list)
 
         for country in relevant_countries:
-            for holiday in holiday_dict.get(country, []):
-                holiday_date = holiday.get("date")
-                if not holiday_date or holiday_date.year != year or holiday_date.month != month:
+            country_records = holiday_dict.get(country, {})
+            for holiday_date, holidays in country_records.items():
+                if holiday_date.year != year or holiday_date.month != month:
                     continue
-                matches_by_date[holiday_date].append({
-                    "country": country,
-                    "holiday_name": (holiday.get("holiday_name") or "").strip() or "-",
-                    "holiday_type": (holiday.get("holiday_type") or holiday.get("holiday_observance") or "").strip() or "-",
-                })
+                for holiday in holidays:
+                    matches_by_date[holiday_date].append({
+                        "country": country,
+                        "holiday_name": (holiday.get("holiday_name") or "").strip() or "-",
+                        "holiday_type": (holiday.get("holiday_type") or "").strip() or "-",
+                    })
 
         return matches_by_date
 
