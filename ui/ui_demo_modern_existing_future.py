@@ -2,6 +2,7 @@ import csv
 import json
 import os
 import sys
+import calendar as pycalendar
 from collections import defaultdict
 from datetime import datetime, timedelta
 
@@ -10,7 +11,7 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 from PyQt6.QtCore import QDate, QTime, Qt
-from PyQt6.QtGui import QColor, QTextCharFormat
+from PyQt6.QtGui import QColor
 from PyQt6.QtWidgets import (
     QApplication,
     QAbstractItemView,
@@ -217,7 +218,6 @@ class PlannerWindow(QMainWindow):
         self.current_sort_field = ""
         self.current_sort_order = "ascending"
         self._holiday_lookup_dw_entries = None
-        self._holiday_lookup_active_source = "Planner Holiday Date"
 
         self.selected_database_filters = set()
         self.selected_country_filters = set()
@@ -229,6 +229,7 @@ class PlannerWindow(QMainWindow):
         central.setLayout(self.main_layout)
 
         self.build_controls_section()
+        self.build_holiday_calendar_section()
         self.build_custom_holiday_section()
         self.build_summary_section()
         self.build_paging_section()
@@ -259,6 +260,7 @@ class PlannerWindow(QMainWindow):
         self.table.itemSelectionChanged.connect(self.update_selected_count)
         self.table.cellDoubleClicked.connect(self.handle_table_double_click)
         self.user_input.textChanged.connect(self.refresh_all_holiday_lookup_calendars)
+        self.holiday_date_input.dateChanged.connect(self.refresh_all_holiday_lookup_calendars)
 
         self.update_action_editor_visibility()
         self.update_paging_labels()
@@ -267,7 +269,6 @@ class PlannerWindow(QMainWindow):
 
     def build_controls_section(self):
         self.controls_box = QGroupBox("Planner Controls")
-        outer_layout = QVBoxLayout()
         layout = QHBoxLayout()
 
         self.user_input = QLineEdit()
@@ -305,27 +306,56 @@ class PlannerWindow(QMainWindow):
         layout.addWidget(self.clear_button)
         layout.addStretch()
 
-        self.lookup_context_label = QLabel("Lookup Source: Planner Holiday Date")
-        self.lookup_date_label = QLabel("Lookup Date: -")
-        self.lookup_count_label = QLabel("Holiday Matches: 0")
-
-        lookup_header_layout = QHBoxLayout()
-        lookup_header_layout.addWidget(self.lookup_context_label)
-        lookup_header_layout.addWidget(self.lookup_date_label)
-        lookup_header_layout.addWidget(self.lookup_count_label)
-        lookup_header_layout.addStretch()
-
-        self.lookup_details = QPlainTextEdit()
-        self.lookup_details.setReadOnly(True)
-        self.lookup_details.setMaximumHeight(110)
-        self.lookup_details.setPlaceholderText("Holiday lookup details will appear here.")
-
-        outer_layout.addLayout(layout)
-        outer_layout.addLayout(lookup_header_layout)
-        outer_layout.addWidget(self.lookup_details)
-
-        self.controls_box.setLayout(outer_layout)
+        self.controls_box.setLayout(layout)
         self.main_layout.addWidget(self.controls_box)
+
+    def build_holiday_calendar_section(self):
+        self.holiday_calendar_box = QGroupBox("Holiday Calendar")
+        outer_layout = QVBoxLayout()
+
+        header_layout = QHBoxLayout()
+        self.holiday_calendar_prev_button = QPushButton("Previous Month")
+        self.holiday_calendar_next_button = QPushButton("Next Month")
+        self.holiday_calendar_month_label = QLabel("Month: -")
+        self.holiday_calendar_scope_label = QLabel("Managed Countries: -")
+
+        header_layout.addWidget(self.holiday_calendar_prev_button)
+        header_layout.addWidget(self.holiday_calendar_next_button)
+        header_layout.addWidget(self.holiday_calendar_month_label)
+        header_layout.addWidget(self.holiday_calendar_scope_label)
+        header_layout.addStretch()
+
+        self.holiday_month_table = QTableWidget()
+        self.holiday_month_table.setColumnCount(7)
+        self.holiday_month_table.setRowCount(6)
+        self.holiday_month_table.setHorizontalHeaderLabels(
+            ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        )
+        self.holiday_month_table.verticalHeader().setVisible(False)
+        self.holiday_month_table.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
+        self.holiday_month_table.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)
+        self.holiday_month_table.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectItems)
+        self.holiday_month_table.setWordWrap(True)
+        self.holiday_month_table.setAlternatingRowColors(False)
+        self.holiday_month_table.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
+        for row_index in range(6):
+            self.holiday_month_table.setRowHeight(row_index, 96)
+
+        self.holiday_calendar_hint_label = QLabel(
+            "Click a day to set Holiday Date. Holidays shown depend on the current Planner User."
+        )
+        self.holiday_calendar_hint_label.setWordWrap(True)
+
+        outer_layout.addLayout(header_layout)
+        outer_layout.addWidget(self.holiday_month_table)
+        outer_layout.addWidget(self.holiday_calendar_hint_label)
+
+        self.holiday_calendar_box.setLayout(outer_layout)
+        self.main_layout.addWidget(self.holiday_calendar_box)
+
+        self.holiday_calendar_prev_button.clicked.connect(lambda: self.shift_holiday_calendar_month(-1))
+        self.holiday_calendar_next_button.clicked.connect(lambda: self.shift_holiday_calendar_month(1))
+        self.holiday_month_table.cellClicked.connect(self.handle_holiday_month_cell_clicked)
 
     def build_custom_holiday_section(self):
         self.custom_holiday_box = QGroupBox("Custom Holiday")
@@ -1097,87 +1127,90 @@ class PlannerWindow(QMainWindow):
 
         return matches_by_date
 
-    def clear_calendar_highlights(self, calendar):
-        year = calendar.yearShown()
-        month = calendar.monthShown()
-        days_in_month = QDate(year, month, 1).daysInMonth()
-        default_format = QTextCharFormat()
+    def build_holiday_month_cell_text(self, target_date, day_matches):
+        lines = [str(target_date.day)]
+        for match in day_matches:
+            lines.append(f"{match['country']} | {match['holiday_name']}")
+        return "\n".join(lines)
 
-        for day in range(1, days_in_month + 1):
-            calendar.setDateTextFormat(QDate(year, month, day), default_format)
+    def build_holiday_month_item(self, target_date, day_matches, selected_date):
+        item = QTableWidgetItem(self.build_holiday_month_cell_text(target_date, day_matches))
+        item.setFlags(Qt.ItemFlag.ItemIsEnabled | Qt.ItemFlag.ItemIsSelectable)
+        item.setTextAlignment(Qt.AlignmentFlag.AlignTop | Qt.AlignmentFlag.AlignLeft)
+        item.setData(Qt.ItemDataRole.UserRole, target_date.isoformat())
 
-    def apply_holiday_highlights(self, calendar):
-        matches_by_date = self.build_lookup_month_matches(calendar.yearShown(), calendar.monthShown())
-        self.clear_calendar_highlights(calendar)
+        if day_matches:
+            item.setBackground(QColor("#fff4d6"))
+            item.setForeground(QColor("#3a2f18"))
+        else:
+            item.setBackground(QColor("#ffffff"))
+            item.setForeground(QColor("#26374d"))
 
-        holiday_format = QTextCharFormat()
-        holiday_format.setBackground(QColor("#ffe7a8"))
-        holiday_format.setForeground(QColor("#5a3b00"))
+        if target_date == selected_date:
+            item.setBackground(QColor("#cfe1ff"))
+            item.setForeground(QColor("#05293a"))
 
-        for match_date in matches_by_date:
-            calendar.setDateTextFormat(QDate(match_date.year, match_date.month, match_date.day), holiday_format)
+        return item
 
-    def update_lookup_display(self, selected_date, source_label=None):
-        if source_label:
-            self._holiday_lookup_active_source = source_label
+    def shift_holiday_calendar_month(self, month_offset):
+        current = self.holiday_date_input.date().toPyDate()
+        month_index = (current.month - 1) + month_offset
+        year = current.year + (month_index // 12)
+        month = (month_index % 12) + 1
+        day = min(current.day, pycalendar.monthrange(year, month)[1])
+        self.holiday_date_input.setDate(QDate(year, month, day))
 
-        try:
-            matches = self.get_lookup_matches_for_date(selected_date)
-            self.lookup_context_label.setText(f"Lookup Source: {self._holiday_lookup_active_source}")
-            self.lookup_date_label.setText(f"Lookup Date: {selected_date.isoformat()}")
-            self.lookup_count_label.setText(f"Holiday Matches: {len(matches)}")
-
-            if matches:
-                self.lookup_details.setPlainText(
-                    "\n".join(
-                        f"{match['country']} | {match['holiday_name']} | {match['holiday_type']}"
-                        for match in matches
-                    )
-                )
-            else:
-                self.lookup_details.setPlainText(
-                    "No holidays found for this date in the current planner scope."
-                )
-        except Exception as exc:
-            self.lookup_context_label.setText(f"Lookup Source: {self._holiday_lookup_active_source}")
-            self.lookup_date_label.setText(f"Lookup Date: {selected_date.isoformat()}")
-            self.lookup_count_label.setText("Holiday Matches: -")
-            self.lookup_details.setPlainText(f"Holiday lookup unavailable:\n{exc}")
-
-    def on_lookup_calendar_page_changed(self, calendar):
-        try:
-            self.apply_holiday_highlights(calendar)
-        except Exception as exc:
-            self.lookup_details.setPlainText(f"Holiday lookup unavailable:\n{exc}")
+    def handle_holiday_month_cell_clicked(self, row, column):
+        item = self.holiday_month_table.item(row, column)
+        if item is None:
+            return
+        iso_value = item.data(Qt.ItemDataRole.UserRole)
+        if not iso_value:
+            return
+        clicked_date = datetime.strptime(iso_value, "%Y-%m-%d").date()
+        self.holiday_date_input.setDate(QDate(clicked_date.year, clicked_date.month, clicked_date.day))
 
     def refresh_all_holiday_lookup_calendars(self):
-        for attr_name, source_label, date_edit_attr in (
-            ("_modern_calendar_widget_holiday", "Planner Holiday Date", "holiday_date_input"),
-            ("_modern_calendar_widget_custom", "Custom Holiday Date", "custom_date_input"),
-        ):
-            calendar = getattr(self, attr_name, None)
-            date_edit = getattr(self, date_edit_attr, None)
-            if calendar is None or date_edit is None:
-                continue
+        try:
+            selected_date = self.holiday_date_input.date().toPyDate()
+            year = selected_date.year
+            month = selected_date.month
+            month_matches = self.build_lookup_month_matches(year, month)
+            relevant_countries = self.get_lookup_relevant_countries()
 
-            self.apply_holiday_highlights(calendar)
+            self.holiday_calendar_month_label.setText(f"Month: {selected_date.strftime('%B %Y')}")
+            if relevant_countries:
+                self.holiday_calendar_scope_label.setText(
+                    "Managed Countries: " + ", ".join(relevant_countries)
+                )
+            else:
+                self.holiday_calendar_scope_label.setText("Managed Countries: None")
 
-            if self._holiday_lookup_active_source == source_label:
-                self.update_lookup_display(date_edit.date().toPyDate(), source_label)
+            self.holiday_month_table.clearContents()
 
-    def attach_holiday_lookup_calendar(self, calendar, date_edit, source_label):
-        self.on_lookup_calendar_page_changed(calendar)
-        self.update_lookup_display(date_edit.date().toPyDate(), source_label)
+            first_day = datetime(year, month, 1).date()
+            start_column = first_day.weekday()
+            days_in_month = pycalendar.monthrange(year, month)[1]
 
-        calendar.currentPageChanged.connect(
-            lambda _year, _month, cal=calendar: self.on_lookup_calendar_page_changed(cal)
-        )
-        calendar.selectionChanged.connect(
-            lambda cal=calendar, src=source_label: self.update_lookup_display(cal.selectedDate().toPyDate(), src)
-        )
-        date_edit.dateChanged.connect(
-            lambda _qdate, src=source_label, de=date_edit: self.update_lookup_display(de.date().toPyDate(), src)
-        )
+            for day in range(1, days_in_month + 1):
+                target_date = datetime(year, month, day).date()
+                row = (start_column + day - 1) // 7
+                column = (start_column + day - 1) % 7
+                day_matches = month_matches.get(target_date, [])
+                item = self.build_holiday_month_item(target_date, day_matches, selected_date)
+                self.holiday_month_table.setItem(row, column, item)
+
+            for row in range(6):
+                for column in range(7):
+                    if self.holiday_month_table.item(row, column) is None:
+                        empty_item = QTableWidgetItem("")
+                        empty_item.setFlags(Qt.ItemFlag.NoItemFlags)
+                        empty_item.setBackground(QColor("#f8fbff"))
+                        self.holiday_month_table.setItem(row, column, empty_item)
+        except Exception as exc:
+            self.holiday_calendar_month_label.setText("Month: -")
+            self.holiday_calendar_scope_label.setText(f"Holiday calendar unavailable: {exc}")
+            self.holiday_month_table.clearContents()
 
     def load_actual_dw_entries_with_assignments(self, start_date, end_date):
         autocalendar = Autocalendar()
@@ -1715,8 +1748,6 @@ def apply_modern_calendar(window):
         cal.setStyleSheet(CALENDAR_QSS)
         window.holiday_date_input.setCalendarWidget(cal)
         setattr(window, "_modern_calendar_widget_holiday", cal)
-        if hasattr(window, "attach_holiday_lookup_calendar"):
-            window.attach_holiday_lookup_calendar(cal, window.holiday_date_input, "Planner Holiday Date")
         attached = True
 
     if hasattr(window, "custom_date_input"):
@@ -1725,12 +1756,7 @@ def apply_modern_calendar(window):
         cal2.setStyleSheet(CALENDAR_QSS)
         window.custom_date_input.setCalendarWidget(cal2)
         setattr(window, "_modern_calendar_widget_custom", cal2)
-        if hasattr(window, "attach_holiday_lookup_calendar"):
-            window.attach_holiday_lookup_calendar(cal2, window.custom_date_input, "Custom Holiday Date")
         attached = True
-
-    if attached and hasattr(window, "update_lookup_display") and hasattr(window, "holiday_date_input"):
-        window.update_lookup_display(window.holiday_date_input.date().toPyDate(), "Planner Holiday Date")
 
     if not attached:
         print("Warning: PlannerWindow has no date inputs ('holiday_date_input' or 'custom_date_input') to wire calendar.")
