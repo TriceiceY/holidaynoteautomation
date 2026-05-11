@@ -364,9 +364,13 @@ class HolidayLookupDateEdit(QDateEdit):
         super().__init__(owner)
         self.owner = owner
         self.lookup_popup = HolidayLookupPopup(owner, owner)
+        self.setCalendarPopup(False)
+
+    def open_lookup_popup(self):
+        self.lookup_popup.open_for(self, self.date().toPyDate())
 
     def showPopup(self):
-        self.lookup_popup.open_for(self, self.date().toPyDate())
+        self.open_lookup_popup()
 
     def hidePopup(self):
         if self.lookup_popup.isVisible():
@@ -374,6 +378,23 @@ class HolidayLookupDateEdit(QDateEdit):
 
     def refresh_popup_if_open(self):
         self.lookup_popup.refresh_if_open(self.date().toPyDate())
+
+    def mousePressEvent(self, event):
+        if event.button() == Qt.MouseButton.LeftButton:
+            self.open_lookup_popup()
+            event.accept()
+            return
+        super().mousePressEvent(event)
+
+    def keyPressEvent(self, event):
+        if (
+            event.key() in {Qt.Key.Key_Return, Qt.Key.Key_Enter, Qt.Key.Key_Space}
+            or (event.key() == Qt.Key.Key_Down and event.modifiers() & Qt.KeyboardModifier.AltModifier)
+        ):
+            self.open_lookup_popup()
+            event.accept()
+            return
+        super().keyPressEvent(event)
 
 
 class PlannerWindow(QMainWindow):
@@ -449,7 +470,6 @@ class PlannerWindow(QMainWindow):
         self.user_input.setFixedWidth(160)
 
         self.holiday_date_input = HolidayLookupDateEdit(self)
-        self.holiday_date_input.setCalendarPopup(True)
         self.holiday_date_input.setDisplayFormat("yyyy-MM-dd")
         self.holiday_date_input.setDate(QDate.currentDate())
         self.holiday_date_input.setFixedWidth(140)
