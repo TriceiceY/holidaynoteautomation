@@ -1405,10 +1405,15 @@ class PlannerWindow(QMainWindow):
     def group_rows_by_target_date(self, rows):
         grouped = defaultdict(list)
         for row in rows:
-            original_scheduling_date = (row.get("original_scheduling_date") or "").strip()
-            if not original_scheduling_date:
+            # Candidate rows are still keyed by target_date before the final
+            # planner-row normalization step renames that field for display/export.
+            date_key = (
+                (row.get("target_date") or "").strip()
+                or (row.get("original_scheduling_date") or "").strip()
+            )
+            if not date_key:
                 continue
-            grouped[original_scheduling_date].append(row)
+            grouped[date_key].append(row)
         return grouped
 
     def choose_rows_by_date_source(self, actual_rows, template_rows, holiday_date, days_before, days_after):
