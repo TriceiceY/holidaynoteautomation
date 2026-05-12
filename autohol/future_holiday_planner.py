@@ -168,7 +168,7 @@ def build_planner_rows(candidate_rows, planner_user, selected_date, days_before=
             
 
             "templateID": row.get("templateID", ""),
-            "target_date": row.get("target_date", ""),
+            "original_scheduling_date": row.get("target_date", ""),
             "time": row.get("time", ""),
             "database": row.get("database", ""),
             "country": row.get("country", ""),
@@ -194,19 +194,31 @@ def build_planner_rows(candidate_rows, planner_user, selected_date, days_before=
 
 
 def write_planner_log_json(path, rows):
-    folder = os.path.dirname(path)
-    if folder:
-        os.makedirs(folder, exist_ok=True)
-
+    os.makedirs(path, exist_ok=True)
     excluded_keys = {"_row_id"}
-    cleaned_rows = [
-            {k: v for k, v in row.items() if k not in excluded_keys}
-            for row in rows
-    ]
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(cleaned_rows, f, ensure_ascii=False, indent=2)
+    written = 0
 
-    return len(cleaned_rows)
+    for row in rows:
+        cleaned_row = {k: v for k, v in row.items() if k not in excluded_keys}
+        original_scheduling_date = (cleaned_row.get("original_scheduling_date") or "").strip() or "unknown-date"
+        entry_source = (cleaned_row.get("entry_source") or "").strip().lower()
+        if entry_source == "actual":
+            source_value = cleaned_row.get("actual_record_id", "")
+            source_label = "actual"
+        else:
+            source_value = cleaned_row.get("templateID", "")
+            source_label = "template"
+
+        if not str(source_value).strip():
+            source_value = row.get("_row_id", "unknown")
+
+        filename = f"{original_scheduling_date}_{source_label}_{source_value}.json"
+        file_path = os.path.join(path, filename)
+        with open(file_path, "w", encoding="utf-8") as f:
+            json.dump(cleaned_row, f, ensure_ascii=False, indent=2)
+        written += 1
+
+    return written
 
 
 def write_planner_log_csv(path, rows):
@@ -232,7 +244,7 @@ def write_planner_log_csv(path, rows):
         "holiday_date",
         "holiday_name",
         "holiday_type",
-        "target_date",
+        "original_scheduling_date",
         "planned_action",
         "planned_note",
         "move_mode",
