@@ -642,7 +642,7 @@ class PlannerWindow(QMainWindow):
         self.table = QTableWidget()
         self.table.setColumnCount(15)
         self.table.setHorizontalHeaderLabels([
-            "target_date",
+            "original_scheduling_date",
             "source",
             "time",
             "database",
@@ -769,9 +769,9 @@ class PlannerWindow(QMainWindow):
 
     def rebuild_date_pages_from_filtered(self):
         self.page_dates = sorted({
-            row.get("target_date", "")
+            row.get("original_scheduling_date", "")
             for row in self.filtered_planner_rows
-            if row.get("target_date", "")
+            if row.get("original_scheduling_date", "")
         })
 
         self.current_page_index = 0
@@ -793,7 +793,7 @@ class PlannerWindow(QMainWindow):
             return []
         return [
             row for row in self.filtered_planner_rows
-            if row.get("target_date", "") == current_date
+            if row.get("original_scheduling_date", "") == current_date
         ]
 
     def load_current_page(self):
@@ -861,7 +861,7 @@ class PlannerWindow(QMainWindow):
 
         for row_idx, row in enumerate(rows):
             values = [
-                row.get("target_date", ""),
+                row.get("original_scheduling_date", ""),
                 self.format_entry_source(row),
                 row.get("time", ""),
                 row.get("database", ""),
@@ -930,7 +930,7 @@ class PlannerWindow(QMainWindow):
 
     def get_table_column_field_map(self):
         return {
-            0: "target_date",
+            0: "original_scheduling_date",
             1: "entry_source",
             2: "time",
             3: "database",
@@ -998,7 +998,7 @@ class PlannerWindow(QMainWindow):
                     return (0, parsed.time(), row.get("_row_id", 0))
                 return (1, (value or "").strip().lower(), row.get("_row_id", 0))
 
-            if sort_field in {"target_date", "holiday_date", "move_to_date"}:
+            if sort_field in {"original_scheduling_date", "holiday_date", "move_to_date"}:
                 text = (value or "").strip()
                 if text:
                     try:
@@ -1405,10 +1405,10 @@ class PlannerWindow(QMainWindow):
     def group_rows_by_target_date(self, rows):
         grouped = defaultdict(list)
         for row in rows:
-            target_date = (row.get("target_date") or "").strip()
-            if not target_date:
+            original_scheduling_date = (row.get("original_scheduling_date") or "").strip()
+            if not original_scheduling_date:
                 continue
-            grouped[target_date].append(row)
+            grouped[original_scheduling_date].append(row)
         return grouped
 
     def choose_rows_by_date_source(self, actual_rows, template_rows, holiday_date, days_before, days_after):
@@ -1649,11 +1649,11 @@ class PlannerWindow(QMainWindow):
         return next_day
 
     def resolve_move_to_date(self, row, move_mode):
-        row_target_date = row.get("target_date", "")
-        if not row_target_date:
+        original_scheduling_date = row.get("original_scheduling_date", "")
+        if not original_scheduling_date:
             return ""
 
-        base_date = datetime.strptime(row_target_date, "%Y-%m-%d").date()
+        base_date = datetime.strptime(original_scheduling_date, "%Y-%m-%d").date()
 
         if move_mode == "specific_date":
             return self.move_date_input.date().toString("yyyy-MM-dd")
@@ -1684,13 +1684,13 @@ class PlannerWindow(QMainWindow):
 
         lines = []
         for row in rows:
-            target_date = (row.get("target_date") or "").strip() or "-"
+            original_scheduling_date = (row.get("original_scheduling_date") or "").strip() or "-"
             database = (row.get("database") or "").strip() or "-"
             country = (row.get("country") or "").strip() or "-"
             group = (row.get("group") or "").strip() or "-"
             update = (row.get("update") or "").strip() or "-"
             lines.append(
-                f"{target_date} | {database} | {country} | {group} | {update}"
+                f"{original_scheduling_date} | {database} | {country} | {group} | {update}"
             )
 
         return "\n".join(lines)
@@ -1894,14 +1894,14 @@ class PlannerWindow(QMainWindow):
             return
 
         try:
-            json_path, csv_path = self.get_output_log_paths()
-            json_count = write_planner_log_json(json_path, action_rows)
+            json_root, csv_path = self.get_output_log_paths()
+            json_count = write_planner_log_json(json_root, action_rows)
             csv_count = write_planner_log_csv(csv_path, action_rows)
 
             QMessageBox.information(
                 self,
                 "Planner Log Saved",
-                f"Saved {json_count} rows to JSON:\n{json_path}\n\nSaved {csv_count} rows to CSV:\n{csv_path}",
+                f"Saved {json_count} JSON files to:\n{json_root}\n\nSaved {csv_count} rows to CSV:\n{csv_path}",
             )
         except Exception as e:
             QMessageBox.critical(self, "Save failed", str(e))
@@ -1915,7 +1915,7 @@ class PlannerWindow(QMainWindow):
         os.makedirs(json_dir, exist_ok=True)
         os.makedirs(csv_dir, exist_ok=True)
 
-        json_path = os.path.join(json_dir, f"autohol_planner_log_{user_part}.json")
+        json_path = os.path.join(json_dir, user_part)
         csv_path = os.path.join(csv_dir, f"autohol_planner_log_{user_part}.csv")
         return json_path, csv_path
 
