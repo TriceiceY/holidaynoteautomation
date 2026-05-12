@@ -1011,25 +1011,10 @@ class PlannerWindow(QMainWindow):
 
         return sorted(rows, key=sort_key, reverse=reverse)
 
-    def require_planner_user_for_custom_holidays(self):
-        planner_user = self.user_input.text().strip()
-        if not planner_user:
-            QMessageBox.warning(
-                self,
-                "Missing user",
-                "Please enter Planner User before adding or importing custom holidays.",
-            )
-            return False
-        return True
-
     def get_custom_holiday_path(self):
-        planner_user = self.user_input.text().strip().lower()
         base_folder = r"F:\intdaily\autohol\custom_hol"
         os.makedirs(base_folder, exist_ok=True)
-
-        if not planner_user:
-            return os.path.join(base_folder, "custom_holidays_default.json")
-        return os.path.join(base_folder, f"custom_holidays_{planner_user}.json")
+        return os.path.join(base_folder, "custom_holidays_global.json")
 
     def load_custom_holidays(self):
         path = self.get_custom_holiday_path()
@@ -1050,10 +1035,32 @@ class PlannerWindow(QMainWindow):
         with open(path, "w", encoding="utf-8") as f:
             json.dump(holidays, f, ensure_ascii=False, indent=2)
 
-    def add_custom_holiday(self):
-        if not self.require_planner_user_for_custom_holidays():
-            return
+    def find_existing_custom_holiday(self, holidays, country, holiday_date, holiday_name):
+        normalized_country = normalize_country(country)
+        normalized_date = (holiday_date or "").strip()
+        normalized_name = (holiday_name or "").strip()
 
+        for item in holidays:
+            existing_country = normalize_country(item.get("country", ""))
+            existing_date = (item.get("holiday_date") or "").strip()
+            existing_name = (item.get("holiday_name") or "").strip()
+            if (
+                existing_country == normalized_country
+                and existing_date == normalized_date
+                and existing_name == normalized_name
+            ):
+                return item
+        return None
+
+    def format_custom_holiday_summary(self, holiday):
+        return (
+            f"Country: {(holiday.get('country') or '').strip()}\n"
+            f"Holiday Date: {(holiday.get('holiday_date') or '').strip()}\n"
+            f"Holiday Name: {(holiday.get('holiday_name') or '').strip()}\n"
+            f"Holiday Observance: {(holiday.get('holiday_observance') or '').strip()}"
+        )
+
+    def add_custom_holiday(self):
         country = self.custom_country_input.text().strip()
         holiday_date = self.custom_date_input.date().toString("yyyy-MM-dd")
         holiday_name = self.custom_name_input.text().strip()
@@ -1073,16 +1080,16 @@ class PlannerWindow(QMainWindow):
             QMessageBox.warning(self, "Invalid date", "Holiday Date must be in yyyy-MM-dd format.")
             return
 
-        new_country = normalize_country(country)
         holidays = self.load_custom_holidays()
-
-        for item in holidays:
-            existing_country = normalize_country(item.get("country", ""))
-            existing_date = (item.get("holiday_date") or "").strip()
-            existing_name = (item.get("holiday_name") or "").strip()
-            if existing_country == new_country and existing_date == holiday_date and existing_name == holiday_name:
-                QMessageBox.warning(self, "Duplicate holiday", "This exact custom holiday already exists for this user.")
-                return
+        existing_holiday = self.find_existing_custom_holiday(holidays, country, holiday_date, holiday_name)
+        if existing_holiday:
+            QMessageBox.warning(
+                self,
+                "Duplicate shared custom holiday",
+                "This shared custom holiday already exists in the global file.\n\n"
+                + self.format_custom_holiday_summary(existing_holiday),
+            )
+            return
 
         holidays.append(
             {
@@ -1099,8 +1106,8 @@ class PlannerWindow(QMainWindow):
             self.save_custom_holidays(holidays)
             QMessageBox.information(
                 self,
-                "Custom Holiday Added",
-                f"Added custom holiday:\n{country} | {holiday_date} | {holiday_name} | {holiday_observance}",
+                "Shared Custom Holiday Added",
+                f"Added shared custom holiday:\n{country} | {holiday_date} | {holiday_name} | {holiday_observance}",
             )
             self.custom_country_input.clear()
             self.custom_name_input.clear()
@@ -1137,9 +1144,6 @@ class PlannerWindow(QMainWindow):
         return holiday_dict
 
     def import_custom_holiday_csv(self):
-        if not self.require_planner_user_for_custom_holidays():
-            return
-
         file_path, _ = QFileDialog.getOpenFileName(self, "Select Custom Holiday CSV", "", "CSV Files (*.csv)")
         if not file_path:
             return
@@ -1211,7 +1215,11 @@ class PlannerWindow(QMainWindow):
                     added_count += 1
 
             self.save_custom_holidays(existing_holidays)
-            QMessageBox.information(self, "Import Complete", f"Imported {added_count} new custom holiday rows.")
+            QMessageBox.information(
+                self,
+                "Import Complete",
+                f"Imported {added_count} new shared custom holiday rows.",
+            )
             self.refresh_all_holiday_lookup_calendars()
         except Exception as e:
             QMessageBox.critical(self, "Import Error", f"Failed to import custom holiday CSV:\n{e}")
