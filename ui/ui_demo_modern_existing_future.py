@@ -570,6 +570,7 @@ class PlannerWindow(QMainWindow):
         self.summary_holiday = QLabel("Holiday Date: -")
         self.summary_window = QLabel("Window: -")
         self.summary_rows = QLabel("Rows Loaded: 0")
+        self.summary_sources = QLabel("Sources: -")
         self.summary_selected = QLabel("Rows Selected: 0")
         self.summary_actions = QLabel("Rows with Actions: 0")
 
@@ -577,6 +578,7 @@ class PlannerWindow(QMainWindow):
         layout.addWidget(self.summary_holiday)
         layout.addWidget(self.summary_window)
         layout.addWidget(self.summary_rows)
+        layout.addWidget(self.summary_sources)
         layout.addWidget(self.summary_selected)
         layout.addWidget(self.summary_actions)
         layout.addStretch()
@@ -638,9 +640,10 @@ class PlannerWindow(QMainWindow):
         layout = QVBoxLayout()
 
         self.table = QTableWidget()
-        self.table.setColumnCount(14)
+        self.table.setColumnCount(15)
         self.table.setHorizontalHeaderLabels([
             "target_date",
+            "source",
             "time",
             "database",
             "country",
@@ -838,12 +841,28 @@ class PlannerWindow(QMainWindow):
             self.current_page_index = self.holiday_page_index
             self.load_current_page()
 
+    def format_entry_source(self, row):
+        entry_source = (row.get("entry_source") or "template").strip().lower()
+        if entry_source == "actual":
+            return "Actual Calendar"
+        return "Future Template"
+
+    def get_entry_source_tooltip(self, row):
+        entry_source = (row.get("entry_source") or "template").strip().lower()
+        if entry_source == "actual":
+            record_id = row.get("actual_record_id", "")
+            return f"AutoCalendar record ID: {record_id}" if record_id else "AutoCalendar record"
+
+        template_id = row.get("templateID", "")
+        return f"Generated from DW template: {template_id}" if template_id else "Generated from DW template"
+
     def load_rows_into_table(self, rows):
         self.table.setRowCount(len(rows))
 
         for row_idx, row in enumerate(rows):
             values = [
                 row.get("target_date", ""),
+                self.format_entry_source(row),
                 row.get("time", ""),
                 row.get("database", ""),
                 row.get("country", ""),
@@ -859,7 +878,10 @@ class PlannerWindow(QMainWindow):
                 row.get("move_to_time", ""),
             ]
             for col_idx, value in enumerate(values):
-                self.table.setItem(row_idx, col_idx, QTableWidgetItem(str(value)))
+                item = QTableWidgetItem(str(value))
+                if col_idx == 1:
+                    item.setToolTip(self.get_entry_source_tooltip(row))
+                self.table.setItem(row_idx, col_idx, item)
 
     def get_selected_row_indexes(self):
         selected = self.table.selectionModel().selectedRows()
@@ -871,6 +893,22 @@ class PlannerWindow(QMainWindow):
     def update_action_count(self):
         count = sum(1 for row in self.planner_rows if row.get("planned_action", "").strip())
         self.summary_actions.setText(f"Rows with Actions: {count}")
+
+    def update_source_count(self):
+        actual_count = 0
+        template_count = 0
+        for row in self.planner_rows:
+            entry_source = (row.get("entry_source") or "template").strip().lower()
+            if entry_source == "actual":
+                actual_count += 1
+            else:
+                template_count += 1
+
+        if not self.planner_rows:
+            self.summary_sources.setText("Sources: -")
+            return
+
+        self.summary_sources.setText(f"Sources: Actual {actual_count} | Template {template_count}")
 
     def handle_table_double_click(self, row, column):
         header = self.table.horizontalHeaderItem(column).text()
@@ -893,19 +931,20 @@ class PlannerWindow(QMainWindow):
     def get_table_column_field_map(self):
         return {
             0: "target_date",
-            1: "time",
-            2: "database",
-            3: "country",
-            4: "group",
-            5: "update",
-            6: "procedures",
-            7: "holiday_name",
-            8: "holiday_type",
-            9: "planned_action",
-            10: "planned_note",
-            11: "move_mode",
-            12: "move_to_date",
-            13: "move_to_time",
+            1: "entry_source",
+            2: "time",
+            3: "database",
+            4: "country",
+            5: "group",
+            6: "update",
+            7: "procedures",
+            8: "holiday_name",
+            9: "holiday_type",
+            10: "planned_action",
+            11: "planned_note",
+            12: "move_mode",
+            13: "move_to_date",
+            14: "move_to_time",
         }
 
     def handle_header_sort(self, column_index):
@@ -1324,6 +1363,7 @@ class PlannerWindow(QMainWindow):
         self.summary_holiday.setText("Holiday Date: -")
         self.summary_window.setText("Window: -")
         self.summary_rows.setText("Rows Loaded: 0")
+        self.summary_sources.setText("Sources: -")
         self.summary_selected.setText("Rows Selected: 0")
         self.summary_actions.setText("Rows with Actions: 0")
 
@@ -1421,6 +1461,7 @@ class PlannerWindow(QMainWindow):
             self.summary_window.setText(f"Window: {window_start.isoformat()} to {window_end.isoformat()}")
             self.summary_rows.setText(f"Rows Loaded: {len(self.planner_rows)}")
             self.summary_selected.setText("Rows Selected: 0")
+            self.update_source_count()
             self.update_action_count()
 
             if planner_user and not combined_base_entries:
