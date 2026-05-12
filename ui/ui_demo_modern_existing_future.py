@@ -1317,7 +1317,8 @@ class PlannerWindow(QMainWindow):
 
     def load_actual_dw_entries_with_assignments(self, start_date, end_date):
         autocalendar = Autocalendar()
-        sql_rows = autocalendar.get_actual_dw_records(start_date, end_date, done_only=True)
+        # A row is actual once it exists in tblcalendar_dw_records; fdDone is only status metadata.
+        sql_rows = autocalendar.get_actual_dw_records(start_date, end_date, done_only=False)
         entries = autocalendar.parse_actual_records(sql_rows)
         assignment_loader = Assignments()
         return assignment_loader.assign(entries, attach=True)
