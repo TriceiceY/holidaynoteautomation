@@ -1060,6 +1060,68 @@ class PlannerWindow(QMainWindow):
             f"Holiday Observance: {(holiday.get('holiday_observance') or '').strip()}"
         )
 
+    def get_existing_holidays_for_country_date(self, country, holiday_date, custom_holidays):
+        country_key = normalize_country(country)
+        try:
+            hdate = datetime.strptime(holiday_date, "%Y-%m-%d").date()
+        except ValueError:
+            return []
+
+        matches = []
+        default_holidays = load_holiday_records(self.default_holiday_path)
+        for holiday in default_holidays.get(country_key, {}).get(hdate, []):
+            matches.append({
+                "country": country_key,
+                "holiday_date": holiday_date,
+                "holiday_name": (holiday.get("holiday_name") or "").strip(),
+                "holiday_observance": (holiday.get("holiday_type") or "").strip(),
+                "source": "default",
+            })
+
+        for item in custom_holidays:
+            existing_country = normalize_country(item.get("country", ""))
+            existing_date = (item.get("holiday_date") or "").strip()
+            if existing_country != country_key or existing_date != holiday_date:
+                continue
+            matches.append({
+                "country": (item.get("country") or "").strip(),
+                "holiday_date": existing_date,
+                "holiday_name": (item.get("holiday_name") or "").strip(),
+                "holiday_observance": (item.get("holiday_observance") or "").strip(),
+                "source": (item.get("source") or "custom").strip(),
+            })
+
+        return matches
+
+    def format_existing_holiday_lines(self, holidays):
+        lines = []
+        for holiday in holidays:
+            lines.append(
+                f"{holiday.get('country', '')} | "
+                f"{holiday.get('holiday_date', '')} | "
+                f"{holiday.get('holiday_name', '')} | "
+                f"{holiday.get('holiday_observance', '')} | "
+                f"{holiday.get('source', '')}"
+            )
+        return "\n".join(lines)
+
+    def confirm_possible_duplicate_holiday(self, country, holiday_date, holiday_name, existing_holidays):
+        message = QMessageBox(self)
+        message.setIcon(QMessageBox.Icon.Warning)
+        message.setWindowTitle("Possible duplicate holiday")
+        message.setText(
+            "A holiday already exists for this country and date.\n\n"
+            f"New holiday:\n{country} | {holiday_date} | {holiday_name}\n\n"
+            "Existing holiday records:\n"
+            f"{self.format_existing_holiday_lines(existing_holidays)}\n\n"
+            "Do you want to add this shared custom holiday anyway?"
+        )
+        continue_button = message.addButton("Continue", QMessageBox.ButtonRole.AcceptRole)
+        message.addButton(QMessageBox.StandardButton.Cancel)
+        message.setDefaultButton(QMessageBox.StandardButton.Cancel)
+        message.exec()
+        return message.clickedButton() == continue_button
+
     def add_custom_holiday(self):
         country = self.custom_country_input.text().strip()
         holiday_date = self.custom_date_input.date().toString("yyyy-MM-dd")
@@ -1089,6 +1151,15 @@ class PlannerWindow(QMainWindow):
                 "This shared custom holiday already exists in the global file.\n\n"
                 + self.format_custom_holiday_summary(existing_holiday),
             )
+            return
+
+        existing_same_date_holidays = self.get_existing_holidays_for_country_date(country, holiday_date, holidays)
+        if existing_same_date_holidays and not self.confirm_possible_duplicate_holiday(
+            country,
+            holiday_date,
+            holiday_name,
+            existing_same_date_holidays,
+        ):
             return
 
         holidays.append(
