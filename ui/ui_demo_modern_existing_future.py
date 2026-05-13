@@ -217,6 +217,11 @@ class HolidayLookupPopup(QDialog):
         self.prev_button = QPushButton("Previous Month")
         self.next_button = QPushButton("Next Month")
         self.month_label = QLabel("Month: -")
+        month_font = self.month_label.font()
+        month_font.setBold(True)
+        month_font.setPointSize(month_font.pointSize() + 1)
+        self.month_label.setFont(month_font)
+        self.month_label.setStyleSheet("color: #1f3f75;")
         self.scope_label = QLabel("Managed Countries: -")
         self.scope_label.setWordWrap(True)
 
@@ -242,19 +247,7 @@ class HolidayLookupPopup(QDialog):
         for row_index in range(6):
             self.month_table.setRowHeight(row_index, 86)
 
-        self.hint_label = QLabel(
-            "Click a day to set Holiday Date. Holidays shown depend on the current Planner User."
-        )
-        self.hint_label.setWordWrap(True)
-
-        layout.addLayout(header_layout)
-        layout.addWidget(self.month_table)
-        layout.addWidget(self.hint_label)
-
-        self.prev_button.clicked.connect(lambda: self.shift_month(-1))
-        self.next_button.clicked.connect(lambda: self.shift_month(1))
-        self.month_table.cellClicked.connect(self.handle_cell_clicked)
-
+            
     def open_for(self, anchor_widget, selected_date):
         self.selected_date = selected_date
         self.visible_month_date = selected_date.replace(day=1)
@@ -656,8 +649,9 @@ class PlannerWindow(QMainWindow):
         layout = QVBoxLayout()
 
         self.table = QTableWidget()
-        self.table.setColumnCount(15)
+        self.table.setColumnCount(16)
         self.table.setHorizontalHeaderLabels([
+            "select",
             "original_scheduling_date",
             "source",
             "time",
@@ -876,6 +870,15 @@ class PlannerWindow(QMainWindow):
         self.table.setRowCount(len(rows))
 
         for row_idx, row in enumerate(rows):
+            checkbox_item = QTableWidgetItem("")
+            checkbox_item.setFlags(
+                Qt.ItemFlag.ItemIsEnabled
+                | Qt.ItemFlag.ItemIsUserCheckable
+                | Qt.ItemFlag.ItemIsSelectable
+            )
+            checkbox_item.setCheckState(Qt.CheckState.Unchecked)
+            self.table.setItem(row_idx, 0, checkbox_item)
+
             values = [
                 row.get("original_scheduling_date", ""),
                 self.format_entry_source(row),
@@ -897,11 +900,21 @@ class PlannerWindow(QMainWindow):
                 item = QTableWidgetItem(str(value))
                 if col_idx == 1:
                     item.setToolTip(self.get_entry_source_tooltip(row))
-                self.table.setItem(row_idx, col_idx, item)
+                self.table.setItem(row_idx, col_idx + 1, item)
+
+    def get_checked_row_indexes(self):
+        checked = []
+        for row_index in range(self.table.rowCount()):
+            item = self.table.item(row_index, 0)
+            if item and item.checkState() == Qt.CheckState.Checked:
+                checked.append(row_index)
+        return checked
 
     def get_selected_row_indexes(self):
         selected = self.table.selectionModel().selectedRows()
-        return sorted(index.row() for index in selected)
+        selected_rows = {index.row() for index in selected}
+        selected_rows.update(self.get_checked_row_indexes())
+        return sorted(selected_rows)
 
     def update_selected_count(self):
         self.summary_selected.setText(f"Rows Selected: {len(self.get_selected_row_indexes())}")
