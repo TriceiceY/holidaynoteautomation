@@ -282,9 +282,18 @@ class HolidayLookupPopup(QDialog):
 
     def build_day_cell_text(self, target_date, day_matches):
         lines = [str(target_date.day)]
-        if day_matches:
-            first_match = day_matches[0]
-            lines.append(f"{first_match['country']} | {first_match['holiday_name']}")
+
+        if not day_matches:
+            return "\n".join(lines)
+
+        preview_matches = day_matches[:2]
+        for match in preview_matches:
+            lines.append(f"{match['country']} | {match['holiday_name']}")
+
+        remaining_count = len(day_matches) - len(preview_matches)
+        if remaining_count > 0:
+            lines.append(f"+{remaining_count} more")
+
         return "\n".join(lines)
 
     def build_day_tooltip(self, day_matches):
@@ -319,12 +328,19 @@ class HolidayLookupPopup(QDialog):
         month = self.visible_month_date.month
         month_matches = self.owner.build_lookup_month_matches(year, month)
         relevant_countries = self.owner.get_lookup_relevant_countries()
+        country_count = len(relevant_countries)
+        countries_csv = ", ".join(relevant_countries)
 
         self.month_label.setText(f"Month: {self.visible_month_date.strftime('%B %Y')}")
-        if relevant_countries:
-            self.scope_label.setText("Managed Countries: " + ", ".join(relevant_countries))
-        else:
+        if country_count == 0:
             self.scope_label.setText("Managed Countries: None")
+            self.scope_label.setToolTip("")
+        elif country_count == 1:
+            self.scope_label.setText(f"Managed Countries: 1 country ({countries_csv})")
+            self.scope_label.setToolTip(countries_csv)
+        else:
+            self.scope_label.setText(f"Managed Countries: {country_count} countries")
+            self.scope_label.setToolTip(countries_csv)
 
         self.month_table.clearContents()
 
@@ -1920,7 +1936,7 @@ class PlannerWindow(QMainWindow):
         os.makedirs(json_dir, exist_ok=True)
         os.makedirs(csv_dir, exist_ok=True)
 
-        json_path = os.path.join(json_dir, user_part)
+        json_path = json_dir
         csv_path = os.path.join(csv_dir, f"autohol_planner_log_{user_part}.csv")
         return json_path, csv_path
 
