@@ -42,7 +42,7 @@ from PyQt6.QtWidgets import (
     QWidget,
 )
 
-from autohol.holidays import add_holiday_record, load_holiday_records
+from autohol.holidays import DEFAULT_HOLIDAY_CSV_PATH, add_holiday_record, load_holiday_records
 from autohol.future_holiday_planner import (
     annotate_holiday_context,
     build_planner_rows,
@@ -442,7 +442,7 @@ class PlannerWindow(QMainWindow):
         self.setWindowTitle("AutoHoliday Planner")
         self.resize(1400, 900)
 
-        self.default_holiday_path = r"F:/intdaily/autohol/Q++ Worldwide Public Holidays ISO-2026.CSV"
+        self.default_holiday_path = DEFAULT_HOLIDAY_CSV_PATH
 
         self.planner_rows = []
         self.filtered_planner_rows = []

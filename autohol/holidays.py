@@ -4,6 +4,9 @@ import csv
 from datetime import datetime, timedelta
 
 
+DEFAULT_HOLIDAY_CSV_PATH = r"F:\intdaily\autohol\Q++ Worldwide Public Holidays ISO-2026.CSV"
+
+
 COUNTRY_TRANSLATE_DICT = {
     "bosnia and herzegovina": ["bosnia", "bosnia & herzegovina"],
     "south korea": ["korea"],
