@@ -1,0 +1,38 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+.venv*/
+venv/
+env/
+ENV/
+
+# Local editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local runtime/cache output
+cache/
+data/planner_logs/
+
+# Local/private data sources
+# Keep sample data in Git only if it is safe to publish.
+data/*.CSV
+data/*.csv
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Archives and backups
+ui/ui_demo.py
+ui/ui_demo_modern.py
