@@ -10,12 +10,13 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-from PyQt6.QtCore import QDate, QPoint, QTime, Qt
+from PyQt6.QtCore import QDate, QItemSelectionModel, QPoint, QTime, Qt
 from PyQt6.QtGui import QColor
 from PyQt6.QtWidgets import (
     QApplication,
     QAbstractItemView,
     QCalendarWidget,
+    QCheckBox,
     QComboBox,
     QDateEdit,
     QDialog,
@@ -214,11 +215,32 @@ class HolidayLookupPopup(QDialog):
         layout = QVBoxLayout(self)
 
         header_layout = QHBoxLayout()
+        header_layout.setSpacing(12)
         self.prev_button = QPushButton("Previous Month")
         self.next_button = QPushButton("Next Month")
         self.month_label = QLabel("Month: -")
+        self.month_label.setMinimumWidth(170)
+        self.month_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.month_label.setStyleSheet("""
+            QLabel {
+                background: #eef4ff;
+                border: 1px solid #bfd3f5;
+                border-radius: 6px;
+                color: #16345f;
+                font-size: 14px;
+                font-weight: 700;
+                padding: 8px 12px;
+            }
+        """)
         self.scope_label = QLabel("Managed Countries: -")
         self.scope_label.setWordWrap(True)
+        self.scope_label.setMinimumWidth(230)
+        self.scope_label.setStyleSheet("""
+            QLabel {
+                color: #26374d;
+                padding-left: 10px;
+            }
+        """)
 
         header_layout.addWidget(self.prev_button)
         header_layout.addWidget(self.next_button)
@@ -286,6 +308,7 @@ class HolidayLookupPopup(QDialog):
         if not day_matches:
             return "\n".join(lines)
 
+        lines.append("")
         preview_matches = day_matches[:2]
         for match in preview_matches:
             lines.append(f"{match['country']} | {match['holiday_name']}")
@@ -429,6 +452,8 @@ class PlannerWindow(QMainWindow):
         self.holiday_page_index = 0
         self.current_sort_field = ""
         self.current_sort_order = "ascending"
+        self.select_column_index = 0
+        self._syncing_selection_checkboxes = False
         self._holiday_lookup_dw_entries = None
 
         self.selected_database_filters = set()
@@ -468,7 +493,7 @@ class PlannerWindow(QMainWindow):
         self.holiday_type_filter_button.clicked.connect(self.open_holiday_type_filter_popup)
         self.clear_all_filters_button.clicked.connect(self.clear_all_filters)
         self.save_button.clicked.connect(self.save_planner_log)
-        self.table.itemSelectionChanged.connect(self.update_selected_count)
+        self.table.itemSelectionChanged.connect(self.handle_table_selection_changed)
         self.table.cellDoubleClicked.connect(self.handle_table_double_click)
         self.user_input.textChanged.connect(self.refresh_all_holiday_lookup_calendars)
         self.holiday_date_input.dateChanged.connect(self.refresh_all_holiday_lookup_calendars)
@@ -656,8 +681,9 @@ class PlannerWindow(QMainWindow):
         layout = QVBoxLayout()
 
         self.table = QTableWidget()
-        self.table.setColumnCount(15)
+        self.table.setColumnCount(16)
         self.table.setHorizontalHeaderLabels([
+            "Select",
             "original_scheduling_date",
             "source",
             "time",
@@ -681,6 +707,13 @@ class PlannerWindow(QMainWindow):
         self.table.setAlternatingRowColors(True)
         self.table.setWordWrap(False)
         self.table.verticalHeader().setVisible(False)
+        self.table.verticalHeader().setDefaultSectionSize(34)
+        self.table.setStyleSheet("""
+            QCheckBox::indicator {
+                width: 22px;
+                height: 22px;
+            }
+        """)
 
         layout.addWidget(self.table)
         self.table_box.setLayout(layout)
@@ -691,6 +724,8 @@ class PlannerWindow(QMainWindow):
         header.setSortIndicatorShown(True)
         header.setSectionsClickable(True)
         header.setSortIndicator(-1, Qt.SortOrder.AscendingOrder)
+        header.setSectionResizeMode(self.select_column_index, QHeaderView.ResizeMode.Fixed)
+        self.table.setColumnWidth(self.select_column_index, 72)
 
     def build_action_section(self):
         self.action_box = QGroupBox("Action Editor")
@@ -873,9 +908,27 @@ class PlannerWindow(QMainWindow):
         return f"Generated from DW template: {template_id}" if template_id else "Generated from DW template"
 
     def load_rows_into_table(self, rows):
+        self.table.blockSignals(True)
         self.table.setRowCount(len(rows))
 
         for row_idx, row in enumerate(rows):
+            select_item = QTableWidgetItem()
+            select_item.setFlags(Qt.ItemFlag.ItemIsEnabled | Qt.ItemFlag.ItemIsSelectable)
+            self.table.setItem(row_idx, self.select_column_index, select_item)
+
+            select_checkbox = QCheckBox()
+            select_checkbox.setFocusPolicy(Qt.FocusPolicy.NoFocus)
+            select_checkbox.stateChanged.connect(
+                lambda state, checkbox_row=row_idx: self.handle_row_checkbox_changed(checkbox_row, state)
+            )
+
+            checkbox_container = QWidget()
+            checkbox_layout = QHBoxLayout(checkbox_container)
+            checkbox_layout.setContentsMargins(0, 0, 0, 0)
+            checkbox_layout.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            checkbox_layout.addWidget(select_checkbox)
+            self.table.setCellWidget(row_idx, self.select_column_index, checkbox_container)
+
             values = [
                 row.get("original_scheduling_date", ""),
                 self.format_entry_source(row),
@@ -897,11 +950,55 @@ class PlannerWindow(QMainWindow):
                 item = QTableWidgetItem(str(value))
                 if col_idx == 1:
                     item.setToolTip(self.get_entry_source_tooltip(row))
-                self.table.setItem(row_idx, col_idx, item)
+                self.table.setItem(row_idx, col_idx + 1, item)
+
+        self.table.clearSelection()
+        self.table.blockSignals(False)
+        self.sync_selection_checkboxes()
 
     def get_selected_row_indexes(self):
         selected = self.table.selectionModel().selectedRows()
         return sorted(index.row() for index in selected)
+
+    def sync_selection_checkboxes(self):
+        selected_rows = set(self.get_selected_row_indexes())
+        self._syncing_selection_checkboxes = True
+        for row_idx in range(self.table.rowCount()):
+            checkbox = self.get_row_checkbox(row_idx)
+            if checkbox is not None:
+                checkbox.setChecked(row_idx in selected_rows)
+        self._syncing_selection_checkboxes = False
+
+    def handle_table_selection_changed(self):
+        self.sync_selection_checkboxes()
+        self.update_selected_count()
+
+    def get_row_checkbox(self, row_idx):
+        container = self.table.cellWidget(row_idx, self.select_column_index)
+        if container is None:
+            return None
+        return container.findChild(QCheckBox)
+
+    def handle_row_checkbox_changed(self, row_idx, state):
+        if self._syncing_selection_checkboxes:
+            return
+
+        self.table.blockSignals(True)
+        if state == Qt.CheckState.Checked.value:
+            self.table.selectionModel().select(
+                self.table.model().index(row_idx, self.select_column_index),
+                QItemSelectionModel.SelectionFlag.Select
+                | QItemSelectionModel.SelectionFlag.Rows,
+            )
+        else:
+            self.table.selectionModel().select(
+                self.table.model().index(row_idx, self.select_column_index),
+                QItemSelectionModel.SelectionFlag.Deselect
+                | QItemSelectionModel.SelectionFlag.Rows,
+            )
+        self.table.blockSignals(False)
+        self.sync_selection_checkboxes()
+        self.update_selected_count()
 
     def update_selected_count(self):
         self.summary_selected.setText(f"Rows Selected: {len(self.get_selected_row_indexes())}")
@@ -946,21 +1043,21 @@ class PlannerWindow(QMainWindow):
 
     def get_table_column_field_map(self):
         return {
-            0: "original_scheduling_date",
-            1: "entry_source",
-            2: "time",
-            3: "database",
-            4: "country",
-            5: "group",
-            6: "update",
-            7: "procedures",
-            8: "holiday_name",
-            9: "holiday_type",
-            10: "planned_action",
-            11: "planned_note",
-            12: "move_mode",
-            13: "move_to_date",
-            14: "move_to_time",
+            1: "original_scheduling_date",
+            2: "entry_source",
+            3: "time",
+            4: "database",
+            5: "country",
+            6: "group",
+            7: "update",
+            8: "procedures",
+            9: "holiday_name",
+            10: "holiday_type",
+            11: "planned_action",
+            12: "planned_note",
+            13: "move_mode",
+            14: "move_to_date",
+            15: "move_to_time",
         }
 
     def handle_header_sort(self, column_index):
