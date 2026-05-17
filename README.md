@@ -1,8 +1,9 @@
 # AutoHoliday Planner
 
-AutoHoliday Planner is a PyQt6 desktop planning tool for upcoming holiday scheduling. It looks at AutoCalendar DW actual/template entries, matches them to EDM assignments, checks whether the selected date is a holiday for countries related to those entries, and builds a planner table for the holiday date plus a surrounding date window.
+AutoHoliday Planner is a planning tool for upcoming holiday scheduling. The planner helps EDMs review and prepare scheduling around holidays. It does not directly update the DW calendar. Instead, it creates planner output that can later be executed by AutoHub Airflow.
 
-The planner helps EDMs review and prepare scheduling around holidays. It does not directly update the DW calendar. Instead, it creates planner output that can later be executed by AutoHub Airflow.
+The program looks at AutoCalendar DW actual/template entries, matches them to EDM assignments, checks whether the selected date is a holiday for countries related to those entries, and builds a planner table for the holiday date plus a surrounding date window.
+
 
 ## Main Application
 
@@ -100,17 +101,9 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-On Windows PowerShell:
-
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-```
-
 ## Required Local Resources
 
-AutoHoliday Planner depends on local company/network resources:
+AutoHoliday Planner depends on Haver resources:
 
 - A MySQL ODBC driver available to `pyodbc`.
 - AutoCalendar database access.
