@@ -96,8 +96,6 @@ Only planner rows with actions are saved. Output is written as JSON and CSV:
 Use Python 3.11 or a compatible Python 3 version.
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
