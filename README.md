@@ -8,7 +8,7 @@ The program looks at AutoCalendar DW actual/template entries, matches them to ED
 ## Main Application
 
 ```bash
-python ui/ui_demo_modern_existing_future.py
+python ui/autohol_ui.py
 ```
 
 ## What It Helps With
@@ -117,9 +117,8 @@ If any default paths differ on your machine, update the relevant path in the UI 
 ## Project Scripts
 
 ```text
-ui/ui_demo_modern_existing_future.py  Main PyQt6 user interface.
+ui/autohol_ui.py                      Main PyQt6 user interface.
 autohol/holidays.py                   Holiday loading, country normalization, and holiday type helpers.
-autohol/dw_source_existing_future.py  AutoCalendar reads and assignment mapping.
+autohol/dw_source.py                  AutoCalendar reads and assignment mapping.
 autohol/future_holiday_planner.py     Planner row generation, filtering, annotation, and log writing.
-autohol/AutoStatsFunctions.py         Legacy/supporting AutoStats utilities.
 ```

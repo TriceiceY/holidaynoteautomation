@@ -56,7 +56,7 @@ from autohol.future_holiday_planner import (
     write_planner_log_csv,
     write_planner_log_json,
 )
-from autohol.dw_source_existing_future import Assignments, Autocalendar
+from autohol.dw_source import Assignments, Autocalendar
 
 
 MODERN_STYLE = """
