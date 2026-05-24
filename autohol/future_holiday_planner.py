@@ -177,6 +177,8 @@ def build_planner_rows(candidate_rows, planner_user, selected_date, days_before=
             "edm": row.get("edm", ""),
             "team": row.get("team", ""),
             "procedures": row.get("procedures", ""),
+            "notes": row.get("notes", ""),
+            "record_last_change": row.get("record_last_change", ""),
 
             "holiday_date": row.get("holiday_date", ""),
             "holiday_name": row.get("holiday_name", ""),
@@ -241,6 +243,8 @@ def write_planner_log_csv(path, rows):
         "edm",
         "team",
         "procedures",
+        "notes",
+        "record_last_change",
         "holiday_date",
         "holiday_name",
         "holiday_type",

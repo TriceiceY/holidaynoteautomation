@@ -681,7 +681,7 @@ class PlannerWindow(QMainWindow):
         layout = QVBoxLayout()
 
         self.table = QTableWidget()
-        self.table.setColumnCount(16)
+        self.table.setColumnCount(17)
         self.table.setHorizontalHeaderLabels([
             "Select",
             "original_scheduling_date",
@@ -692,6 +692,7 @@ class PlannerWindow(QMainWindow):
             "group",
             "update",
             "procedures",
+            "AutoCalendar Notes",
             "holiday_name",
             "holiday_type",
             "planned_action",
@@ -938,6 +939,7 @@ class PlannerWindow(QMainWindow):
                 row.get("group", ""),
                 row.get("update", ""),
                 row.get("procedures", ""),
+                row.get("notes", ""),
                 row.get("holiday_name", ""),
                 row.get("holiday_type", ""),
                 row.get("planned_action", ""),
@@ -950,6 +952,8 @@ class PlannerWindow(QMainWindow):
                 item = QTableWidgetItem(str(value))
                 if col_idx == 1:
                     item.setToolTip(self.get_entry_source_tooltip(row))
+                if col_idx == 8 and str(value).strip():
+                    item.setToolTip(str(value))
                 self.table.setItem(row_idx, col_idx + 1, item)
 
         self.table.clearSelection()
@@ -1051,13 +1055,14 @@ class PlannerWindow(QMainWindow):
             6: "group",
             7: "update",
             8: "procedures",
-            9: "holiday_name",
-            10: "holiday_type",
-            11: "planned_action",
-            12: "planned_note",
-            13: "move_mode",
-            14: "move_to_date",
-            15: "move_to_time",
+            9: "notes",
+            10: "holiday_name",
+            11: "holiday_type",
+            12: "planned_action",
+            13: "planned_note",
+            14: "move_mode",
+            15: "move_to_date",
+            16: "move_to_time",
         }
 
     def handle_header_sort(self, column_index):
@@ -1897,6 +1902,80 @@ class PlannerWindow(QMainWindow):
         )
         return result == QMessageBox.StandardButton.Save
 
+    def get_autohol_note_lines(self, notes):
+        lines = []
+        for line in str(notes or "").splitlines():
+            text = line.strip()
+            if text.upper().startswith("AUTOHOL:"):
+                lines.append(text)
+        return lines
+
+    def get_existing_note_action_rows(self, action_rows):
+        flagged_rows = []
+        for row in action_rows:
+            notes = (row.get("notes") or "").strip()
+            record_last_change = (row.get("record_last_change") or "").strip()
+            if notes or record_last_change:
+                flagged_rows.append(row)
+        return flagged_rows
+
+    def format_existing_note_warning_details(self, rows):
+        if not rows:
+            return ""
+
+        lines = []
+        max_rows = 10
+        for row in rows[:max_rows]:
+            original_scheduling_date = (row.get("original_scheduling_date") or "").strip() or "-"
+            database = (row.get("database") or "").strip() or "-"
+            group = (row.get("group") or "").strip() or "-"
+            update = (row.get("update") or "").strip() or "-"
+            record_id = (str(row.get("actual_record_id") or "").strip()) or "-"
+            planned_action = (row.get("planned_action") or "").strip() or "-"
+            record_last_change = (row.get("record_last_change") or "").strip() or "-"
+            autohol_lines = self.get_autohol_note_lines(row.get("notes"))
+
+            lines.append(
+                f"{original_scheduling_date} | {database} | {group} | {update} | "
+                f"record {record_id} | new action {planned_action} | last changed {record_last_change}"
+            )
+            if autohol_lines:
+                lines.append("Existing AUTOHOL notes:")
+                lines.extend(f"  {line}" for line in autohol_lines)
+            else:
+                notes = (row.get("notes") or "").strip()
+                if notes:
+                    lines.append("Existing notes: " + notes.replace("\n", " | "))
+            lines.append("")
+
+        remaining = len(rows) - max_rows
+        if remaining > 0:
+            lines.append(f"...and {remaining} more row(s).")
+
+        return "\n".join(lines).strip()
+
+    def confirm_existing_autocalendar_notes(self, action_rows):
+        existing_note_rows = self.get_existing_note_action_rows(action_rows)
+        if not existing_note_rows:
+            return True
+
+        message = (
+            "Some selected action rows already have AutoCalendar notes or record-change metadata.\n"
+            "The executor will preserve manual notes and replace previous AUTOHOL notes with the latest action note.\n\n"
+            f"Rows with existing record metadata: {len(existing_note_rows)}\n\n"
+            "date | database | group | update | record | new action | last changed\n"
+            f"{self.format_existing_note_warning_details(existing_note_rows)}\n\n"
+            "Do you want to continue saving these planner actions?"
+        )
+        result = QMessageBox.question(
+            self,
+            "Existing AutoCalendar Notes",
+            message,
+            QMessageBox.StandardButton.Save | QMessageBox.StandardButton.Cancel,
+            QMessageBox.StandardButton.Cancel,
+        )
+        return result == QMessageBox.StandardButton.Save
+
     def get_selected_row_ids(self):
         row_ids = []
         for page_row_index in self.get_selected_row_indexes():
@@ -2007,6 +2086,8 @@ class PlannerWindow(QMainWindow):
         action_rows = [row for row in self.planner_rows if (row.get("planned_action") or "").strip()]
         if not action_rows:
             QMessageBox.information(self, "No actions to save", "There are no planner rows with actions to save.")
+            return
+        if not self.confirm_existing_autocalendar_notes(action_rows):
             return
         if not self.confirm_save_summary(action_rows):
             return

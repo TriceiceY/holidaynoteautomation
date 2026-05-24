@@ -37,6 +37,9 @@ class ExecutionResult:
     record_id: Any = ""
     action: str = ""
     destination_path: str = ""
+    previous_notes: str = ""
+    applied_note: str = ""
+    final_notes: str = ""
 
 
 def utc_now_iso() -> str:
@@ -107,15 +110,24 @@ def parse_planner_time(value: Any, field_name: str = "time") -> str:
     raise ValueError(f"{field_name} has an unsupported time format: {text}")
 
 
-def append_note(existing_note: Any, new_note: Any) -> str:
+def is_autohol_note_line(line: Any) -> bool:
+    return clean_text(line).upper().startswith("AUTOHOL:")
+
+
+def replace_autohol_note(existing_note: Any, new_note: Any) -> str:
     existing = clean_text(existing_note)
     new = clean_text(new_note)
 
     if not new:
         return existing
-    if not existing:
-        return new
-    return existing + "\n" + new
+
+    manual_lines = [
+        line.rstrip()
+        for line in existing.splitlines()
+        if line.strip() and not is_autohol_note_line(line)
+    ]
+    manual_lines.append(new)
+    return "\n".join(manual_lines)
 
 
 def row_value(row: Any, name: str, default: Any = "") -> Any:
@@ -242,13 +254,13 @@ def update_record_note(cursor: Any, record_id: Any, note: str) -> None:
 def apply_add_note(cursor: Any, record: Any, planner_row: dict[str, Any], executed_at: datetime) -> None:
     planned_note = require_value(planner_row, "planned_note")
     record_id = row_value(record, "fdRecID")
-    final_note = append_note(row_value(record, "fdNotes"), planned_note)
+    final_note = replace_autohol_note(row_value(record, "fdNotes"), planned_note)
     update_record_note(cursor, record_id, final_note)
 
 
 def apply_mark_done(cursor: Any, record: Any, planner_row: dict[str, Any], executed_at: datetime) -> None:
     record_id = row_value(record, "fdRecID")
-    final_note = append_note(row_value(record, "fdNotes"), planner_row.get("planned_note"))
+    final_note = replace_autohol_note(row_value(record, "fdNotes"), planner_row.get("planned_note"))
     done_date = executed_at.date().isoformat()
 
     cursor.execute(
@@ -268,7 +280,7 @@ def apply_move_date(cursor: Any, record: Any, planner_row: dict[str, Any], execu
     record_id = row_value(record, "fdRecID")
     move_to_date = parse_planner_date(planner_row.get("move_to_date"), "move_to_date")
     move_to_time = clean_text(planner_row.get("move_to_time"))
-    final_note = append_note(row_value(record, "fdNotes"), planner_row.get("planned_note"))
+    final_note = replace_autohol_note(row_value(record, "fdNotes"), planner_row.get("planned_note"))
 
     if move_to_time:
         cursor.execute(
@@ -299,7 +311,7 @@ def apply_move_date(cursor: Any, record: Any, planner_row: dict[str, Any], execu
 def apply_move_time(cursor: Any, record: Any, planner_row: dict[str, Any], executed_at: datetime) -> None:
     record_id = row_value(record, "fdRecID")
     move_to_time = parse_planner_time(planner_row.get("move_to_time"), "move_to_time")
-    final_note = append_note(row_value(record, "fdNotes"), planner_row.get("planned_note"))
+    final_note = replace_autohol_note(row_value(record, "fdNotes"), planner_row.get("planned_note"))
 
     cursor.execute(
         """
@@ -321,7 +333,7 @@ ACTION_HANDLERS = {
 }
 
 
-def apply_planner_action(cursor: Any, record: Any, planner_row: dict[str, Any], executed_at: datetime) -> str:
+def apply_planner_action(cursor: Any, record: Any, planner_row: dict[str, Any], executed_at: datetime) -> dict[str, str]:
     action = normalize_action(planner_row)
     if not action:
         raise ValueError("Missing planned_action.")
@@ -330,8 +342,16 @@ def apply_planner_action(cursor: Any, record: Any, planner_row: dict[str, Any], 
     if handler is None:
         raise ValueError(f"Unsupported planned_action: {action}")
 
+    previous_notes = clean_text(row_value(record, "fdNotes"))
+    applied_note = clean_text(planner_row.get("planned_note"))
     handler(cursor, record, planner_row, executed_at)
-    return action
+    final_notes = replace_autohol_note(previous_notes, applied_note)
+    return {
+        "action": action,
+        "previous_notes": previous_notes,
+        "applied_note": applied_note,
+        "final_notes": final_notes,
+    }
 
 
 def unique_destination_path(folder: str, source_path: str) -> str:
@@ -354,6 +374,9 @@ def write_result_sidecar(destination_path: str, result: ExecutionResult) -> None
         "record_id": result.record_id,
         "action": result.action,
         "message": result.message,
+        "previous_notes": result.previous_notes,
+        "applied_note": result.applied_note,
+        "final_notes": result.final_notes,
         "executed_at": utc_now_iso(),
     }
     with open(destination_path + ".result.json", "w", encoding="utf-8") as f:
@@ -401,14 +424,17 @@ def execute_planner_file(
                 action=action,
             )
 
-        apply_planner_action(cursor, record, row, datetime.now())
+        action_result = apply_planner_action(cursor, record, row, datetime.now())
         con.commit()
         result = ExecutionResult(
             status=STATUS_PROCESSED,
             source_path=source_path,
             message=f"Applied {action} to AutoCalendar record {record_id}.",
             record_id=record_id,
-            action=action,
+            action=action_result["action"],
+            previous_notes=action_result["previous_notes"],
+            applied_note=action_result["applied_note"],
+            final_notes=action_result["final_notes"],
         )
         return move_with_result(source_path, processed_dir, result)
     except Exception as exc:
