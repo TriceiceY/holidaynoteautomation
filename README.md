@@ -11,6 +11,125 @@ The program looks at AutoCalendar DW actual/template entries, matches them to ED
 python ui/autohol_ui.py
 ```
 
+## Airflow Executor Progress
+
+The repository also includes an Airflow DAG for executing saved planner JSON
+actions through AutoHub Airflow:
+
+```text
+DAG/autohol_executor_dag.py          Airflow TaskFlow DAG entrypoint.
+autohol_executor.py                  Planner JSON executor business logic.
+tests/test_autohol_executor.py       Unit tests for executor behavior.
+```
+
+The DAG is intentionally thin. It imports the tested executor logic from
+`autohol_executor.py`, exposes runtime parameters for the planner JSON,
+processed, and error folders, and runs the executor as one TaskFlow task.
+
+### DAG Script
+
+```python
+"""
+Airflow DAG entrypoints for the AutoHoliday executor.
+
+Business logic lives in autohol_executor.py so it can be imported and tested
+without requiring Airflow.
+"""
+
+from __future__ import annotations
+
+from autohol_executor import (
+    DEFAULT_BATCH_LIMIT,
+    DEFAULT_ERROR_DIR,
+    DEFAULT_PLANNER_JSON_DIR,
+    DEFAULT_PROCESSED_DIR,
+    airflow_executor_kwargs,
+    execute_planner_batch,
+)
+
+
+try:
+    import pendulum
+    from airflow.decorators import dag, task
+    from airflow.models.param import Param
+
+    AIRFLOW_AVAILABLE = True
+except Exception:
+    pendulum = None
+    dag = None
+    task = None
+    Param = None
+    AIRFLOW_AVAILABLE = False
+
+
+if AIRFLOW_AVAILABLE:
+    AIRFLOW_PARAMS = {
+        "planner_json_dir": Param(DEFAULT_PLANNER_JSON_DIR, type="string"),
+        "processed_dir": Param(DEFAULT_PROCESSED_DIR, type="string"),
+        "error_dir": Param(DEFAULT_ERROR_DIR, type="string"),
+        "batch_limit": Param(DEFAULT_BATCH_LIMIT, type="integer", minimum=1),
+        "dry_run": Param(False, type="boolean"),
+    }
+
+    @dag(
+        dag_id="autohol_executor_taskflow",
+        start_date=pendulum.datetime(2026, 1, 1, tz="America/New_York"),
+        schedule=None,
+        catchup=False,
+        params=AIRFLOW_PARAMS,
+        tags=["autohol", "autocalendar"],
+    )
+    def build_autohol_executor_taskflow():
+        @task
+        def run_executor(**context):
+            return execute_planner_batch(**airflow_executor_kwargs(**context))
+
+        run_executor()
+
+    autohol_executor_taskflow = build_autohol_executor_taskflow()
+```
+
+### Triggering The DAG
+
+The DAG is configured with `schedule=None`, so it is meant to be triggered
+manually or by another orchestration process.
+
+From the Airflow UI:
+
+1. Open the Airflow web UI.
+2. Find `autohol_executor_taskflow`.
+3. Unpause the DAG if needed.
+4. Click the trigger/play button.
+5. Optionally override the DAG params for `planner_json_dir`, `processed_dir`,
+   `error_dir`, `batch_limit`, or `dry_run`.
+
+From the Airflow CLI:
+
+```bash
+airflow dags trigger autohol_executor_taskflow
+```
+
+With runtime config:
+
+```bash
+airflow dags trigger autohol_executor_taskflow \
+  --conf '{
+    "planner_json_dir": "F:\\intdaily\\autohol\\planner\\json",
+    "processed_dir": "F:\\intdaily\\autohol\\planner\\processed",
+    "error_dir": "F:\\intdaily\\autohol\\planner\\error",
+    "batch_limit": 100,
+    "dry_run": true
+  }'
+```
+
+### Windows Airflow Note
+
+Apache Airflow does not run successfully in a native Windows virtual
+environment because it depends on POSIX-only modules such as `fcntl`. On a
+Windows machine, run Airflow through WSL2 Ubuntu or Linux containers. The
+project code can still be edited on Windows, but the Airflow scheduler,
+webserver, and CLI should run in the Linux environment.
+
 ## What It Helps With
 
 - Finds which assigned countries are on holiday on a selected date.
