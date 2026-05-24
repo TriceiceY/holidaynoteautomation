@@ -6,6 +6,23 @@ import pyodbc
 import re
 
 
+DEFAULT_DW_ASSIGNMENTS = r"f:\automation\stats\assignments\dw.csv"
+DEFAULT_MQA_ASSIGNMENTS = r"f:\automation\stats\assignments\mqa.csv"
+DEFAULT_DW_ASSIGNMENTS_CUSTOM = r"f:\automation\stats\assignments\dw_custom.csv"
+DEFAULT_MQA_ASSIGNMENTS_CUSTOM = r"f:\automation\stats\assignments\mqa_custom.csv"
+DEFAULT_INTDAILY_GPA = r"f:\intdaily\qa\GRPLIST\INTDAILY.GPA"
+DEFAULT_INTWKLY_GPA = r"f:\intwkly\qa\GRPLIST\INTWKLY.GPA"
+
+ENV_DW_ASSIGNMENTS = "AUTOHOL_DW_ASSIGNMENTS"
+ENV_MQA_ASSIGNMENTS = "AUTOHOL_MQA_ASSIGNMENTS"
+ENV_DW_ASSIGNMENTS_CUSTOM = "AUTOHOL_DW_ASSIGNMENTS_CUSTOM"
+ENV_MQA_ASSIGNMENTS_CUSTOM = "AUTOHOL_MQA_ASSIGNMENTS_CUSTOM"
+
+
+def resolve_assignment_path(explicit_path: str | None, env_var: str, default_path: str) -> str:
+    if explicit_path is not None:
+        return explicit_path
+    return os.environ.get(env_var) or default_path
 
 
 class Autocalendar:
@@ -256,27 +273,44 @@ class Assignments:
     ----------
     dw_assignments : str (Optional)
         path to the dw.csv file.
-        default f:\\automation\\stats\\assignments\\dw.csv
+        default f:\\automation\\stats\\assignments\\dw.csv, or
+        AUTOHOL_DW_ASSIGNMENTS when set.
     dw_assignments_custom : str (Optional)
         path to the dw_custom.csv file.
-        default f:\\automation\\stats\\assignments\\dw_custom.csv
+        default f:\\automation\\stats\\assignments\\dw_custom.csv, or
+        AUTOHOL_DW_ASSIGNMENTS_CUSTOM when set.
     mqa_assignments : str (Optional)
         path to the mqa.csv file.
-        default f:\\automation\\stats\\assignments\\mqa.csv
+        default f:\\automation\\stats\\assignments\\mqa.csv, or
+        AUTOHOL_MQA_ASSIGNMENTS when set.
     mqa_assignments_custom : str (Optional)
         path to the mqa_custom file.
-        default f:\\automation\\stats\\assignments\\mqa_custom.csv
+        default f:\\automation\\stats\\assignments\\mqa_custom.csv, or
+        AUTOHOL_MQA_ASSIGNMENTS_CUSTOM when set.
     """
 
     def __init__(
         self,
-        dw_assignments="f:\\automation\\stats\\assignments\\dw.csv",
-        mqa_assignments="f:\\automation\\stats\\assignments\\mqa.csv",
-        dw_assignments_custom="f:\\automation\\stats\\assignments\\dw_custom.csv",
-        mqa_assignments_custom="f:\\automation\\stats\\assignments\\mqa_custom.csv",
-        intdaily_gpa="f:\\intdaily\\qa\\GRPLIST\\INTDAILY.GPA",
-        intwkly_gpa="f:\\intwkly\\qa\\GRPLIST\\INTWKLY.GPA",
+        dw_assignments=None,
+        mqa_assignments=None,
+        dw_assignments_custom=None,
+        mqa_assignments_custom=None,
+        intdaily_gpa=DEFAULT_INTDAILY_GPA,
+        intwkly_gpa=DEFAULT_INTWKLY_GPA,
         ):
+        dw_assignments = resolve_assignment_path(dw_assignments, ENV_DW_ASSIGNMENTS, DEFAULT_DW_ASSIGNMENTS)
+        mqa_assignments = resolve_assignment_path(mqa_assignments, ENV_MQA_ASSIGNMENTS, DEFAULT_MQA_ASSIGNMENTS)
+        dw_assignments_custom = resolve_assignment_path(
+            dw_assignments_custom,
+            ENV_DW_ASSIGNMENTS_CUSTOM,
+            DEFAULT_DW_ASSIGNMENTS_CUSTOM,
+        )
+        mqa_assignments_custom = resolve_assignment_path(
+            mqa_assignments_custom,
+            ENV_MQA_ASSIGNMENTS_CUSTOM,
+            DEFAULT_MQA_ASSIGNMENTS_CUSTOM,
+        )
+
         self.dw_assignments_path = dw_assignments
         self.mqa_assignments_path = mqa_assignments
         self.dw_assignments_custom_path = dw_assignments_custom
