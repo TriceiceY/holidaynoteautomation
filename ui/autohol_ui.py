@@ -455,6 +455,7 @@ class PlannerWindow(QMainWindow):
         self.select_column_index = 0
         self._syncing_selection_checkboxes = False
         self._holiday_lookup_dw_entries = None
+        self.has_unsaved_action_changes = False
 
         self.selected_database_filters = set()
         self.selected_country_filters = set()
@@ -501,6 +502,25 @@ class PlannerWindow(QMainWindow):
         self.update_action_editor_visibility()
         self.update_paging_labels()
         self.update_active_filters_label()
+
+    def closeEvent(self, event):
+        if not self.has_unsaved_planner_actions():
+            event.accept()
+            return
+
+        result = QMessageBox.question(
+            self,
+            "Unsaved Planner Actions",
+            "There are planner rows with unsaved action changes.\n\n"
+            "If you close now, those action changes will not be saved to planner JSON.\n\n"
+            "Do you want to close anyway?",
+            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.Cancel,
+            QMessageBox.StandardButton.Cancel,
+        )
+        if result == QMessageBox.StandardButton.Yes:
+            event.accept()
+        else:
+            event.ignore()
 
     def build_controls_section(self):
         self.controls_box = QGroupBox("Planner Controls")
@@ -1558,6 +1578,7 @@ class PlannerWindow(QMainWindow):
         self.current_page_index = 0
         self.current_page_rows = []
         self.holiday_page_index = 0
+        self.has_unsaved_action_changes = False
 
         self.load_rows_into_table([])
         self.update_paging_labels()
@@ -1654,6 +1675,7 @@ class PlannerWindow(QMainWindow):
                 planner_row["actual_record_id"] = source_row.get("actual_record_id", "")
                 planner_row["fdDone"] = source_row.get("fdDone", "")
 
+            self.has_unsaved_action_changes = False
             self.filtered_planner_rows = list(self.planner_rows)
             self.update_active_filters_label()
             self.rebuild_date_pages_from_filtered()
@@ -1902,79 +1924,11 @@ class PlannerWindow(QMainWindow):
         )
         return result == QMessageBox.StandardButton.Save
 
-    def get_autohol_note_lines(self, notes):
-        lines = []
-        for line in str(notes or "").splitlines():
-            text = line.strip()
-            if text.upper().startswith("AUTOHOL:"):
-                lines.append(text)
-        return lines
+    def has_action_rows(self):
+        return any((row.get("planned_action") or "").strip() for row in self.planner_rows)
 
-    def get_existing_note_action_rows(self, action_rows):
-        flagged_rows = []
-        for row in action_rows:
-            notes = (row.get("notes") or "").strip()
-            record_last_change = (row.get("record_last_change") or "").strip()
-            if notes or record_last_change:
-                flagged_rows.append(row)
-        return flagged_rows
-
-    def format_existing_note_warning_details(self, rows):
-        if not rows:
-            return ""
-
-        lines = []
-        max_rows = 10
-        for row in rows[:max_rows]:
-            original_scheduling_date = (row.get("original_scheduling_date") or "").strip() or "-"
-            database = (row.get("database") or "").strip() or "-"
-            group = (row.get("group") or "").strip() or "-"
-            update = (row.get("update") or "").strip() or "-"
-            record_id = (str(row.get("actual_record_id") or "").strip()) or "-"
-            planned_action = (row.get("planned_action") or "").strip() or "-"
-            record_last_change = (row.get("record_last_change") or "").strip() or "-"
-            autohol_lines = self.get_autohol_note_lines(row.get("notes"))
-
-            lines.append(
-                f"{original_scheduling_date} | {database} | {group} | {update} | "
-                f"record {record_id} | new action {planned_action} | last changed {record_last_change}"
-            )
-            if autohol_lines:
-                lines.append("Existing AUTOHOL notes:")
-                lines.extend(f"  {line}" for line in autohol_lines)
-            else:
-                notes = (row.get("notes") or "").strip()
-                if notes:
-                    lines.append("Existing notes: " + notes.replace("\n", " | "))
-            lines.append("")
-
-        remaining = len(rows) - max_rows
-        if remaining > 0:
-            lines.append(f"...and {remaining} more row(s).")
-
-        return "\n".join(lines).strip()
-
-    def confirm_existing_autocalendar_notes(self, action_rows):
-        existing_note_rows = self.get_existing_note_action_rows(action_rows)
-        if not existing_note_rows:
-            return True
-
-        message = (
-            "Some selected action rows already have AutoCalendar notes or record-change metadata.\n"
-            "The executor will preserve manual notes and replace previous AUTOHOL notes with the latest action note.\n\n"
-            f"Rows with existing record metadata: {len(existing_note_rows)}\n\n"
-            "date | database | group | update | record | new action | last changed\n"
-            f"{self.format_existing_note_warning_details(existing_note_rows)}\n\n"
-            "Do you want to continue saving these planner actions?"
-        )
-        result = QMessageBox.question(
-            self,
-            "Existing AutoCalendar Notes",
-            message,
-            QMessageBox.StandardButton.Save | QMessageBox.StandardButton.Cancel,
-            QMessageBox.StandardButton.Cancel,
-        )
-        return result == QMessageBox.StandardButton.Save
+    def has_unsaved_planner_actions(self):
+        return self.has_unsaved_action_changes and self.has_action_rows()
 
     def get_selected_row_ids(self):
         row_ids = []
@@ -2050,6 +2004,7 @@ class PlannerWindow(QMainWindow):
             row["move_to_time"] = final_move_to_time if planned_action in {"MOVE_DATE", "MOVE_TIME"} else ""
 
         self.note_input.setPlainText("AUTOHOL:")
+        self.has_unsaved_action_changes = True
         self.apply_filters_and_refresh()
         self.update_action_count()
 
@@ -2070,6 +2025,7 @@ class PlannerWindow(QMainWindow):
                 row["move_to_time"] = ""
 
         self.note_input.setPlainText("AUTOHOL:")
+        self.has_unsaved_action_changes = True
         self.apply_filters_and_refresh()
         self.update_action_count()
 
@@ -2087,8 +2043,6 @@ class PlannerWindow(QMainWindow):
         if not action_rows:
             QMessageBox.information(self, "No actions to save", "There are no planner rows with actions to save.")
             return
-        if not self.confirm_existing_autocalendar_notes(action_rows):
-            return
         if not self.confirm_save_summary(action_rows):
             return
 
@@ -2102,6 +2056,7 @@ class PlannerWindow(QMainWindow):
                 "Planner Log Saved",
                 f"Saved {json_count} JSON files to:\n{json_root}\n\nSaved {csv_count} rows to CSV:\n{csv_path}",
             )
+            self.has_unsaved_action_changes = False
         except Exception as e:
             QMessageBox.critical(self, "Save failed", str(e))
 
