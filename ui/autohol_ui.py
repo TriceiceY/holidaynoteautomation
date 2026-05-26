@@ -482,6 +482,7 @@ class PlannerWindow(QMainWindow):
         self.next_date_button.clicked.connect(self.go_to_next_page)
         self.jump_holiday_button.clicked.connect(self.go_to_holiday_page)
         self.clear_button.clicked.connect(self.clear_table)
+        self.custom_holiday_toggle_button.clicked.connect(self.toggle_custom_holiday_section)
         self.add_custom_holiday_button.clicked.connect(self.add_custom_holiday)
         self.import_custom_holiday_button.clicked.connect(self.import_custom_holiday_csv)
         self.custom_holiday_csv_help_button.clicked.connect(self.show_custom_holiday_csv_help)
@@ -547,6 +548,10 @@ class PlannerWindow(QMainWindow):
 
         self.generate_button = QPushButton("Generate Planner Rows")
         self.clear_button = QPushButton("Clear Table")
+        self.custom_holiday_toggle_button = QPushButton("Custom Holiday")
+        self.custom_holiday_toggle_button.setToolTip(
+            "Show optional custom holiday controls when a holiday is missing from the default file."
+        )
 
         layout.addWidget(QLabel("Planner User:"))
         layout.addWidget(self.user_input)
@@ -558,6 +563,7 @@ class PlannerWindow(QMainWindow):
         layout.addWidget(self.days_after_input)
         layout.addWidget(self.generate_button)
         layout.addWidget(self.clear_button)
+        layout.addWidget(self.custom_holiday_toggle_button)
         layout.addStretch()
 
         self.controls_box.setLayout(layout)
@@ -569,6 +575,11 @@ class PlannerWindow(QMainWindow):
         layout.setHorizontalSpacing(4)
         layout.setVerticalSpacing(6)
         layout.setContentsMargins(6, 6, 6, 6)
+
+        self.custom_holiday_hint_label = QLabel(
+            "Optional: use this only when a holiday is missing from the default holiday file."
+        )
+        self.custom_holiday_hint_label.setWordWrap(True)
 
         self.custom_country_input = QLineEdit()
         self.custom_country_input.setPlaceholderText("Country name")
@@ -599,15 +610,16 @@ class PlannerWindow(QMainWindow):
         self.import_custom_holiday_button = QPushButton("Import Custom Holiday CSV")
         self.custom_holiday_csv_help_button = QPushButton("CSV Format Help")
 
-        layout.addWidget(QLabel("Country:"), 0, 0)
-        layout.addWidget(self.custom_country_input, 0, 1)
-        layout.addWidget(QLabel("Holiday Date:"), 0, 2)
-        layout.addWidget(self.custom_date_input, 0, 3)
-        layout.addWidget(QLabel("Holiday Name:"), 0, 4)
-        layout.addWidget(self.custom_name_input, 0, 5)
-        layout.addWidget(QLabel("Holiday Observance:"), 0, 6)
-        layout.addWidget(self.custom_observance_combo, 0, 7)
-        layout.addWidget(self.add_custom_holiday_button, 0, 8)
+        layout.addWidget(self.custom_holiday_hint_label, 0, 0, 1, 9)
+        layout.addWidget(QLabel("Country:"), 1, 0)
+        layout.addWidget(self.custom_country_input, 1, 1)
+        layout.addWidget(QLabel("Holiday Date:"), 1, 2)
+        layout.addWidget(self.custom_date_input, 1, 3)
+        layout.addWidget(QLabel("Holiday Name:"), 1, 4)
+        layout.addWidget(self.custom_name_input, 1, 5)
+        layout.addWidget(QLabel("Holiday Observance:"), 1, 6)
+        layout.addWidget(self.custom_observance_combo, 1, 7)
+        layout.addWidget(self.add_custom_holiday_button, 1, 8)
 
         row2_layout = QHBoxLayout()
         row2_layout.setContentsMargins(0, 0, 0, 0)
@@ -618,10 +630,19 @@ class PlannerWindow(QMainWindow):
 
         row2_widget = QWidget()
         row2_widget.setLayout(row2_layout)
-        layout.addWidget(row2_widget, 1, 0, 1, 9)
+        layout.addWidget(row2_widget, 2, 0, 1, 9)
 
         self.custom_holiday_box.setLayout(layout)
+        self.custom_holiday_box.setVisible(False)
         self.main_layout.addWidget(self.custom_holiday_box)
+
+    def toggle_custom_holiday_section(self):
+        is_visible = self.custom_holiday_box.isVisible()
+        self.custom_holiday_box.setVisible(not is_visible)
+        if is_visible:
+            self.custom_holiday_toggle_button.setText("Custom Holiday")
+        else:
+            self.custom_holiday_toggle_button.setText("Hide Custom Holiday")
 
     def build_summary_section(self):
         self.summary_box = QGroupBox("Summary")
