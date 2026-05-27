@@ -1,9 +1,12 @@
 # AutoHoliday Planner
 
 ## What Is It
-AutoHoliday Planner is a planning tool for upcoming holiday scheduling. The planner helps EDMs review and prepare scheduling around holidays. It does not directly update the DW calendar. Instead, it creates planner output that can later be executed by AutoHub Airflow.
+AutoHoliday Planner is a planning tool for upcoming holiday scheduling. The planner helps EDMs review and prepare scheduling around holidays. 
 
 The program looks at AutoCalendar DW actual/template entries, matches them to EDM assignments, checks whether the selected date is a holiday for countries related to those entries, and builds a planner table for the holiday date plus a surrounding date window.
+
+## Why It Matters
+EDMs do not have to wait until the autocalendar generates records to do the holiday schedulding. Instead, they can pick any holiday date through out the year and schedulding their updates. The planner will create planner output that can be executed by AutoHub Airflow automatically.
 
 ## How It Works
 
