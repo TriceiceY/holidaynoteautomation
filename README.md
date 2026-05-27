@@ -102,11 +102,10 @@ The repository also includes an Airflow DAG for executing saved planner JSON
 actions through AutoHub Airflow:
 
 ```text
-tests/test_autohol_executor.py       Unit tests for executor behavior.
+autohol_executor.py                  Planner JSON executor logic.
 ```
 
-The DAG is intentionally thin. It imports the tested executor logic from
-`autohol_executor.py`, exposes runtime parameters for the planner JSON,
+The DAG imports the executor logic from `autohol_executor.py`, exposes runtime parameters for the planner JSON,
 processed, and error folders, and runs the executor as one TaskFlow task.
 
 
@@ -148,6 +147,6 @@ ui/autohol_ui.py                      Main PyQt6 user interface.
 autohol/holidays.py                   Holiday loading, country normalization, and holiday type helpers.
 autohol/dw_source.py                  AutoCalendar reads and assignment mapping.
 autohol/future_holiday_planner.py     Planner row generation, filtering, annotation, and log writing.
-DAG/autohol_executor_dag.py          Airflow TaskFlow DAG entrypoint.
-autohol_executor.py                  Planner JSON executor business logic.
+DAG/autohol_executor_dag.py           Airflow TaskFlow DAG entrypoint.
+autohol_executor.py                   Planner JSON executor logic.
 ```
