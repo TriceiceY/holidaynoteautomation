@@ -1,0 +1,1997 @@
+===================================================================================================
+DBM: RyanT
+===================================================================================================
+E69 INTDAILY XXXX Hong Kong: Exchange Fund Bills Tender Calculations, HKMA/H
+L41 INTDAILY XXXX Egypt: Interbank Volume, CBE
+L42 INTDAILY XXXX Egypt: Interbank Volume SAT, CBE
+L43 INTDAILY XXXX Egypt: Interbank Volume SUN, CBE
+L88 INTDAILY XXXX Iran: Stock Market Indicators SAT
+L89 INTDAILY XXXX Iran: Stock Market Indicators SUN
+L09 INTDAILY XXXX United Arab Emirates: Monetary Bills Yield, CBUAE
+E68 INTDAILY XXXX Hong Kong: Exchange Fund Bills Tender, HKMA
+L23 INTDAILY XXXX Hong Kong: Interbank Liquidity SAT, HKMA
+L24 INTDAILY XXXX Hong Kong: Interbank Liquidity SUN, HKMA
+L18 INTDAILY XXXX Hong Kong: Interest Rates SAT
+L19 INTDAILY XXXX Hong Kong: Interest Rates SUN
+L07 INTDAILY XXXX Hong Kong: Monetary and Financial Aggregates [SAT], HKMA
+L08 INTDAILY XXXX Hong Kong: Monetary and Financial Aggregates [SUN], HKMA
+L21 INTDAILY XXXX Kazakhstan: Open Positions SAT, NBK
+L22 INTDAILY XXXX Kazakhstan: Open Positions SUN, NBK
+L20 INTDAILY XXXX Kazakhstan: Open Positions, NBK
+L05 INTDAILY XXXX Kyrgyz Republic: Deposit Operations, NBKR
+O14 INTDAILY XXXX Kyrgyz Republic: Foreign Currency Interventions SAT, NBKR
+O15 INTDAILY XXXX Kyrgyz Republic: Foreign Currency Interventions SUN, NBKR
+O12 INTDAILY XXXX Kyrgyz Republic: Foreign Currency Interventions, NBKR
+L13 INTDAILY XXXX Kyrgyz Republic: Note Auctions, NBKR
+J13 INTDAILY XXXX Taiwan: 3 Months Deposit Rates                                                    
+J90 INTDAILY XXXX Taiwan: Bills Index Rate [TAIBIR], TDCC                                           
+W47 INTDAILY XXXX Taiwan: Exchange Rates, CBC                                                       
+W48 INTDAILY XXXX Taiwan: Interbank Rate, CBC                                                       
+Y98 INTDAILY XXXX Taiwan: Negotiated Working Hours, MOL                                             
+J19 INTDAILY XXXX Taiwan: Policy Rates, CBC                                                         
+J39 INTDAILY XXXX Taiwan: Reserve Requirement Ratios, CBC                                           
+X60 INTDAILY XXXX Taiwan: Taipei Interbank Rates [TAIBOR], BAROC 
+I11 INTDAILY XXXX Macao: Base Rate, AMCM
+R31 INTDAILY XXXX Macao: Exchange Rate, AMCM                                                        
+J14 INTDAILY XXXX Macao: MAIBOR Rates, AMCM                                                         
+T60 INTDAILY XXXX Macao: MOP Overnight Index Average [MONIA], AMCM   
+J37 INTDAILY XXXX Hong Kong: Exchange Fund Bills and Notes Bond Yields                              
+R50 INTDAILY XXXX Hong Kong: Exchange Rates and Effective Exch Rates, HKMA                          
+X91 INTDAILY XXXX Hong Kong: HSI Volatility Index, HSI                                              
+H03 INTDAILY XXXX Hong Kong: Indicative Pricings of Government Bonds: Return, HKGB/H                
+E28 INTDAILY XXXX Hong Kong: Infrastructure and Sustainable Gov Bond, HKGB
+E30 INTDAILY XXXX Hong Kong: Infrastructure and Sustainable Gov Bond, HKGB
+W25 INTDAILY XXXX Hong Kong: Interbank Liquidity, HKMA                                              
+J08 INTDAILY XXXX Hong Kong: Interest Rates                                                         
+J32 INTDAILY XXXX Hong Kong: Interest Rates                                                         
+J07 INTDAILY XXXX Hong Kong: Interest Settlement Rates                                              
+G70 INTDAILY XXXX Hong Kong: Monetary and Financial Aggregates, HKMA                                
+T50 INTDAILY XXXX Hong Kong: Nominal Effective Exchange Rate, HKMA                                  
+W89 INTDAILY XXXX Hong Kong: Renminbi Liquidity Facility, HKMA                                      
+T22 INTDAILY XXXX Hong Kong: Stock Exchange, HKEX                                                   
+V95 INTDAILY XXXX Hong Kong: Stock Exchange, HKEX                                                   
+S90 INTDAILY XXXX Hong Kong: Stock Market Indicators
+G47 INTDAILY XXXX Thailand: Bangkok Interbank Offered Rate, BOT                                     
+M11 INTDAILY XXXX Thailand: Current Account Balances, BOT                                           
+N12 INTDAILY XXXX Thailand: Deposit & Loan Rates, BOT
+N13 INTDAILY XXXX Thailand: Deposit & Loan Rates: Mid Rates, BOT
+R16 INTDAILY XXXX Thailand: Exchange Rates, BoT                                                     
+N25 INTDAILY XXXX Thailand: Foreign Exchange Mid Rates, BoT/H
+N24 INTDAILY XXXX Thailand: Foreign Exchange Rates, BoT
+F73 INTDAILY XXXX Thailand: Interest Rates, BOT                                                     
+I60 INTDAILY XXXX Thailand: Interest Rates, BOT                                                     
+P32 INTDAILY XXXX Thailand: Non-resident Flows, ThaiBMA                                             
+J55 INTDAILY XXXX Thailand: Open Market Operations, BOT                                             
+M08 INTDAILY XXXX Thailand: Repo Operations, BOT                                                    
+F50 INTDAILY XXXX Thailand: THOR Average Compounded Rates & Index, BOT                              
+F49 INTDAILY XXXX Thailand: THOR Overnight Rates, BOT                                               
+T42 INTDAILY XXXX Thailand: Treasury Bill and Bank of Thailand Bond Auctions, BOT                   
+P74 INTDAILY XXXX Thailand: Wholesale and Retail Agricultural Prices                                
+P72 INTDAILY XXXX Thailand: Wholesale and Retail Agricultural Prices [Saturday]                     
+P73 INTDAILY XXXX Thailand: Wholesale and Retail Agricultural Prices [Sunday]                           
+O10 INTDAILY XXXX Myanmar: Activities of Foreign Exchange Market, CBM
+X38 INTDAILY XXXX Myanmar: Exchange Rates, CBM                                                      
+N15 INTDAILY XXXX Myanmar: Forex Market Online Trading Platform Data, CBM
+N70 INTDAILY XXXX Myanmar: Interest Rates, CBM
+X41 INTDAILY XXXX Myanmar: Monetary Policy Rate, CBM                                                
+X39 INTDAILY XXXX Myanmar: Stock Indicators, YSX                              
+I89 INTDAILY XXXX Brunei: Policy Rates, BDCB                                                     
+X42 INTDAILY XXXX Cambodia: Exchange Rates, NBC                                                     
+X40 INTDAILY XXXX Cambodia: Stock Indicators, CSX                             
+X63 INTDAILY XXXX Moldova: Central Bank Interest Rates, NBM                                         
+X64 INTDAILY XXXX Moldova: Exchange Rates, NBM                                                      
+X65 INTDAILY XXXX Moldova: Interbank Rates, NBM                                                     
+H13 INTDAILY XXXX Moldova: Interbank Rates, NBM/H   
+K71 INTDAILY XXXX Moldova: Reserve Requirement Rates [SAT], NBM
+K72 INTDAILY XXXX Moldova: Reserve Requirement Rates [SUN], NBM
+K70 INTDAILY XXXX Moldova: Reserve Requirement Rates, NBM
+A80 INTDAILY XXXX Tajikistan: Exchange Rates, NBT
+X33 INTDAILY XXXX Tajikistan: Exchange Rates, NBT                                                   
+X32 INTDAILY XXXX Tajikistan: Refinancing Rates, NBT 
+M35 INTDAILY XXXX Kazahstan: Compounded TONIA Index and Rates, KASE [SUN]
+B34 INTDAILY XXXX Kazakhstan: Account Balances, NBK
+B35 INTDAILY XXXX Kazakhstan: Account Balances, NBK
+G34 INTDAILY XXXX Kazakhstan: Account Balances, NBK                                                 
+C62 INTDAILY XXXX Kazakhstan: Compounded TONIA Index and Rates, KASE 
+M34 INTDAILY XXXX Kazakhstan: Compounded TONIA Index and Rates, KASE [SAT]
+K51 INTDAILY XXXX Kazakhstan: Exchange Rates, NBK
+K53 INTDAILY XXXX Kazakhstan: Exchange Rates, NBK
+G93 INTDAILY XXXX Kazakhstan: Exchange Rates, NBK                                                   
+D96 INTDAILY XXXX Kazakhstan: Money Market Index, KASE
+D97 INTDAILY XXXX Kazakhstan: Money Market Index, KASE
+C61 INTDAILY XXXX Kazakhstan: Money Market Index, KASE                                              
+C59 INTDAILY XXXX Kazakhstan: Money Market Indicators, KASE                                         
+D88 INTDAILY XXXX Kazakhstan: Money Market Indicators, KASE [SAT]
+D89 INTDAILY XXXX Kazakhstan: Money Market Indicators, KASE [SUN]
+I06 INTDAILY XXXX Kazakhstan: Policy Rates, NBK                                                     
+V04 INTDAILY XXXX Kazakhstan: Stock Market Indicators    
+E54 INTDAILY XXXX Kazakhstan: Stock Market Indicators [SAT]
+E55 INTDAILY XXXX Kazakhstan: Stock Market Indicators [SUN]
+C60 INTDAILY XXXX Kazakhstan: Swap Indicators, KASE                                                 
+E50 INTDAILY XXXX Kazakhstan: Yields on Non-Indexed Government Securities, KASE
+E51 INTDAILY XXXX Kazakhstan: Yields on Non-Indexed Government Securities, KASE
+C68 INTDAILY XXXX Kazakhstan: Yields on Non-Indexed Government Securities, KASE
+G55 INTDAILY XXXX Kyrgyz Republic: Auctions of State Treasury Bills, NBKR                           
+W26 INTDAILY XXXX Kyrgyz Republic: Exchange Rates, NBKR                                             
+W82 INTDAILY XXXX Kyrgyz Republic: Kyrgyz Stock Exchange Index, KSE                                 
+A90 INTDAILY XXXX Kyrgyz Republic: Monetary Policy Rates, NBKR
+B05 INTDAILY XXXX Kyrgyz Republic: Monetary Policy Rates, NBKR
+B06 INTDAILY XXXX Kyrgyz Republic: Monetary Policy Rates, NBKR
+W27 INTDAILY XXXX Kyrgyz Republic: Monetary Policy Rates, NBKR                                      
+T33 INTDAILY XXXX Kyrgyz Republic: Volume of State Treasury Bills, NBKR                             
+T34 INTDAILY XXXX Kyrgyz Republic: Volume of State Treasury Bonds, NBKR
+W99 INTDAILY XXXX Armenia: Exchange Rates, CBRA                                                     
+G43 INTDAILY XXXX Armenia: Government Bond Yield Curves, CBA
+V85 INTDAILY XXXX Armenia: Monetary Policy Rates, CBA 
+E34 INTDAILY XXXX Azerbaijan: AZIR Index, CBAR
+E35 INTDAILY XXXX Azerbaijan: AZIR Index, CBAR [SAT]
+E36 INTDAILY XXXX Azerbaijan: AZIR Index, CBAR [SUN]
+B60 INTDAILY XXXX Azerbaijan: Exchange Rates, CBAR
+B61 INTDAILY XXXX Azerbaijan: Exchange Rates, CBAR
+R06 INTDAILY XXXX Azerbaijan: Exchange Rates, CBAR                                                  
+I03 INTDAILY XXXX Azerbaijan: Interest Rates                                                        
+I68 INTDAILY XXXX Azerbaijan: Reserve Requirements
+M84 INTDAILY XXXX Abu Dhabi: Securities Exchange Indicators [Saturdays], ADX          
+M85 INTDAILY XXXX Abu Dhabi: Securities Exchange Indicators [Sundays], ADX 
+O24 INTDAILY XXXX Bahrain: 182 Day Treasury Bill Auctions Press Release Saturday Series, CBB        
+O23 INTDAILY XXXX Bahrain: 182 Day Treasury Bill Auctions Press Release Sunday Series, CBB          
+X22 INTDAILY XXXX Bahrain: 182 Day Treasury Bill Auctions Press Release, CBB                        
+X23 INTDAILY XXXX Bahrain: 365 Day Treasury Bill Auctions Press Release, CBB                        
+X21 INTDAILY XXXX Bahrain: 91 Day Treasury Bill Auctions Press Release, CBB                         
+R21 INTDAILY XXXX Bahrain: Exchange Rates, CBB/Haver                                                
+U78 INTDAILY XXXX Bahrain: Exchange Rates, CBB/Haver [Saturday]                                     
+U79 INTDAILY XXXX Bahrain: Exchange Rates, CBB/Haver [Sunday]                                       
+R08 INTDAILY XXXX Bahrain: Interest Rates Saturday Series, CBB
+R10 INTDAILY XXXX Bahrain: Interest Rates Sunday Series, CBB
+R20 INTDAILY XXXX Bahrain: Interest Rates, CBB                                                      
+U26 INTDAILY XXXX Bahrain: Stock Market Indexes, BHB                                                
+U27 INTDAILY XXXX Bahrain: Stock Market Indexes, BHB                                                
+X93 INTDAILY XXXX Bahrain: Stock Market Indexes, BHB                                                
+X09 INTDAILY XXXX Bahrain: Treasury Bill Auctions Statistical Bulletin, CBB
+B83 INTDAILY XXXX Egypt: CONIA Compounded Term Rate And Index, CBE                                  
+B84 INTDAILY XXXX Egypt: CONIA Compounded Term Rate And Index, [Saturdays] CBE                      
+B85 INTDAILY XXXX Egypt: CONIA Compounded Term Rate And Index, [Sundays] CBE  
+B80 INTDAILY XXXX Egypt: Cairo Overnight Index Average [CONIA], CBE                                 
+B81 INTDAILY XXXX Egypt: Cairo Overnight Index Average [CONIA], [Saturdays] CBE                     
+B82 INTDAILY XXXX Egypt: Cairo Overnight Index Average [CONIA], [Sundays] CBE                       
+H77 INTDAILY XXXX Egypt: Exchange Rates [Saturdays], CBE                                            
+H85 INTDAILY XXXX Egypt: Exchange Rates [Saturdays], CBE                                            
+H78 INTDAILY XXXX Egypt: Exchange Rates [Sundays], CBE                                              
+H86 INTDAILY XXXX Egypt: Exchange Rates [Sundays], CBE                                              
+G68 INTDAILY XXXX Egypt: Exchange Rates, CBE                                                        
+H31 INTDAILY XXXX Egypt: Exchange Rates: Mid Rate, CBE/Haver                                        
+H81 INTDAILY XXXX Egypt: Interbank Rates, CBE                                                       
+H82 INTDAILY XXXX Egypt: Interbank Rates, CBE                                                       
+W98 INTDAILY XXXX Egypt: Interbank Rates, CBE                                                       
+I87 INTDAILY XXXX Egypt: Official CBE Rates                                                         
+J60 INTDAILY XXXX Egypt: Open Market & Liquidity Operations, CBE                                    
+H97 INTDAILY XXXX Egypt: Open Market & Liquidity Operations, [Saturday] CBE                         
+H98 INTDAILY XXXX Egypt: Open Market & Liquidity Operations, [Sunday] CBE                           
+D82 INTDAILY XXXX Egypt: Parallel Exchange Rate [Saturday], RealEGP
+D83 INTDAILY XXXX Egypt: Parallel Exchange Rate [Sunday], RealEGP
+D81 INTDAILY XXXX Egypt: Parallel Exchange Rate, RealEGP
+A02 INTDAILY XXXX Egypt: Purchases & Sales of Equities & Bonds Saturday, EGX
+A03 INTDAILY XXXX Egypt: Purchases & Sales of Equities & Bonds Sunday, EGX
+A01 INTDAILY XXXX Egypt: Purchases & Sales of Equities & Bonds, EGX
+H83 INTDAILY XXXX Egypt: Stock Exchange Index Saturday, CASE                                     
+H84 INTDAILY XXXX Egypt: Stock Exchange Index Sunday, CASE
+S48 INTDAILY XXXX Egypt: Stock Exchange Index, CASE                                                 
+C79 INTDAILY XXXX Iran: Exchange Rates, CBI 
+C78 INTDAILY XXXX Iran: Exchange Rates, CBI                                                         
+R54 INTDAILY XXXX Iran: Exchange Rates, CBI                                                         
+A37 INTDAILY XXXX Iran: Parallel Exchange Rates, BON-BAST
+A45 INTDAILY XXXX Iran: Parallel Exchange Rates, BON-BAST [SAT]
+A47 INTDAILY XXXX Iran: Parallel Exchange Rates, BON-BAST [SUN]
+A17 INTDAILY XXXX Iran: Parallel Exchange Rates: Mid Rates [SAT], BON-BAST
+A18 INTDAILY XXXX Iran: Parallel Exchange Rates: Mid Rates [SUN], BON-BAST
+A16 INTDAILY XXXX Iran: Parallel Exchange Rates: Mid Rates, BON-BAST
+V07 INTDAILY XXXX Iran: Stock Market Indicators                                                     
+E32 INTDAILY XXXX Iraq: Exchange Rates [SAT], CBI
+E33 INTDAILY XXXX Iraq: Exchange Rates [SUN], CBI
+E31 INTDAILY XXXX Iraq: Exchange Rates, CBI
+E42 INTDAILY XXXX Iraq: Exchange Rates: Mid Rate [SAT], CBI
+E43 INTDAILY XXXX Iraq: Exchange Rates: Mid Rates [SUN], CBI
+E41 INTDAILY XXXX Iraq: Exchange Rates: Mid Rates, CBI
+W80 INTDAILY XXXX Iraq: Iraq Stock Exchange Indicators, CBI                                         
+A60 INTDAILY XXXX Iraq: Parallel Exchange Rate Saturday Series, Shafaq.com
+A63 INTDAILY XXXX Iraq: Parallel Exchange Rate Saturday Series, Shafaq.com/Haver Analytics
+A61 INTDAILY XXXX Iraq: Parallel Exchange Rate Sunday Series, Shafaq.com
+A64 INTDAILY XXXX Iraq: Parallel Exchange Rate Sunday Series, Shafaq.com/Haver Analytics
+A59 INTDAILY XXXX Iraq: Parallel Exchange Rate, Shafaq.com
+A62 INTDAILY XXXX Iraq: Parallel Exchange Rates, Shafaq.com/Haver Analytics
+W85 INTDAILY XXXX Iraq: Policy Interest Rates, CBI                                                  
+H70 INTDAILY XXXX Iraq: Stock Exchange Indicators [Saturdays], ISX                                  
+H71 INTDAILY XXXX Iraq: Stock Exchange Indicators, ISX   
+T55 INTDAILY XXXX Jordan: Exchange Rates Historical Data, CBJ                                       
+R62 INTDAILY XXXX Jordan: Exchange Rates Mid Rates, CBJ                                             
+T53 INTDAILY XXXX Jordan: Exchange Rates Saturday, CBJ                                              
+T56 INTDAILY XXXX Jordan: Exchange Rates Sunday Mid Rates, CBJ                                      
+T54 INTDAILY XXXX Jordan: Exchange Rates Sunday, CBJ                                                
+S64 INTDAILY XXXX Jordan: Exchange Rates, CBJ                                                       
+T49 INTDAILY XXXX Jordan: Policy Rates Saturday Series, CBJ
+T87 INTDAILY XXXX Jordan: Policy Rates Sunday Series, CBJ
+V82 INTDAILY XXXX Jordan: Policy Rates, CBJ                                                         
+S97 INTDAILY XXXX Jordan: Stock Market Indicators, ASE   
+H87 INTDAILY XXXX Jordan: Stock Market Indicators, ASE                                              
+H88 INTDAILY XXXX Jordan: Stock Market Indicators, ASE                                              
+U72 INTDAILY XXXX Kuwait: Exchange Rates, CBK                                                       
+U73 INTDAILY XXXX Kuwait: Exchange Rates, CBK                                                       
+W93 INTDAILY XXXX Kuwait: Exchange Rates, CBK                                                       
+G48 INTDAILY XXXX Kuwait: Interbank Rates, CBK                                                      
+U76 INTDAILY XXXX Kuwait: Interbank Rates, CBK                                                      
+U77 INTDAILY XXXX Kuwait: Interbank Rates, CBK                                                      
+F77 INTDAILY XXXX Kuwait: Interest Rates, CBoK                                                      
+K42 INTDAILY XXXX Kuwait: KONIA [SAT], CBK
+K43 INTDAILY XXXX Kuwait: KONIA [SUN], CBK
+K41 INTDAILY XXXX Kuwait: KONIA, CBK
+E96 INTDAILY XXXX Kuwait: Market Capitalization [SAT], BKU
+E97 INTDAILY XXXX Kuwait: Market Capitalization [SUN], BKU
+K78 INTDAILY XXXX Kuwait: Market Capitalization and Trading Statistics, BKU
+M21 INTDAILY XXXX Kuwait: Stock Market Indexes [Saturday], Boursa Kuwait                            
+M22 INTDAILY XXXX Kuwait: Stock Market Indexes [Sunday], Boursa Kuwait                              
+M20 INTDAILY XXXX Kuwait: Stock Market Indexes, Boursa Kuwait                                       
+I23 INTDAILY XXXX Kuwait: Treasury Auction, CBOK    
+T23 INTDAILY XXXX Lebanon: BLOM Stock Market Index, BIB                                             
+G33 INTDAILY XXXX Lebanon: Exchange Rate, LIRA                                                      
+R94 INTDAILY XXXX Lebanon: Exchange Rates, Bdl                                                      
+V25 INTDAILY XXXX Lebanon: Interim Balance Sheet, BDL                                                
+C96 INTDAILY XXXX Oman Interbank Rates                                                              
+C97 INTDAILY XXXX Oman Interbank Rates                                                              
+C53 INTDAILY XXXX Oman: Exchange Rate Mid Rate Sunday Series, CBO/H
+C94 INTDAILY XXXX Oman: Exchange Rates, CBO                                                         
+C95 INTDAILY XXXX Oman: Exchange Rates, CBO                                                         
+K21 INTDAILY XXXX Oman: Exchange Rates, CBO                                                         
+W55 INTDAILY XXXX Oman: Exchange Rates, CBO                                                         
+C98 INTDAILY XXXX Oman: Interbank Offer Rate, CBO                                                   
+C99 INTDAILY XXXX Oman: Interbank Offer Rate, CBO                                                   
+H69 INTDAILY XXXX Oman: Oman Interbank Rates, CBO                                                   
+C47 INTDAILY XXXX Oman: Repo and Discount Rate 
+X81 INTDAILY XXXX Oman: Stock Market Indicators   
+C92 INTDAILY XXXX Oman: Stock Market Indicators, Saturday                                           
+C93 INTDAILY XXXX Oman: Stock Market Indicators, Sunday                                             
+G67 INTDAILY XXXX Qatar: Exchange Rates, QCB                                                        
+B41 INTDAILY XXXX Qatar: Interest Rates Saturday Series, QCB
+B42 INTDAILY XXXX Qatar: Interest Rates Sunday Series, QCB
+I83 INTDAILY XXXX Qatar: Interest Rates, QCB                                                        
+W86 INTDAILY XXXX Qatar: Qatar Stock Exchange Indicators, QE                                        
+U86 INTDAILY XXXX Qatar: Stock Exchange Indicators, QSE  
+U85 INTDAILY XXXX Qatar: Stock Exchange Indicators, QSE                                             
+F75 INTDAILY XXXX Saudi Arabia: Interest Rates, SAMA                                                
+U56 INTDAILY XXXX Saudi Arabia: SAIBOR, LSEG [Saturday]                                        
+U57 INTDAILY XXXX Saudi Arabia: SAIBOR, LSEG [Sunday]                                           
+T82 INTDAILY XXXX Saudi Arabia: Stock Market Indicators, Tadawul  
+F76 INTDAILY XXXX Saudi Arabia: Stock Market Indicators, Tadawul                                    
+T81 INTDAILY XXXX Saudi Arabia: Stock Market Indicators, Tadawul                                    
+E84 INTDAILY XXXX Syria: Exchange Rate Mid Rates [Saturdays], CBS                                   
+E85 INTDAILY XXXX Syria: Exchange Rate Mid Rates [Sundays], CBS                                     
+E83 INTDAILY XXXX Syria: Exchange Rate Mid Rates, CBS                                               
+E64 INTDAILY XXXX Syria: Exchange Rates (Banknotes) [SAT], CBS
+E65 INTDAILY XXXX Syria: Exchange Rates (Banknotes) [SUN], CBS
+E63 INTDAILY XXXX Syria: Exchange Rates (Banknotes), CBS
+E81 INTDAILY XXXX Syria: Exchange Rates [Saturdays], CBS                                            
+E82 INTDAILY XXXX Syria: Exchange Rates [Sundays], CBS                                              
+E80 INTDAILY XXXX Syria: Exchange Rates, CBS                                                        
+L02 INTDAILY XXXX Syria: Securities Exchange Indicators Saturday Series, DSE
+L03 INTDAILY XXXX Syria: Securities Exchange Indicators Sunday Series, DSE
+L01 INTDAILY XXXX Syria: Securities Exchange Indicators, DSE
+E87 INTDAILY XXXX Syria: Syrian Pound Parallel Exchange Rate Saturday, SPT                          
+E88 INTDAILY XXXX Syria: Syrian Pound Parallel Exchange Rate Sunday, SPT
+E86 INTDAILY XXXX Syria: Syrian Pound Parallel Exchange Rate, SPT                                   
+B52 INTDAILY XXXX UAE: Dubai Financial Market Overview Statistics Saturday Series, DFM
+B36 INTDAILY XXXX UAE: Dubai Financial Market Overview Statistics Sunday Series, DFM
+U53 INTDAILY XXXX United Arab Emirates: AEIBOR, LSEG [Saturday]                                
+U54 INTDAILY XXXX United Arab Emirates: AEIBOR, LSEG [Sunday]                                 
+B64 INTDAILY XXXX United Arab Emirates: Abu Dhabi Securities Market Capitalization, ADX
+B65 INTDAILY XXXX United Arab Emirates: Abu Dhabi Securities Market Capitalization, ADX
+B03 INTDAILY XXXX United Arab Emirates: Abu Dhabi Securities Market Capitalization, ADX
+A20 INTDAILY XXXX United Arab Emirates: Abu Dhabi Trade by Nationality, ADX                         
+B04 INTDAILY XXXX United Arab Emirates: Dubai Financial Market Overview Statistics, DFM
+V23 INTDAILY XXXX United Arab Emirates: Financial Market Indicators, DFM                            
+A42 INTDAILY XXXX United Arab Emirates: Liquidity Indicators, CBUAE
+A40 INTDAILY XXXX United Arab Emirates: Liquidity Indicators, CBUAE                                 
+A41 INTDAILY XXXX United Arab Emirates: Liquidity Indicators, CBUAE                                 
+X26 INTDAILY XXXX United Arab Emirates: Policy Rate, CBUAE                                          
+V24 INTDAILY XXXX United Arab Emirates: Securities Exchange Indicators, ADX                         
+D36 INTDAILY XXXX United Arab Emirates: Trade by Nationality [Saturdays], DFM                       
+D37 INTDAILY XXXX United Arab Emirates: Trade by Nationality [Sundays], DFM 
+D35 INTDAILY XXXX United Arab Emirates: Trade by Nationality, DFM                                   
+A10 INTDAILY XXXX United Arab Emirates: Trading by Nationality, ADX                                 
+U84 INTDAILY XXXX United Arab Emirates: U.A.E Exchange Rates, CBUAE                                              
+R15 INTDAILY XXXX Uzbekistan: Exchange Rates, CBU                                                   
+Y34 INTDAILY XXXX Uzbekistan: FX Transactions Volume, URCE                                          
+J99 INTDAILY XXXX Uzbekistan: Monetary Policy Rates, Central Bank of Uzbekistan                     
+W83 INTDAILY XXXX Uzbekistan: UZSE Stock Exchange, UZSE 
+U36 INTDAILY XXXX Uzbekistan: Uzbek Overnight Index Average (UZONIA), CBK
+===================================================================================================
+DBM: Florence
+===================================================================================================
+L30 INTDAILY XXXX Mauritania: Policy Rates, BCM
+P20 INTDAILY XXXX Mauritania: Exchange Rates
+P23 INTDAILY XXXX Mauritania: Exchange Rates, Saturdays
+P83 INTDAILY XXXX Mauritania: Exchange Rates, Sundays
+R33 INTDAILY XXXX Georgia: Exchange Rates, NBG                                                      
+D87 INTDAILY XXXX Georgia: Government Bond Yield, NBG
+X06 INTDAILY XXXX Georgia: Interbank Annual Interest Rate and Loan Volume, NBG                      
+X05 INTDAILY XXXX Georgia: National Bank of Georgia: FX Auctions, NBG                               
+X24 INTDAILY XXXX Georgia: Nominal Effective Exchange Rate Index of GEL, NBG                        
+J16 INTDAILY XXXX Georgia: Policy Rates, NBG                                                        
+X47 INTDAILY XXXX Georgia: Stock Market Index, GSE   
+R04 INTDAILY XXXX Belarus: Exchange Rates
+F09 INTDAILY XXXX Belarus: Reference Rate, NBB
+A82 INTDAILY XXXX Algeria: Exchange Rates, BdA
+A76 INTDAILY XXXX Algeria: Interest Rates Saturday Series, BdA
+A77 INTDAILY XXXX Algeria: Interest Rates Sunday Series, BdA
+A75 INTDAILY XXXX Algeria: Interest Rates, BdA
+A88 INTDAILY XXXX Algeria: Reserve Requirement Saturday Series, BdA
+A89 INTDAILY XXXX Algeria: Reserve Requirement Sunday Series, BdA
+A87 INTDAILY XXXX Algeria: Reserve Requirement, BdA
+A71 INTDAILY XXXX Algeria: Stock Exchange Indicators Saturday Series, SGBV
+A70 INTDAILY XXXX Algeria: Stock Exchange Indicators Sunday Series, SGBV
+A69 INTDAILY XXXX Algeria: Stock Exchange Indicators, SGBV
+E10 INTDAILY XXXX Libya: Central Bank Exchange Rates, CBL
+E11 INTDAILY XXXX Libya: Central Bank Exchange Rates, CBL [SAT]
+E12 INTDAILY XXXX Libya: Central Bank Exchange Rates, CBL [SUN]
+B44 INTDAILY XXXX Libya: Parallel Exchange Rate Saturday Series,Libya Observer
+B45 INTDAILY XXXX Libya: Parallel Exchange Rate Sunday Series,Libya Observer
+B43 INTDAILY XXXX Libya: Parallel Exchange Rate,Libya Observer
+E29 INTDAILY XXXX Libya: Parallel Exchange Rates Saturday Series, LY Black
+E39 INTDAILY XXXX Libya: Parallel Exchange Rates Sunday Series, LY Black
+E27 INTDAILY XXXX Libya: Parallel Exchange Rates, LY Black
+H75 INTDAILY XXXX Morocco: Exchange Rate Fluctuation Band, BKAM                                     
+R23 INTDAILY XXXX Morocco: Exchange Rates, BAM/Haver                                                
+I91 INTDAILY XXXX Morocco: Interest Rates, BAM                                                      
+G15 INTDAILY XXXX Morocco: Key Interest Rate, BKAM                                                  
+H74 INTDAILY XXXX Morocco: Key Interest Rate, BKAM                                                  
+S63 INTDAILY XXXX Morocco: Stock Price Indexes, BdC   
+R56 INTDAILY XXXX Tunisia: 10 Day Balance Sheet, CBT                                                
+C56 INTDAILY XXXX Tunisia: 10-day Tunisian Tourism, Income & Debt [Saturday], BCT                   
+C57 INTDAILY XXXX Tunisia: 10-day Tunisian Tourism, Income & Debt [Sunday], BCT   
+C55 INTDAILY XXXX Tunisia: 10-day Tunisian Tourism, Income & Debt, BCT                              
+F84 INTDAILY XXXX Tunisia: Bond Yields, BCT                                                         
+X62 INTDAILY XXXX Tunisia: Central Bank Interest Rates, CBT                                         
+R64 INTDAILY XXXX Tunisia: Exchange Rates, BCT                                                      
+V39 INTDAILY XXXX Tunisia: Foreign Currency Reserves, BCT                                           
+X52 INTDAILY XXXX Tunisia: Interbank Offered Rates, CBT                                             
+X54 INTDAILY XXXX Tunisia: Open Market Operations, CBT                                              
+S47 INTDAILY XXXX Tunisia: Stock Prices, BdT    
+===================================================================================================
+DBM: Binru
+===================================================================================================
+O34 INTDAILY XXXX Risk-On Risk-Off Index, FRBKC
+O74 INTDAILY XXXX China: Markets Agricultural Prices, MOA
+O75 INTDAILY XXXX China: Markets Agricultural Prices [SAT], MOA
+O76 INTDAILY XXXX China: Markets Agricultural Prices [SUN], MOA
+K94 INTDAILY XXXX Haver Analytics US Economic Surprise Index
+E95 INTDAILY XXXX Deutsche Bank FX Volatility Index
+M60 INTDAILY XXXX China: Central Bank Lending and Discount Rates [SAT], PBoC
+M61 INTDAILY XXXX China: Central Bank Lending and Discount Rates [SUN], PBoC
+M67 INTDAILY XXXX China: Central Bank Lending and Discount Rates, PBoC
+O39 INTDAILY XXXX China: Open Market Operations Overnight Repo Rate, PBoC
+O71 INTDAILY XXXX Bitcoin and Ethereum Price Index, CD
+O72 INTDAILY XXXX Bitcoin and Ethereum Price Index [SAT], CD
+O73 INTDAILY XXXX Bitcoin and Ethereum Price Index [SUN], CD
+K97 INTDAILY XXXX China: Margin Trading Transactions, SZSE
+T65 INTDAILY XXXX Suspended Indeed Series [Saturday]
+T66 INTDAILY XXXX Suspended Indeed Series [Sunday]
+T93 INTDAILY XXXX Suspended Indeed Series
+K59 INTDAILY XXXX China: Interest Rate Swap, CFETS
+K76 INTDAILY XXXX China: Interest Rate Swap [SAT], CFETS
+K77 INTDAILY XXXX China: Interest Rate Swap [SUN], CFETS
+O49 INTDAILY XXXX Tullett Prebon Risk-Free, FRA/OIS Spread [7AM ET], TPI
+O50 INTDAILY XXXX Tullett Prebon Risk-Free, FRA/OIS Spread [2PM ET], TPI
+O51 INTDAILY XXXX Tullett Prebon Risk-Free, FRA/OIS Spread [5PM ET], TPI
+O62 INTDAILY XXXX Tullett Prebon Risk-Free, Overnight Index Swap [2PM ET], TPI
+O65 INTDAILY XXXX Tullett Prebon Risk-Free, Overnight Index Swap [5PM ET], TPI
+O67 INTDAILY XXXX Tullett Prebon Risk-Free, Overnight Index Swap [7AM ET], TPI
+O80 INTDAILY XXXX Tullett Prebon Basis Swap [7AM ET], TPI
+O81 INTDAILY XXXX Tullett Prebon Basis Swap [2PM ET], TPI
+O82 INTDAILY XXXX Tullett Prebon Basis Swap [5PM ET], TPI
+U58 INTDAILY XXXX Broad Effective Exchange Rates, Daily
+X28 INTDAILY XXXX International Yield Curve Decomposition Rate, LJK
+M41 INTDAILY XXXX Cryptocurrency Prices, CG
+M42 INTDAILY XXXX Cryptocurrency Prices [SATURDAY], CG
+M43 INTDAILY XXXX Cryptocurrency Prices [SUNDAY], CG
+V32 INTDAILY XXXX S&P BRIC 40 INDEX
+O41 INTDAILY XXXX Tullett Prebon Risk-Free, NCS & TSP Swaps Mid [2PM ET], TPI
+O42 INTDAILY XXXX Tullett Prebon Risk-Free, NCS & TSP Swaps [2PM ET], TPI
+O44 INTDAILY XXXX Tullett Prebon Risk-Free, NCS & TSP Swaps Mid [5PM ET], TPI
+O45 INTDAILY XXXX Tullett Prebon Risk-Free, NCS & TSP Swaps [5PM ET], TPI
+O46 INTDAILY XXXX Tullett Prebon Risk-Free, NCS & TSP Swaps Mid [7AM ET], TPI
+O47 INTDAILY XXXX Tullett Prebon Risk-Free, NCS & TSP Swaps [7AM ET], TPI
+T71 INTDAILY XXXX Indeed Remote Job Postings Share, Hiring Lab
+T72 INTDAILY XXXX Indeed Remote Job Postings Share Saturday, Hiring Lab
+T73 INTDAILY XXXX Indeed Remote Job Postings Sahre Sunday, Hiring Lab
+D95 INTDAILY XXXX China: Reference Exchange Rate, CFETS
+D91 INTDAILY XXXX China: Forward Rates, CFETS
+D92 INTDAILY XXXX China: Forward Rates [SATURDAY], CFETS
+D93 INTDAILY XXXX China: Forward Rates [SUNDAY], CFETS
+K83 INTDAILY XXXX China: Shanghai Stock Exchange Margin Balance, SSE
+G06 INTDAILY XXXX UK: FTSE EPRA Nareit
+T75 INTDAILY XXXX Saudi Arabia: SAIBOR, LSEG
+E01 INTDAILY XXXX Easter Sunday, Census
+E02 INTDAILY XXXX Easter Sunday [SATURDAY], Census
+E03 INTDAILY XXXX Easter Sunday [SUNDAY], Census
+E04 INTDAILY XXXX Ramadan Dates, Umm Al-Qura University
+E05 INTDAILY XXXX Ramadan Dates [SATURDAY], Umm Al-Qura University
+E06 INTDAILY XXXX Ramadan Dates [SUNDAY], Umm Al-Qura University
+D84 INTDAILY XXXX China: Private Placement Notes, CFETS
+D85 INTDAILY XXXX China: Private Placement Notes [SATURDAY], CFETS
+D86 INTDAILY XXXX China: Private Placement Notes [SUNDAY], CFETS
+N17 INTDAILY XXXX China: Shenzhen Stock Exchange Securities, Shenzhen Stock Exchange
+X95 INTDAILY XXXX China: PBOC OMO: Bills via HKMA CMU
+M23 INTDAILY XXXX Tullett Prebon Spot & Forward Exch Rates Mid Rates, EMEA, TPI/Haver Analytics
+M44 INTDAILY XXXX Tullett Prebon Bond Prices & Yields Mid Rates, EMEA, TP/Haver Analytics
+M45 INTDAILY XXXX Tullett Prebon Bond Prices & Yields, Asia & Australasia Mid Rates, TPI/Haver
+M49 INTDAILY XXXX Tullett Prebon Money Mkt/Repos/Interbank Mid Rates, EMEA, TPI/Haver Analytics
+M50 INTDAILY XXXX Tullett Prebon Money Mkt/Repos/Interbank Rt Mid Rts, Asia & Australasia, TPI/H
+M51 INTDAILY XXXX Tullett Prebon Spot & Fwd Exch Rates Mid Rates, Asia & Australasia, TPI/Haver
+M70 INTDAILY XXXX Tullett Prebon Interest Rate Swaps & OIS Mid Rates, EMEA, TP/Haver Analytics
+M75 INTDAILY XXXX Tullett Prebon Int Rate Swaps & OIS Mid Rates, Asia & Australasia, TPI/Haver
+M88 INTDAILY XXXX Tullett Prebon Spot & Fwd Exch Rates Mid Rates, Americas, TPI/Haver Analytics
+M91 INTDAILY XXXX Tullett Prebon Int Rate Swaps & OIS Mid Rates, Americas, TPI/Haver Analytics
+M93 INTDAILY XXXX Tullett Prebon Bond Prices & Yields Mid Rates, Americas, TPI/Haver Analytics
+M96 INTDAILY XXXX Tullett Prebon Money Mkt/Repos/Interbank Rates Mid Rates, TPI/Haver Analytics
+O02 INTDAILY XXXX Tullet Prebon Risk-Free, Basis & Other Swaps [2PM ET], TPI
+O05 INTDAILY XXXX Tullet Prebon Risk-Free, Basis & Other Swaps [5PM ET], TPI
+O07 INTDAILY XXXX Tullet Prebon Risk-Free, Basis & Other Swaps [7AM ET], TPI
+T16 INTDAILY XXXX Euro Area: Overnight Index Swap, LSEG 
+B10 INTDAILY XXXX Constants  
+B26 INTDAILY XXXX China: Passenger Car Sales, CPCA                                                  
+B27 INTDAILY XXXX China: Passenger Car Sales, CPCA, Saturday                                        
+B28 INTDAILY XXXX China: Passenger Car Sales, CPCA, Sunday    
+C24 INTDAILY XXXX Restaurant Statistics, Daily 
+C85 INTDAILY XXXX China: Daily Coal Consumption & Inventories, CCTD                                 
+C86 INTDAILY XXXX China: Daily Coal Consumption & Inventories[Saturday], CCTD                       
+C87 INTDAILY XXXX China: Daily Coal Consumption & Inventories [Sunday], CCTD
+D40 INTDAILY XXXX China: Central Bank Bill Yields, CFETS                                            
+D41 INTDAILY XXXX China: Central Bank Yields [SATURDAY], CFETS                                      
+D42 INTDAILY XXXX China: Central Bank Yields [SUNDAY], CFETS                                        
+D45 INTDAILY XXXX China: Corporate Bond Yields, CFETS                                               
+D46 INTDAILY XXXX China: Corporate Bond Yields [SATURDAY], CFETS                                    
+D47 INTDAILY XXXX China: Corporate Bond Yields [SUNDAY], CFETS                                      
+D48 INTDAILY XXXX China: Negotiable Certificates of Deposit, CFETS                                  
+D49 INTDAILY XXXX China: Negotiable Certificates of Deposit [SATURDAY], CFETS                       
+D50 INTDAILY XXXX China: Negotiable Certificates of Deposit [SUNDAY], CFETS                         
+D52 INTDAILY XXXX China: Ultra Short Term Financing Bills [SATURDAY], CFETS                         
+D53 INTDAILY XXXX China: Ultra Short Term Financing Bills [SUNDAY], CFETS                           
+D54 INTDAILY XXXX China: Governmen-sponsored Agency Bonds, CFETS                                    
+D55 INTDAILY XXXX China: Governmen-sponsored Agency Bonds [SATURDAY], CFETS                         
+D56 INTDAILY XXXX China: Governmen-sponsored Agency Bonds [SUNDAY], CFETS                           
+D57 INTDAILY XXXX China: Policy Bank Bond Yields, CFETS                                             
+D58 INTDAILY XXXX China: Policy Bank Bond Yields [SATURDAY], CFETS                                  
+D59 INTDAILY XXXX China: Policy Bank Bond Yields [SUNDAY], CFETS                                    
+D60 INTDAILY XXXX China: Corporate Bonds by Rating, CFETS                                           
+D61 INTDAILY XXXX China: Corporate Bonds by Rating [SATURDAY], CFETS                                
+D62 INTDAILY XXXX China: Corporate Bonds by Rating [SUNDAY], CFETS                                  
+D63 INTDAILY XXXX China: Medium-term Notes by Rating, CFETS                                         
+D64 INTDAILY XXXX China: Medium-term Notes by Rating [SATURDAY], CFETS                              
+D65 INTDAILY XXXX China: Medium-term Notes by Rating [SUNDAY], CFETS                                
+D66 INTDAILY XXXX China: Local Government Bonds by Rating, CFETS                                    
+D67 INTDAILY XXXX China: Local Government Bonds by Rating [SATURDAY], CFETS                         
+D68 INTDAILY XXXX China: Local Government Bonds by Rating [SUNDAY], CFETS                           
+D69 INTDAILY XXXX China: Financial Bonds of Commercial Banks by Rating, CFETS                       
+D70 INTDAILY XXXX China: Financial Bonds of Commercial Banks by Rating [SATURDAY], CFETS            
+D71 INTDAILY XXXX China: Financial Bonds of Commercial Banks by Rating [SUNDAYT], CFETS             
+D72 INTDAILY XXXX China: Secondary Capital Bond of Commercial Banks by Rating, CFETS                
+D73 INTDAILY XXXX China: Secondary Capital Bond of Commercial Banks by Rating [SATURDAY], CFETS     
+D74 INTDAILY XXXX China: Secondary Capital Bond of Commercial Banks by Rating [SUNDAY], CFETS       
+D75 INTDAILY XXXX China: Asset-backed Securities by Rating, CFETS                                   
+D76 INTDAILY XXXX China: Asset-backed Securities by Rating [SATURDAY], CFETS                        
+D77 INTDAILY XXXX China: Asset-backed Securities by Rating [SUNDAY], CFETS                          
+D78 INTDAILY XXXX China: Commercial Paper of Securities Company by Rating, CFETS                    
+D79 INTDAILY XXXX China: Commercial Paper of Securities Company by Rating [SATURDAY], CFETS         
+D80 INTDAILY XXXX China: Commercial Paper of Securities Company by Rating [SUNDAY], CFETS
+T13 INTDAILY XXXX Americas: Government Bond Yields, LSEG 
+T12 INTDAILY XXXX Asia: Fixing Rates, LSEG
+W34 INTDAILY XXXX BCEAO: Central Bank of West African States (BCEAO) Interest Rates, BCEAO [SUN]
+W72 INTDAILY XXXX Broad and Narrow Nominal Effective Exchange Rates, BIS
+X77 INTDAILY XXXX Central Bank Policy Rates [Saturdays], BIS                                        
+X89 INTDAILY XXXX Central Bank Policy Rates [Sundays], BIS                                          
+X72 INTDAILY XXXX Central Bank Policy Rates, BIS
+U37 INTDAILY XXXX China: 10-Day Steel Production                                                    
+U38 INTDAILY XXXX China: 10-Day Steel Production [Saturday]                                         
+U39 INTDAILY XXXX China: 10-Day Steel Production [Sunday]                                           
+V28 INTDAILY XXXX China: 10-Day Steel Social Inventory                                              
+V66 INTDAILY XXXX China: 10-Day Steel Social Inventory, Saturday                                    
+V86 INTDAILY XXXX China: 10-Day Steel Social Inventory, Sunday                                      
+M18 INTDAILY XXXX China: Beijing Stock Exchage Daily Indicators, BSE                                
+T68 INTDAILY XXXX China: Bond Issuance [SATURDAY], CELBMA                                           
+T69 INTDAILY XXXX China: Bond Issuance [SUNDAY], CELBMA                                             
+V67 INTDAILY XXXX China: Bond Issuance, CELBMA                                                      
+M14 INTDAILY XXXX China: Central Bank Bills Swap: 3 Months [SATURDAY], PBoC                         
+M15 INTDAILY XXXX China: Central Bank Bills Swap: 3 Months [SUNDAY], PBoC                           
+V08 INTDAILY XXXX China: Central Bank Bills Swap: 3 Months, PBoC                                    
+M16 INTDAILY XXXX China: Central Treasury Cash Management Operations [SATURDAY], PBoC               
+M17 INTDAILY XXXX China: Central Treasury Cash Management Operations [SUNDAY], PBoC                 
+X11 INTDAILY XXXX China: Central Treasury Cash Management Operations, PBoC                          
+M24 INTDAILY XXXX China: China Parity Rates, CFETS                                                  
+H95 INTDAILY XXXX China: Daily Air Quality Indexes by City [SATURDAY], MEP                          
+H96 INTDAILY XXXX China: Daily Air Quality Indexes by City [SUNDAY], MEP                            
+V42 INTDAILY XXXX China: Daily Air Quality Indexes by City, MEP                                     
+U01 INTDAILY XXXX China: Detailed Open Market Operations [Saturdays], PBoC                          
+U02 INTDAILY XXXX China: Detailed Open Market Operations [Sundays], PBoC                            
+S99 INTDAILY XXXX China: Detailed Open Market Operations, PBoC                                      
+R79 INTDAILY XXXX China: Exchange Rates, SAFE, Daily                                                
+U68 INTDAILY XXXX China: Government Bond Yield Curve and Others [Saturday], PBC                     
+U69 INTDAILY XXXX China: Government Bond Yield Curve and Others [Sunday], PBC                       
+G74 INTDAILY XXXX China: Government Bond Yield Curve and Others, PBC                                
+U07 INTDAILY XXXX China: Interest Rates [Saturdays], PBC                                            
+U09 INTDAILY XXXX China: Interest Rates [Saturdays], PBC                                            
+U08 INTDAILY XXXX China: Interest Rates [Sundays], PBC                                              
+U10 INTDAILY XXXX China: Interest Rates [Sundays], PBC                                              
+G99 INTDAILY XXXX China: Interest Rates, PBC                                                        
+I88 INTDAILY XXXX China: Interest Rates, PBC                                                        
+P24 INTDAILY XXXX China: Lean Hog Price Index, MoA                                                  
+T91 INTDAILY XXXX China: Lending Facility Operations [SATURDAY], PBoC                               
+T92 INTDAILY XXXX China: Lending Facility Operations [SUNDAY], PBoC                                 
+T86 INTDAILY XXXX China: Lending Facility Operations, PBoC                                          
+P36 INTDAILY XXXX China: Loan Prime Rate [SATURDAY], PBC                                            
+P37 INTDAILY XXXX China: Loan Prime Rate [SUNDAY], PBC                                              
+J25 INTDAILY XXXX China: Loan Prime Rate, PBC                                                       
+V65 INTDAILY XXXX China: Market Prices of Important Means of Production, CNBS                       
+T51 INTDAILY XXXX China: Medium Term Lending Facility [MLF] [SATURDAY], PBoC                        
+T52 INTDAILY XXXX China: Medium Term Lending Facility [MLF] [SUNDAY], PBoC                          
+V49 INTDAILY XXXX China: Medium Term Lending Facility [MLF] SUSP, PBoC
+U51 INTDAILY XXXX China: Medium Term Notes [SATURDAY], CFETS                                        
+U52 INTDAILY XXXX China: Medium Term Notes [SUNDAY], CFETS                                          
+P69 INTDAILY XXXX China: Oil Commodity Prices, NDRC                                                 
+U23 INTDAILY XXXX China: Open Market Operations and Derived Liquidity Indicators [Saturdays], PBoC  
+U24 INTDAILY XXXX China: Open Market Operations and Derived Liquidity Indicators [Sundays], PBoC    
+V96 INTDAILY XXXX China: Open Market Operations and Derived Liquidity Indicators, PBoC              
+U61 INTDAILY XXXX China: Pledged Repo Rates [SATURDAY], CFETS                                       
+U62 INTDAILY XXXX China: Pledged Repo Rates [SUNDAY], CFETS                                         
+U60 INTDAILY XXXX China: Pledged Repo Rates, CFETS                                                  
+F82 INTDAILY XXXX China: Repo & Interbank repo Fixing Rates, CFETS                                  
+U66 INTDAILY XXXX China: Repo & Interbank repo Fixing Rates, Saturday, CFETS                        
+U67 INTDAILY XXXX China: Repo & Interbank repo Fixing Rates, Sunday, CFETS                          
+J27 INTDAILY XXXX China: Reserve Requirement Ratios                                                 
+T44 INTDAILY XXXX China: Reserve Requirement Ratios, Saturday                                       
+T45 INTDAILY XXXX China: Reserve Requirement Ratios, Sunday                                         
+J02 INTDAILY XXXX China: SHIBOR Rates, NIBLC                                                        
+U70 INTDAILY XXXX China: SHIBOR Rates, Saturdays NIBLC                                              
+U71 INTDAILY XXXX China: SHIBOR Rates, Sundays NIBLC                                                
+W81 INTDAILY XXXX China: Shanghai & Shenzhen+HK Connect Statistics, HKEX                            
+U40 INTDAILY XXXX China: Shanghai Stock Exchange Indices, SSE                                       
+J29 INTDAILY XXXX China: Shanghai Stock Market, SSE                                                 
+U59 INTDAILY XXXX China: Shanghai-HK Stock Connect, SSE                                             
+S57 INTDAILY XXXX China: Shenzhen Stock Market, SZSE                                                
+U49 INTDAILY XXXX China: Shenzhen-HK Stock Connect, SZSE                                            
+T96 INTDAILY XXXX China: Short-term Liquidity Operations [SATURDAY], PBoC                           
+T97 INTDAILY XXXX China: Short-term Liquidity Operations [SUNDAY], PBoC                             
+V98 INTDAILY XXXX China: Short-term Liquidity Operations, PBoC                                      
+V90 INTDAILY XXXX China: Statistics of Margin Transactions, CSF                                     
+S93 INTDAILY XXXX China: Stock Market Indicators                                                    
+S35 INTDAILY XXXX China: Stock Pledge Repurchases, Shanghai Stock Exchange                          
+S52 INTDAILY XXXX China: Stock Pledge Repurchases, Shenzhen Stock Exchange                          
+V59 INTDAILY XXXX China: Stock Price Index                                                          
+S94 INTDAILY XXXX China: Stock Price Indexes, SZSE, Daily                                           
+T88 INTDAILY XXXX China: Targeted Term Lending Facility [TMLF] [SATURDAY], PBoC                     
+T89 INTDAILY XXXX China: Targeted Term Lending Facility [TMLF] [SUNDAY], PBoC                       
+T84 INTDAILY XXXX China: Targeted Term Lending Facility [TMLF], PBoC                                
+U17 INTDAILY XXXX China: Tianhong Yue Bao Fund, Alipay                                              
+U18 INTDAILY XXXX China: Tianhong Yue Bao Fund, Saturday, Alipay                                    
+U19 INTDAILY XXXX China: Tianhong Yue Bao Fund, Sunday, Alipay                                      
+U41 INTDAILY XXXX China: Treasury Bond Yields [SATURDAY], CFETS                                     
+U42 INTDAILY XXXX China: Treasury Bond Yields [SUNDAY], CFETS                                       
+I71 INTDAILY XXXX China: Treasury Bond Yields and Medium Term Notes, CFETS                          
+G94 INTDAILY XXXX China: Treasury Bond Yields, Short Term Notes, Repo Rates, CFETS                  
+P34 INTDAILY XXXX China: Wholesale Agricultural Prices [Saturday], MOA                              
+P35 INTDAILY XXXX China: Wholesale Agricultural Prices [Sunday], MOA                                
+P33 INTDAILY XXXX China: Wholesale Agricultural Prices, MOA                                         
+P68 INTDAILY XXXX China: Wholesale Price Indexes, MOA                                               
+T46 INTDAILY XXXX China: Wholesale Price Indexes, MOA, Saturday                                     
+T47 INTDAILY XXXX China: Wholesale Price Indexes, MOA, Sunday                                       
+T58 INTDAILY XXXX China: Yicai High Frequency Economic Activity Index (YHEI) [SATURDAY], YMG        
+T59 INTDAILY XXXX China: Yicai High Frequency Economic Activity Index (YHEI) [SUNDAY], YMG          
+T57 INTDAILY XXXX China: Yicai High Frequency Economic Activity Index (YHEI), YMG                   
+U74 INTDAILY XXXX China: Zhengzhou Commodity Exchange: Thermal Coal Futures, ZCE                    
+J21 INTDAILY XXXX Citigroup Economic Surprise Indexes, Citigroup                                    
+J11 INTDAILY XXXX Citigroup Inflation Surprise Indexes, Citigroup 
+P84 INTDAILY XXXX Brent Oil Prices, ICE
+T04 INTDAILY XXXX Deposit Rates, LSEG                                                                     
+F81 INTDAILY XXXX Dollar Spot Forward Rates Against the Dollar [FT]
+S13 INTDAILY XXXX Dow Jones Indexes 
+T03 INTDAILY XXXX Europe: Fixing Rates, LSEG                                                             
+T05 INTDAILY XXXX Europe: Forward Rates, LSEG                                                             
+T02 INTDAILY XXXX Europe: Government Bond Yields, LSEG
+V38 INTDAILY XXXX FTSE Euro 100 Stock Index, FT                                                     
+V80 INTDAILY XXXX FTSE European Indexes, FT                                                         
+V68 INTDAILY XXXX FTSE: Eurotop 100 Index, FT                                                       
+R49 INTDAILY XXXX Financial Times World Currencies, FT  
+T41 INTDAILY XXXX Extended Frontier: S&P 150 Index  
+R75 INTDAILY XXXX IMF Exchange Rates, IMF                                                           
+X18 INTDAILY XXXX IMF: SDR Exchange Rates, IMF                                                      
+T38 INTDAILY XXXX IMF: SDR Interest Rates, IMF    
+T78 INTDAILY XXXX Indeed Job Postings Index Saturday, Hiring Lab                                    
+T79 INTDAILY XXXX Indeed Job Postings Index Sunday, Hiring Lab                                      
+T77 INTDAILY XXXX Indeed Job Postings Index, Hiring Lab    
+T01 INTDAILY XXXX Interest Rate Swaps, LSEG   
+W61 INTDAILY XXXX International Shadow Short Rates & Std Deviations, LJK   
+S14 INTDAILY XXXX JP Morgan Emerging Markets Bond Indexes                                           
+P64 INTDAILY XXXX Johnson Matthey Prices -Hong Kong                                                 
+P66 INTDAILY XXXX Johnson Matthey Prices -London                                                    
+P67 INTDAILY XXXX Johnson Matthey Prices -New York   
+T11 INTDAILY XXXX New Zealand and Asia: Government Bond Yields, LSEG
+T07 INTDAILY XXXX North America: Repo Rates, LSEG 
+H05 INTDAILY XXXX OpenTable Restaurant Statistics [Saturday], Daily                                 
+H06 INTDAILY XXXX OpenTable Restaurant Statistics [Sunday], Daily                                                                    
+V43 INTDAILY XXXX Tullett Prebon Bond Prices & Yields, Americas, TPI                                
+V45 INTDAILY XXXX Tullett Prebon Bond Prices & Yields, Asia & Australasia, TPI                      
+V44 INTDAILY XXXX Tullett Prebon Bond Prices & Yields, EMEA, TP                                     
+V71 INTDAILY XXXX Tullett Prebon Interest Rate Swaps & OIS, Americas, TPI                           
+V73 INTDAILY XXXX Tullett Prebon Interest Rate Swaps & OIS, Asia & Australasia, TPI                 
+V72 INTDAILY XXXX Tullett Prebon Interest Rate Swaps & OIS, EMEA, TP                                
+V46 INTDAILY XXXX Tullett Prebon Money Market/Repos/Interbank Rates, Americas, TPI                  
+V48 INTDAILY XXXX Tullett Prebon Money Market/Repos/Interbank Rates, Asia & Australasia, TPI        
+V47 INTDAILY XXXX Tullett Prebon Money Market/Repos/Interbank Rates, EMEA, TPI                      
+W03 INTDAILY XXXX Tullett Prebon Spot & Forward Exchange Rates, Americas, TPI                       
+W01 INTDAILY XXXX Tullett Prebon Spot & Forward Exchange Rates, Asia & Australasia, TPI             
+W02 INTDAILY XXXX Tullett Prebon Spot & Forward Exchange Rates, EMEA, TPI  
+S83 INTDAILY XXXX China: Shanghai Stock Exchange Margin Balance, SSE                                                            
+G11 INTDAILY XXXX UK: FTSE Actuaries Gilts, FT                                                      
+F94 INTDAILY XXXX UK: FTSE Actuaries Share Indexes  
+I92 INTDAILY XXXX UK: Govt Securities Inflation Adjusted Prices & Yields, FT   
+T21 INTDAILY XXXX UAE and Saudi Arabia: AEIBOR & SAIBOR, LSEG 
+R74 INTDAILY XXXX US Exchange Rates, BIS, Daily  
+Y87 INTDAILY XXXX World Health Organization: COVID-19 Cases and Deaths                              
+X51 INTDAILY XXXX World Health Organization: Saturday COVID-19 Cases and Deaths                     
+X66 INTDAILY XXXX World Health Organization: Sunday COVID-19 Cases and Deaths  
+T10 INTDAILY XXXX Russia: Non Deliverable Forward Rate to US Dollar, LSEG   
+T06 INTDAILY XXXX Government Bond Yields [SUNDAY], LSEG
+T08 INTDAILY XXXX Government Bond Yields [SATURDAY], LSEG
+T14 INTDAILY XXXX Government Bond Yields, LSEG
+O32 INTDAILY XXXX Tullett Prebon: Currency Basis Swap [2PM ET], TPI
+O33 INTDAILY XXXX Tullett Prebon: Currency Basis Swap Mid Rate [2PM ET], TPI/H
+O35 INTDAILY XXXX Tullett Prebon: Currency Basis Swap [5PM ET], TPI
+O36 INTDAILY XXXX Tullett Prebon: Currency Basis Swap Mid Rate [5PM ET], TPI/H
+O37 INTDAILY XXXX Tullett Prebon: Currency Basis Swap [7AM ET], TPI
+O38 INTDAILY XXXX Tullett Prebon: Currency Basis Swap Mid Rate [7AM ET], TPI/H
+===================================================================================================
+DBM: Yukun
+===================================================================================================
+E57 INTDAILY XXXX Israel: Trends in the Activity in Cash Saturday Series, BoI
+E67 INTDAILY XXXX Israel: Trends in the Activity in Cash Sunday Series, BoI
+L97 INTDAILY XXXX Sweden: Consumption Indicators, SCB
+L98 INTDAILY XXXX Sweden: Consumption Indicators, SCB
+L99 INTDAILY XXXX Sweden: Consumption Indicators, SCB
+N04 INTDAILY XXXX Hungary: OTC Security Volume Traded, KELER
+N05 INTDAILY XXXX Hungary: OTC Security Volume Traded, KELER
+N06 INTDAILY XXXX Hungary: OTC Security Volume Traded, KELER
+Q97 INTDAILY XXXX Switzerland: Effective Exchange Rate Indexes, SNB
+N36 INTDAILY XXXX Hungary: Foreign Currency Liquidity Providing FX Swap Tenders, MNB
+N37 INTDAILY XXXX Hungary: Foreign Currency Liquidity Providing FX Swap Tenders, MNB
+B70 INTDAILY XXXX United Kingdom: Bank of England Indexed Long-Term Repo OMOs, BoE/H
+E76 INTDAILY XXXX Turkey: Interest Rates, CBRT
+E77 INTDAILY XXXX Turkey: Interest Rates, CBRT
+I64 INTDAILY XXXX Turkey: Interest Rates, CBRT
+M86 INTDAILY XXXX Israel: Payment Card Transactions, BOI
+M87 INTDAILY XXXX Israel: Payment Card Transactions, Saturdays, BOI
+M89 INTDAILY XXXX Israel: Payment Card Transactions, Sundays, BOI
+V20 INTDAILY XXXX Montenegro: Stock Price Index   
+R58 INTDAILY XXXX North Macedonia: Exchange Rates, NBRNM                                            
+J49 INTDAILY XXXX North Macedonia: Interbank Rates (SKIBOR), NBRNM                                  
+J96 INTDAILY XXXX North Macedonia: Liquidity Indicators, NBRNM                                      
+J95 INTDAILY XXXX North Macedonia: MKDONIA (Macedonian Denar Overnight Index Average), NBRNM        
+J91 INTDAILY XXXX North Macedonia: Policy Rates, NBRNM                                              
+J93 INTDAILY XXXX North Macedonia: Reserve Requirement Ratios, NBRNM    
+X80 INTDAILY XXXX Poland: Banking Liquidity, NBP                                                    
+R99 INTDAILY XXXX Poland: Exchange Rates, NBP                                                       
+I48 INTDAILY XXXX Poland: Interest Rates, NBP                                                       
+E20 INTDAILY XXXX Poland: Monetary Policy Meetings, NBP
+E21 INTDAILY XXXX Poland: Monetary Policy Meetings, NBP
+E22 INTDAILY XXXX Poland: Monetary Policy Meetings, NBP
+B90 INTDAILY XXXX Poland: Monetary Policy Rate Change Announcements, NBP
+B91 INTDAILY XXXX Poland: Monetary Policy Rate Change Announcements, NBP
+B92 INTDAILY XXXX Poland: Monetary Policy Rate Change Announcements, NBP
+X76 INTDAILY XXXX Poland: NBP Bill Tenders, NBP                                                     
+G18 INTDAILY XXXX Poland: Non Residents Treasury Holdings, MOF                                      
+W92 INTDAILY XXXX Poland: POLONIA Reference Rate, NBP                                               
+O60 INTDAILY XXXX Poland: Polish Short Term Rate, GPW
+O61 INTDAILY XXXX Poland: Polish Short Term Rate, GPW
+S62 INTDAILY XXXX Poland: Stock Market Indexes, WSE/Haver                                           
+X71 INTDAILY XXXX Poland: Warsaw InterBank Bid/Offer Rates, WSE                                     
+T19 INTDAILY XXXX Poland: Warsaw InterBank Mid Rates, WSE/Haver Analytics                           
+P39 INTDAILY XXXX Poland: Warsaw Interest Rate Overnight, GPW   
+P31 INTDAILY XXXX Poland: Warsaw Interest Rate Overnight, GPW                                       
+Y55 INTDAILY XXXX Romania: Calculated Government Bond Mid Yields, NBR/Haver                         
+Y54 INTDAILY XXXX Romania: Calculated Interbank Mid Rates, NBR/Haver                                
+J45 INTDAILY XXXX Romania: Government Bond Yields, NBR                                              
+I96 INTDAILY XXXX Romania: Interbank Rates, NBR                                                     
+I46 INTDAILY XXXX Romania: Interest Rates, NBR/Haver                                                
+J89 INTDAILY XXXX Romania: Open Market Operations, NBR                                              
+Y30 INTDAILY XXXX Romania: Secondary Government Market Securities, NBR                              
+Y51 INTDAILY XXXX Romania: Spot Exchange Rates, NBR                                                 
+S66 INTDAILY XXXX Romania: Stock Market Indicators, BSE   
+C71 INTDAILY XXXX Israel: Credit Card Expenditure [Saturday], BoI                                   
+C72 INTDAILY XXXX Israel: Credit Card Expenditure [Sunday], BoI                                     
+C70 INTDAILY XXXX Israel: Credit Card Expenditure, BoI                                              
+F55 INTDAILY XXXX Israel: Deposit and Monetary Loan Auctions [SATURDAY], BoI                        
+F69 INTDAILY XXXX Israel: Deposit and Monetary Loan Auctions [SUNDAY], BoI                          
+F70 INTDAILY XXXX Israel: Deposit and Monetary Loan Auctions, BoI                                   
+R95 INTDAILY XXXX Israel: Exchange Rates, BOI                                                       
+G45 INTDAILY XXXX Israel: FX Trade Turnover, BoI                                                    
+K52 INTDAILY XXXX Israel: FX Trade Turnover, BoI/Haver Analytics
+C73 INTDAILY XXXX Israel: Interest Rates [Saturday], BoI                                            
+C74 INTDAILY XXXX Israel: Interest Rates [Sunday], BoI                                              
+L80 INTDAILY XXXX Israel: Interest Rates, BOI
+L81 INTDAILY XXXX Israel: Interest Rates, BOI
+L82 INTDAILY XXXX Israel: Interest Rates, BOI
+L12 INTDAILY XXXX Israel: Interest Rates, BOI
+M54 INTDAILY XXXX Israel: Interest Rates, BOI
+M55 INTDAILY XXXX Israel: Interest Rates, BOI
+M90 INTDAILY XXXX Israel: Interest Rates, BOI
+M92 INTDAILY XXXX Israel: Interest Rates, BOI
+I05 INTDAILY XXXX Israel: Interest Rates, BOI                                                       
+F71 INTDAILY XXXX Israel: Interest Rates, BoI                                                       
+G66 INTDAILY XXXX Israel: Nominal Effective Exchange Rates, BoI                                     
+U87 INTDAILY XXXX Israel: Shekel Overnight Interest Rate [SHIR], BOI                                
+M12 INTDAILY XXXX Israel: Stock Price Indexes [Saturday], TASE                                      
+M13 INTDAILY XXXX Israel: Stock Price Indexes [Sunday], TASE                                        
+S75 INTDAILY XXXX Israel: Stock Price Indexes, TASE    
+C81 INTDAILY XXXX Israel: Trends in the Activity in Cash [Saturday], BoI                            
+C82 INTDAILY XXXX Israel: Trends in the Activity in Cash [Sunday], BoI 
+C80 INTDAILY XXXX Israel: Trends in the Activity in Cash, BoI                                       
+S68 INTDAILY XXXX Latvia: Stock Market Indicators, OMX  
+W22 INTDAILY XXXX Lithuania: Interest Rates                                                         
+S69 INTDAILY XXXX Lithuania: Stock Market Indicators, OMX   
+S77 INTDAILY XXXX Macedonia: Stock Exchange MBI-10, MSE 
+T09 INTDAILY XXXX Hungary: Benchmark Government Bond Total Returns, AKK/H                           
+U30 INTDAILY XXXX Hungary: Benchmark Government Bond Yields, AKK                                    
+F89 INTDAILY XXXX Hungary: Budapest Interbank Offered Rates (BUBOR), MNB                            
+W64 INTDAILY XXXX Hungary: Budapest Interest Rate Swap Historical Series, MNB                       
+Y96 INTDAILY XXXX Hungary: Budapest Interest Rate Swap, MNB                                         
+R63 INTDAILY XXXX Hungary: Exchange Rates, NBH                                                      
+G90 INTDAILY XXXX Hungary: Government Bond Holdings, AKK                                            
+W91 INTDAILY XXXX Hungary: HUFONIA Reference Rate, MNB                                              
+V35 INTDAILY XXXX Hungary: Hungary Stock Indices, FT                                                
+B51 INTDAILY XXXX Hungary: Instant Reserve Accounts, MNB
+B56 INTDAILY XXXX Hungary: Instant Reserve Accounts, MNB
+Y97 INTDAILY XXXX Hungary: Instant Reserve Accounts, MNB                                            
+I62 INTDAILY XXXX Hungary: Interest rates and bond yields                                           
+Y24 INTDAILY XXXX Hungary: MTS Government Bond Turnover, AKK                                                                       
+B50 INTDAILY XXXX Hungary: Standing Facilities, MNB
+B55 INTDAILY XXXX Hungary: Standing Facilities, MNB
+W53 INTDAILY XXXX Hungary: Standing Facilities, MNB                                                 
+F23 INTDAILY XXXX Hungary: Zero Coupon Yield Curve, AKK  
+R13 INTDAILY XXXX Bosnia and Herzegovina: Exchange Rates, CBBH                                      
+G64 INTDAILY XXXX Bosnia and Herzegovina: Sarajevo Stock Exchange, SASE
+I21 INTDAILY XXXX Bulgaria: Interest Rates Rates, BNB                                               
+S70 INTDAILY XXXX Bulgaria: Stock Price Index, BSE-Sofia
+E59 INTDAILY XXXX Central Bank of the Republic of Turkey [SUN]
+X29 INTDAILY XXXX Croatia: CNB Open Market Operations, CNB                                          
+S59 INTDAILY XXXX Croatia: Stock Market Indicators, ZSE
+G32 INTDAILY XXXX Czechia: 10-Day Balance Sheet, CNB                                         
+W56 INTDAILY XXXX Czechia: Banking Sector Liquidity, CNB                                     
+W90 INTDAILY XXXX Czechia: CZEONIA Reference Rate, CNB                                       
+R93 INTDAILY XXXX Czechia: Exchange Rates, CNB                                               
+I45 INTDAILY XXXX Czechia: Interest Rates, CNB                                               
+O90 INTDAILY XXXX Czechia: Monetary Policy Rate Change Announcement, CNB
+O91 INTDAILY XXXX Czechia: Monetary Policy Rate Meetings, CNB
+S33 INTDAILY XXXX Czechia: Stock Price Index
+S67 INTDAILY XXXX Estonia: Stock Market Indicators, OMX   
+F51 INTDAILY XXXX Albania: Benchmark Yield Fixing Rate                                              
+R38 INTDAILY XXXX Albania: Exchange Rates, BoA                                                      
+I22 INTDAILY XXXX Albania: Interest Rates                                                           
+W35 INTDAILY XXXX Albania: Monetary Policy Rates                                                    
+H46 INTDAILY XXXX Denmark: DESTR Compounded Index, DNB                                              
+C12 INTDAILY XXXX Denmark: Danmarks Nationalbank Monetary Policy Change Dates, DNB          
+H45 INTDAILY XXXX Denmark: Denmark Short Term Rate [DESTR], DNB                                     
+R70 INTDAILY XXXX Denmark: Exchange Rates, DNB                                                      
+I33 INTDAILY XXXX Denmark: Interest Rates                                                           
+G19 INTDAILY XXXX Denmark: Net Positions with Banks and Mortgage Credit Institutes Accounts, DNB    
+T25 INTDAILY XXXX Denmark: US-Dollar Treasury Bill Auctions
+H38 INTDAILY XXXX Finland: 10-Year Government Bond Total Return, BoF                                
+X90 INTDAILY XXXX Finland: Base Rate, BoF                                                           
+I80 INTDAILY XXXX Finland: Govt Bond Yields, Bank of Finland                                        
+S78 INTDAILY XXXX Finland: Stock Market Indicators, BoF    
+X27 INTDAILY XXXX Iceland: Bond Prices and Yields, CBI
+V75 INTDAILY XXXX Iceland: Breakeven Inflation Expectations, CBI                                    
+C13 INTDAILY XXXX Iceland: Central Bank of Iceland Monetary Policy Change Dates, CBI         
+A53 INTDAILY XXXX Iceland: Central Bank of Iceland Monetary Policy Meeting Dates, CBI
+R68 INTDAILY XXXX Iceland: Exchange Rates, CBI                                                      
+U25 INTDAILY XXXX Iceland: Icelandic Krona OverNight Rate [IKON], CBI                                                
+M19 INTDAILY XXXX Iceland: Interest Rate Mid Rates, CBI                                             
+A65 INTDAILY XXXX Iceland: Interest Rates, CBI
+I98 INTDAILY XXXX Iceland: Interest Rates, CBI    
+Y22 INTDAILY XXXX Nordic: OMX Stock Price Indexes   
+H39 INTDAILY XXXX Norway: 10-Year Government Bond Total Return, NB                                  
+H40 INTDAILY XXXX Norway: Effect on Liquidity and Liquidity Holdings, NB                            
+I79 INTDAILY XXXX Norway: Exchange Rates, NB                                                        
+N10 INTDAILY XXXX Norway: Generic Yields, NB
+H73 INTDAILY XXXX Norway: Interest Rates                                                            
+I77 INTDAILY XXXX Norway: Interest Rates                                                            
+C14 INTDAILY XXXX Norway: Norges Bank Monetary Policy Change Dates, NB
+A54 INTDAILY XXXX Norway: Norges Bank Monetary Policy Meeting Dates, NB
+V02 INTDAILY XXXX Norway: Stock Market Prices                                                       
+T27 INTDAILY XXXX Norway: US-Dollar Auctions                                                        
+J41 INTDAILY XXXX Norway: Zero Coupon Yield Curve, NB   
+K06 INTDAILY XXXX Sweden: 10-Year Government Bond Total Return, SRB
+E44 INTDAILY XXXX Sweden: Consumption Indicators Saturday Series, SCB
+E45 INTDAILY XXXX Sweden: Consumption Indicators Sunday Series, SCB
+E40 INTDAILY XXXX Sweden: Consumption Indicators, SCB
+R41 INTDAILY XXXX Sweden: Exchange Rates, SRB                                                       
+X75 INTDAILY XXXX Sweden: FX Market Turnover, SRB                                                   
+X79 INTDAILY XXXX Sweden: Fixed Income Daily Turnover, SRB                                          
+I43 INTDAILY XXXX Sweden: Government Bond Yields, SRB                                               
+K05 INTDAILY XXXX Sweden: Interest Rates, SRB
+I39 INTDAILY XXXX Sweden: Policy Rates, SRB                                                      
+A73 INTDAILY XXXX Sweden: Reference Rate, SRB
+C18 INTDAILY XXXX Sweden: Riksbank Monetary Policy Change Dates, SRB                         
+A58 INTDAILY XXXX Sweden: Riksbank Monetary Policy Meeting Dates, RIKSBANK
+J03 INTDAILY XXXX Sweden: Sweden Interest rates, SRB                                                
+H80 INTDAILY XXXX Sweden: Swedish Krona Short Term Rate [SWESTR], SRB                               
+R42 INTDAILY XXXX Sweden: Total Competitiveness Weights Index                                       
+T26 INTDAILY XXXX Sweden: US-Dollar Auctions                                                        
+A66 INTDAILY XXXX Switzerland: Daily Interest Rates, SNB
+H19 INTDAILY XXXX Switzerland: Daily Interest Rates, SNB                                            
+J04 INTDAILY XXXX Switzerland: Daily Interest Rates, SNB                                            
+X97 INTDAILY XXXX Switzerland: Effective Exchange Rate Indexes, SNB                                 
+R78 INTDAILY XXXX Switzerland: Exchange Rates, SNB                                                  
+J74 INTDAILY XXXX Switzerland: Government Bond Returns, SNB/Haver
+Y95 INTDAILY XXXX Switzerland: Money Market Operations, SNB                                         
+A27 INTDAILY XXXX Switzerland: SNB Bond Yield, SNB
+H50 INTDAILY XXXX Switzerland: SNB Bulletin, SNB
+S89 INTDAILY XXXX Switzerland: Stock Market Indicators, SWX                                         
+C16 INTDAILY XXXX Switzerland: Swiss National Bank Monetary Policy Change Dates, SNB
+A56 INTDAILY XXXX Switzerland: Swiss National Bank Monetary Policy Meeting Dates, SNB
+Y79 INTDAILY XXXX Switzerland: Swiss Reference Rates [SARON], SIX Swiss Exchange                    
+X55 INTDAILY XXXX Switzerland: Swiss Volatility Indexes, SWX                                        
+T24 INTDAILY XXXX Switzerland: US-Dollar Treasury Bill Auctions  
+R85 INTDAILY XXXX U.K.: Effective Exchange Rates, BoE                                               
+I76 INTDAILY XXXX U.K.: Government Bond Yields, BoE                                                 
+I40 INTDAILY XXXX U.K.: Interest Rates, BoE                                                         
+R86 INTDAILY XXXX U.K.: Spot Exchange Rates, BoE                                                    
+I72 INTDAILY XXXX U.K.: Wholesale Interest and Discount Rates, BoE     
+C10 INTDAILY XXXX UK: Bank of England Monetary Policy Change Dates, BOE
+A51 INTDAILY XXXX UK: Bank of England Monetary Policy Meeting Dates, BoE
+Y18 INTDAILY XXXX UK: Bank of England USD Repo Operations, BoE                                      
+D43 INTDAILY XXXX UK: Economic Policy Uncertainty Index Saturday Series, PU
+D90 INTDAILY XXXX UK: Economic Policy Uncertainty Index Sunday Series, PU
+C21 INTDAILY XXXX UK: Economic Policy Uncertainty Index, PU
+V03 INTDAILY XXXX UK: FTSE Stock Market Prices                                                      
+Y62 INTDAILY XXXX UK: FTSE TechMark Indexes, FT                                                     
+H23 INTDAILY XXXX UK: Government Bond Yields Total Returns, BoE                                     
+P90 INTDAILY XXXX UK: London Metal Exchange, FT                                                     
+C51 INTDAILY XXXX UK: Revolut Spending on Debit Cards Saturday Series, ONS/RVT
+C52 INTDAILY XXXX UK: Revolut Spending on Debit Cards Sunday Series, ONS/RVT
+C50 INTDAILY XXXX UK: Revolut Spending on Debit Cards, ONS/RVT
+C89 INTDAILY XXXX UK: Sonia Compound Index                                                          
+C90 INTDAILY XXXX UK: Yield Curve Inflation Indicators, Bank of England/Haver Analytics 
+W66 INTDAILY XXXX United Kingdom: Bank of England Daily Open Market Operations, BoE                 
+H24 INTDAILY XXXX United Kingdom: Official Bank Rate, BoE                                           
+W08 INTDAILY XXXX United Kingdom: Operational Standing Deposit Lending Facilities, BoE              
+I35 INTDAILY XXXX United Kingdom: Policy Rates on Announcement Date, BoE
+H26 INTDAILY XXXX United Kingdom: Reformed Sonia Rates, BoE 
+J58 INTDAILY XXXX Serbia: BELIBOR Interest Rates, NBS                                               
+J57 INTDAILY XXXX Serbia: BEONIA(BElgrade OverNight Index Average), NBS                             
+R60 INTDAILY XXXX Serbia: Exchange Rates, NBS                                                       
+T85 INTDAILY XXXX Serbia: Foreign Exchange Transactions, NBS                                        
+J48 INTDAILY XXXX Serbia: Policy Rates, NBS                                                         
+L40 INTDAILY XXXX Serbia: Secondary Trading Maturities, NBS
+G92 INTDAILY XXXX Serbia: Stock Market Indicators, BSE   
+I85 INTDAILY XXXX Slovakia: Government Bond Yield Curve, NBS                                        
+I97 INTDAILY XXXX Slovakia: Interest Rates, BSE                                                     
+V37 INTDAILY XXXX Slovakia: Slovakia Stock Index, FT                                                
+S58 INTDAILY XXXX Slovenia: Stock Market Indicators, LJSE     
+P03 INTDAILY XXXX Turkey: Amount of Gold Traded, BIST                                               
+V70 INTDAILY XXXX Turkey: BIST Overnight Repo Rate/Volumes, CBRT                                    
+Y65 INTDAILY XXXX Turkey: BIST Trading Volume & Value, CBRT                                         
+G76 INTDAILY XXXX Turkey: BRSA Daily Banking Sector Report, BRSA                                    
+H76 INTDAILY XXXX Turkey: BRSA Daily Banking Sector Report, BRSA/H                                  
+G79 INTDAILY XXXX Turkey: Bank FX Transcations, CBRT                                                
+T15 INTDAILY XXXX Turkey: Borsa Istanbul Swaps Market, BIST                                         
+T40 INTDAILY XXXX Turkey: CBRT Swap Transactions, CBRT                                              
+G75 INTDAILY XXXX Turkey: Central Bank Analytical Balance Sheet, CBRT                               
+V15 INTDAILY XXXX Turkey: Domestic & Foreign Investors Custody Ratios, CRA                          
+I81 INTDAILY XXXX Turkey: Exchange Rates, CBT                                                       
+H21 INTDAILY XXXX Turkey: Exchange Rates: Mid Rates, CBRT/H                                         
+T32 INTDAILY XXXX Turkey: Foreign Exchange Transactions, CBRT                                       
+G97 INTDAILY XXXX Turkey: Free Deposits of Banks and Total Liquidity at Banks, TCMB                 
+T18 INTDAILY XXXX Turkey: Government Bond Yields, LSEG                                                 
+J17 INTDAILY XXXX Turkey: Interbank Money Market, CBRT                                              
+T74 INTDAILY XXXX Turkey: Interest Rates, CBRT
+I19 INTDAILY XXXX Turkey: Interest Rates, CBRT                                                      
+E58 INTDAILY XXXX Turkey: Interest Rates, CBRT [SAT]
+E74 INTDAILY XXXX Turkey: Interest Rates, CBRT [SAT]
+E75 INTDAILY XXXX Turkey: Interest Rates, CBRT [SUN]
+L11 INTDAILY XXXX Turkey: Net Foreign Assets Less Swaps, CBRT/Haver Analytics
+L10 INTDAILY XXXX Turkey: Net Foreign Assets, CBRT/Haver Analytics
+G04 INTDAILY XXXX Turkey: Open Market Repo Operations, CBRT                                         
+G35 INTDAILY XXXX Turkey: Open Market Repo Transactions Through Quotation, CBRT                     
+U50 INTDAILY XXXX Turkey: Overnight Participation Reference Rate Index, BIST                        
+Y50 INTDAILY XXXX Turkey: Overnight Participation Reference Rate, BIST                              
+Y66 INTDAILY XXXX Turkey: Overnight Reference Rates, BIST                                           
+J38 INTDAILY XXXX Turkey: Reserve Requirement Ratios, TCMB                                          
+I84 INTDAILY XXXX Turkey: Stock Market Indicators, CBT                                              
+T64 INTDAILY XXXX Turkey: Turkish Lira-Settled FX Futures & Forward Transactions, CBRT
+G83 INTDAILY XXXX Turkey: Weighted Average Cost of the CBRT Funding, CBRT    
+===================================================================================================
+DBM: Babalwa
+===================================================================================================
+J44 INTDAILY XXXX Canada: Term Premium Estimates, BOC
+P98 INTDAILY XXXX Canada: Commodity Cash Prices, ICE, Daily
+O52 INTDAILY XXXX Greece: Treasury Bill Auction 1 Month Press Release, PDMA
+O53 INTDAILY XXXX Greece: Treasury Bill Auction 1 Month Full File, PDMA
+O54 INTDAILY XXXX Greece: Treasury Bill Auction 3 Month Press Release, PDMA
+O55 INTDAILY XXXX Greece: Treasury Bill Auction 3 Month Full File, PDMA
+O56 INTDAILY XXXX Greece: Treasury Bill Auction 6 Month Press Release, PDMA
+O57 INTDAILY XXXX Greece: Treasury Bill Auction 6 Month Full File, PDMA
+O58 INTDAILY XXXX Greece: Treasury Bill Auction 1 Year Press Release, PDMA
+O59 INTDAILY XXXX Greece: Treasury Bill Auction 1 Year Full File, PDMA
+E19 INTDAILY XXXX Germany: Auctions Reopenings, FMF
+E07 INTDAILY XXXX Germany: Auctions, New Issues, FMF
+A94 INTDAILY XXXX Canada: Policy Rates on Accouncement Date, BoC
+A74 INTDAILY XXXX Euro Area: Policy Rates on Effective Date, ECB
+C39 INTDAILY XXXX Canada: Bank of Canada Monetary Policy Announcement Dates, BoC
+A48 INTDAILY XXXX Canada: Bank of Canada Monetary Policy Meeting Dates, BoC
+A52 INTDAILY XXXX Euro Area: European Central Bank Monetary Policy Meeting Dates, ECB
+P99 INTDAILY XXXX Canada: Track Vancouver Grade 1 Canola Price, ICE
+J06 INTDAILY XXXX France: Breakeven Inflation Rates, AFT
+A26 INTDAILY XXXX Euro area: Forward Looking Term Rate [EFTERM], EMMI
+B11 INTDAILY XXXX Germany: Rhine River Water Level at Koblenz, Daily                                
+B12 INTDAILY XXXX Germany: Rhine River Water Level at Koblenz, Saturday                             
+B13 INTDAILY XXXX Germany: Rhine River Water Level at Koblenz, Sunday                               
+B14 INTDAILY XXXX Germany: Rhine River Water Level at Koblenz, Historical                           
+B19 INTDAILY XXXX Germany: Rhine River Water Level at Koblenz, Saturday, Historical                 
+B20 INTDAILY XXXX Germany: Rhine River Water Level at Koblenz, Saturday, Historical    
+C07 INTDAILY XXXX Canada: Bank of Canada Monetary Policy Change Dates, BoC
+C11 INTDAILY XXXX Euro Area: European Central Bank Monetary Policy Change Dates, ECB 
+I29 INTDAILY XXXX Austria: Interest Rates                                                           
+V33 INTDAILY XXXX Austria: Traded Index, FT
+P85 INTDAILY XXXX Belgium: Gold Prices, NBB                                                         
+I31 INTDAILY XXXX Belgium: Interest Rates, BNdB                                                     
+I75 INTDAILY XXXX Belgium: Loan Rates in the Secondary Market, BNdB                                 
+S80 INTDAILY XXXX Belgium: Stock Prices, Euronext
+H37 INTDAILY XXXX Canada: 10-Year Government Bond Constant Maturity Total Return, BoC               
+H35 INTDAILY XXXX Canada: Benchmark Bond Yields, BoC                                                         
+X68 INTDAILY XXXX Canada: Canada Effective Exchange Rate (CEER), BoC                                
+Y94 INTDAILY XXXX Canada: Canadian Overnight Repo Rate Average [CORRA], BoC                                                                  
+X14 INTDAILY XXXX Canada: End of Day Exchange Rates, BoC                                            
+P96 INTDAILY XXXX Canada: Futures Prices                                                            
+I32 INTDAILY XXXX Canada: Policy Rates on Effective Date, BoC                                                      
+H33 INTDAILY XXXX Canada: Marketable Bond Average Yields, BoC                                       
+H27 INTDAILY XXXX Canada: Operating Bands High&Low, BoC                                             
+H28 INTDAILY XXXX Canada: Overnight Money Market Financing, BoC                                     
+J05 INTDAILY XXXX Canada: Special Purchase Agreements                                               
+W41 INTDAILY XXXX Canada: Spread Between Conventional and Real Return Bonds, BoC                    
+O01 INTDAILY XXXX Canada: Stock Market Composite Index, TSX                                         
+S65 INTDAILY XXXX Canada: Toronto Stock Exchange Indicators                                         
+H29 INTDAILY XXXX Canada: Treasury Bills, BoC                                                       
+J61 INTDAILY XXXX Canada: Zero Coupon Yield Curve, BOC  
+V05 INTDAILY XXXX Cyprus: Stock Market Indicators 
+Y91 INTDAILY XXXX Euro Area: APP and PEPP End of Year Target Levels, ECB                            
+Y90 INTDAILY XXXX Euro Area: Composite Indicators of Systemic Stress, ECB                           
+H90 INTDAILY XXXX Euro Area: Compounded ESTR Average Rates and Index, ECB                           
+F92 INTDAILY XXXX Euro Area: ECB Excess Liquidity {Liquidity Surplus}                               
+F79 INTDAILY XXXX Euro Area: ECB Marginal Lending and Deposit Facilities                            
+F78 INTDAILY XXXX Euro Area: ECB Open Market Operation and Standing Facilities                      
+F74 INTDAILY XXXX Euro Area: ECB Yield Curves                                                       
+J09 INTDAILY XXXX Euro Area: ECB Yield Curves                                                       
+I82 INTDAILY XXXX Euro Area: Euro Short-Term rate (ESTR), ECB                                       
+Y60 INTDAILY XXXX Euro Area: Eurosystem PSPP Securities Lending Balances, ECB                       
+I20 INTDAILY XXXX Euro Area: Eurozone Assets and Liabilities                                        
+I41 INTDAILY XXXX Euro Area: Eurozone Money Market Rates                                            
+R07 INTDAILY XXXX Euro Area: Exchange Rates                                                         
+T31 INTDAILY XXXX Euro Area: Foreign Exchange Interventions                                         
+I34 INTDAILY XXXX Euro Area: Policy Rates on Announcement Date, ECB
+R11 INTDAILY XXXX Euro Area: Nominal Effective Exchange Rates                                       
+G24 INTDAILY XXXX Euro Area: Open Market Operations, ECB                                            
+M38 INTDAILY XXXX Euro Area: Outstanding Swap Lines, ECB                                            
+G62 INTDAILY XXXX Euro Area: S&P Euro Index, S&P                                                    
+X69 INTDAILY XXXX Euro Area: STOXX 50 Volatility Index, STOXX                                       
+J28 INTDAILY XXXX Euro Area: Short Term European Paper, ECB                                         
+G09 INTDAILY XXXX Euro area: Benchmark Allotment, ECB                                               
+G12 INTDAILY XXXX Euro area: ICE/BofA Merrill Lynch Bond Indexes, ICE/BOAML 
+S41 INTDAILY XXXX European Stock Prices                                                             
+S86 INTDAILY XXXX European Stock Prices                                                               
+H51 INTDAILY XXXX France: Commercial Paper and Medium Term Notes Markets, BdF                       
+H18 INTDAILY XXXX France: Interest Rates: Total, Banque de France                                   
+V97 INTDAILY XXXX France: Zero Coupon Yield Curves, BdF  
+Y32 INTDAILY XXXX Germany: Breakeven Inflation Rates, Bbk/H                                         
+V11 INTDAILY XXXX Germany: DAX & Implied Volatity                                                   
+I67 INTDAILY XXXX Germany: Debt Security and Pfandbriefe Yields, BBK                                
+I36 INTDAILY XXXX Germany: Interest Rates, BBK                                                      
+Y31 INTDAILY XXXX Germany: Nominal & Real Government Bond Yields at Constant Maturity, Bbk/H        
+J82 INTDAILY XXXX Germany: Prices & Yields of Listed Federal Securities, BBK                        
+S88 INTDAILY XXXX Germany: Stock Market Indicators, DBo   
+Y84 INTDAILY XXXX Greece: 10 Year Government Bond Constant Maturity Total Return, BoG/Haver         
+Y80 INTDAILY XXXX Greece: Government Bond Prices and Yields, BoG                                    
+I63 INTDAILY XXXX Greece: Sovereign Yield Curve, PDMA                                               
+V34 INTDAILY XXXX Greece: Stock Indices, FT                                                         
+V36 INTDAILY XXXX Ireland: Stock Index, FT                                                          
+V06 INTDAILY XXXX Ireland: Stock Market Indicators 
+I28 INTDAILY XXXX Italy: Interest Rates                                                             
+S79 INTDAILY XXXX Italy: Stock Market Indexes, Borsa Italiana                                                         
+S72 INTDAILY XXXX Luxembourg: Stock Price Index, LUX  
+G65 INTDAILY XXXX Malta: Stock Market Indicators, MSE       
+Y56 INTDAILY XXXX Netherlands: 10 Year Government Bond Total Return Calculation, FIN/Haver          
+T43 INTDAILY XXXX Netherlands: Ten Year Government Bond Yield, FIN   
+J34 INTDAILY XXXX Portugal: Government Bond Yields, PTBdP   
+S61 INTDAILY XXXX STOXX Stock Market Indexes                                                  
+M62 INTDAILY XXXX Spain: ERTE Unemployment, Effective Date                                          
+M63 INTDAILY XXXX Spain: ERTE Unemployment, Effective Date [Saturday]                               
+M64 INTDAILY XXXX Spain: ERTE Unemployment, Effective Date [Sunday]                                 
+M65 INTDAILY XXXX Spain: ERTE Unemployment, Notification Date                                       
+X83 INTDAILY XXXX Spain: IBEX 35 Volatilty Index [VIBEX], BDM                                       
+I65 INTDAILY XXXX Spain: Interest Rates, BDE                                                        
+V01 INTDAILY XXXX Spain: Stock Market Indicators                                                    
+S60 INTDAILY XXXX Spain: Stock Market Indicators, BDM                                               
+M66 INTDAILY XXXX Spain: Total Affiliation to Social Security                                                             
+B32 INTDAILY XXXX Portugal: Daily Economic Activity Indicator, BdP, Saturday
+B33 INTDAILY XXXX Portugal: Daily Economic Activity Indicator, BdP, Sunday
+G44 INTDAILY XXXX Portugal: Daily Economic Activity Indicator, BdP
+A44 INTDAILY XXXX Euro Area: European Central Bank Monetary Policy Announcement Dates, ECB
+===================================================================================================
+DBM: Mike
+===================================================================================================
+E62 INTDAILY XXXX Guinea: Reference Exchange Rates, BCRG
+E56 INTDAILY XXXX Burundi: Exchange Rates, BRB
+L36 INTDAILY XXXX Burundi: Monetary Policy Rates, BRB
+L04 INTDAILY XXXX Guinea: Monetary Policy Rates, BCRG
+I37 INTDAILY XXXX Kenya: KESONIA Compounded Index, CBK
+A05 INTDAILY XXXX Nigeria: Open Market Operations, CBN
+W78 INTDAILY XXXX Rwanda: Central Bank Exchange Rates, NBR
+A04 INTDAILY XXXX Sierra Leone: Central Bank Reference Exchange Rates, BSL
+A06 INTDAILY XXXX Ethiopia: Parallel Market Exchange Rates, BE [SAT]
+A07 INTDAILY XXXX Ethiopia: Parallel Market Exchange Rates, BE [SUN]
+A35 INTDAILY XXXX Ethiopia: Parallel Market Exchange Rates: Middle, BE [SAT]
+A36 INTDAILY XXXX Ethiopia: Parallel Market Exchange Rates: Middle, BE [SUN]
+C26 INTDAILY XXXX Liberia: Policy Rates
+K69 INTDAILY XXXX South Africa: Interest Rates, SARB
+E89 INTDAILY XXXX Liberia: Exchange Rates
+E90 INTDAILY XXXX Liberia: Exchange Rates, Saturday
+E91 INTDAILY XXXX Liberia: Exchange Rates, Sunday
+E92 INTDAILY XXXX Liberia: Middle Exchange Rates
+E93 INTDAILY XXXX Liberia: Middle Exchange Rates, Saturday
+E94 INTDAILY XXXX Liberia: Middle Exchange Rates, Sunday
+W32 INTDAILY XXXX BCEAO: Central Bank of West African States (BCEAO) Interest Rates, BCEAO [SAT]
+H11 INTDAILY XXXX Ethiopia: Open Market Operation, NBE
+E18 INTDAILY XXXX Zambia: Exchange Mid Rates, BOZ
+A91 INTDAILY XXXX Ethiopia: Policy Rates, NBE
+A92 INTDAILY XXXX Ethiopia: Middle Exchange Rates, NBE
+K22 INTDAILY XXXX Ethiopia: Policy Rates, NBE
+K23 INTDAILY XXXX Tanzania: Interest Rates, BOT
+P58 INTDAILY XXXX Selected Brent Futures Prices, ICE 
+A84 INTDAILY XXXX Eswatini: Interest Rates, CBE
+A85 INTDAILY XXXX Eswatini: Interest Rates, Saturday, CBE
+A86 INTDAILY XXXX Eswatini: Interest Rates, Sunday, CBE
+W95 INTDAILY XXXX Canada: Benchmark Crude Oil Calculated Prices, DISC KCI
+P70 INTDAILY XXXX Canada: Selected Crude Oil Prices, DISC KCI
+V81 INTDAILY XXXX Archived Zimbabwe Exchange Rates, RBZ
+F87 INTDAILY XXXX Mozambique: Prime Rate, BoM
+U43 INTDAILY XXXX South Africa: Compound Overnight ZARONIA
+A81 INTDAILY XXXX Uganda: Interbank Rates, BOU
+A08 INTDAILY XXXX South Africa: R Bond Rates
+V09 INTDAILY XXXX Angola: Exchange Rates, BOA                                                       
+V61 INTDAILY XXXX Angola: Monetary Policy Rates, National Bank of Angola   
+K04 INTDAILY XXXX South Africa: Interest Rates, SARB
+E13 INTDAILY XXXX Zimbabwe Exchange Rates, RBZ
+A33 INTDAILY XXXX South Africa: Government Bond Yield Curve                                         
+C69 INTDAILY XXXX Botswana: Botswana Policy Rate, BoB 
+C88 INTDAILY XXXX Angola: International Reserves, NBA
+C91 INTDAILY XXXX Botswana: Stock Exchange Indexes
+X10 INTDAILY XXXX BCEAO: Central Bank of West African States (BCEAO) Interest Rates, BCEAO          
+R59 INTDAILY XXXX BCEAO: Exchange Mid Rates, BCEAO/Haver                                            
+R25 INTDAILY XXXX BCEAO: Exchange Rates, BCEAO/Haver
+R44 INTDAILY XXXX Botswana: Exchange Rates, BoB                                                     
+J75 INTDAILY XXXX Botswana: Policy Rate, BoB
+P38 INTDAILY XXXX Congo, Democratic Republic: Exchange Rates, BCC                                   
+P01 INTDAILY XXXX Congo, Democratic Republic: Policy Rate, BCC  
+H99 INTDAILY XXXX Ghana: Exchange Rates, BoG                                                        
+R66 INTDAILY XXXX Ghana: Exchange Rates, BoG                                                        
+J86 INTDAILY XXXX Ghana: Interbank Rate, BoG                                                        
+J80 INTDAILY XXXX Ghana: Policy Rate, BoG                                                           
+S44 INTDAILY XXXX Ghana: Stock Market Indicators, GSE  
+V64 INTDAILY XXXX Kenya: Interbank Rate, CBK                                                        
+V63 INTDAILY XXXX Kenya: Monetary Policy Rates, CBK                                                 
+S43 INTDAILY XXXX Kenya: Stock Market Indicators, NSE/Haver                                         
+H08 INTDAILY XXXX Kenya: Exchange Rates, CBK 
+V12 INTDAILY XXXX Malawi: Stock Market Indicators    
+W59 INTDAILY XXXX Mauritius: Exchange Rates, BOM                                                    
+H10 INTDAILY XXXX Mauritius: Exchange Rates: Mid Rates,BOM/H                                        
+W65 INTDAILY XXXX Mauritius: Interbank Rates, BoM                                                   
+V62 INTDAILY XXXX Mauritius: Repo Rates, Central Bank of Mauritius                                  
+W57 INTDAILY XXXX Mauritius: Stock Indexes, SEM   
+T30 INTDAILY XXXX Mozambique: Exchange Rates, BoM                                                   
+W37 INTDAILY XXXX Mozambique: Exchange Rates, BoM                                                   
+W36 INTDAILY XXXX Mozambique: Monetary Policy Rates, BoM 
+W63 INTDAILY XXXX Namibia: Exchange Rates, BoN                                                      
+V60 INTDAILY XXXX Namibia: Monetary Policy Rates, Bank of Namibia  
+X84 INTDAILY XXXX Nigeria: Autonomous Foreign Exchange Rate [NAFEX], FMDQ                           
+R47 INTDAILY XXXX Nigeria: Exchange Rates, CBN                                                      
+R46 INTDAILY XXXX Nigeria: Foreign Exchange Market, CBN                                             
+X87 INTDAILY XXXX Nigeria: Interbank Offered Rate [NIBOR], FMDQ                                     
+X85 INTDAILY XXXX Nigeria: Interbank Treasury Bills True Yield Fixing [NITTY], FMDQ                 
+V87 INTDAILY XXXX Nigeria: Monetary Open Market Operations, CBN                                     
+J88 INTDAILY XXXX Nigeria: Nigerian Treasury Bills Primary Market Rates, CBN                        
+T48 INTDAILY XXXX Nigeria: Parallel Market Exchange Rates, abokiFX.com                              
+X34 INTDAILY XXXX Nigeria: Parallel Market Exchange Rates, abokiFX.com                              
+J47 INTDAILY XXXX Nigeria: Policy Rates, CBN                                                        
+X25 INTDAILY XXXX Nigeria: Stock Market Statistics, NSE   
+W04 INTDAILY XXXX Rwanda: Central Bank Exchange Rates, NBR                                          
+W05 INTDAILY XXXX Rwanda: Monetary Policy Rates, BNR                                                
+W06 INTDAILY XXXX Rwanda: Treasury Bill Auctions, BNR                                               
+X08 INTDAILY XXXX Rwanda: Treasury Bill Auctions, BNR   
+R30 INTDAILY XXXX South Africa: Effective Exchange Rates, SARB                                      
+R26 INTDAILY XXXX South Africa: Exchange Rates, SARB                                                
+R27 INTDAILY XXXX South Africa: Exchange Rates, SARS                                               
+I18 INTDAILY XXXX South Africa: Interest Rates, JSE                                                 
+I59 INTDAILY XXXX South Africa: Interest Rates, SARB                                                
+W40 INTDAILY XXXX South Africa: Money Market Rates, SARB                                            
+W44 INTDAILY XXXX South Africa: Money Market Summary, SARB                                          
+W43 INTDAILY XXXX South Africa: Money Market Transactions, SARB                                     
+J92 INTDAILY XXXX South Africa: National Credit Act: Max Interest Rates, SARB                                                                
+P95 INTDAILY XXXX South Africa: SA Volatility Index, FT                                             
+W42 INTDAILY XXXX South Africa: Selected Bond Market Yields, SARB                                   
+S37 INTDAILY XXXX South Africa: Stock Price Index                                                   
+U03 INTDAILY XXXX South Africa: ZARIBOR and ZARONIA  
+R24 INTDAILY XXXX Tanzania: Exchange Rates, BoT/Haver                                               
+H20 INTDAILY XXXX Tanzania: Exchange Rates: Mid Rates, BOT/Haver                                    
+W67 INTDAILY XXXX Tanzania: Interbank Money Market Rates, BoT                                       
+W75 INTDAILY XXXX Tanzania: Stock Market Indicators    
+X82 INTDAILY XXXX UEMOA: West Africa Regional Securities Exchange, BRVM  
+V17 INTDAILY XXXX Uganda: Interbank Average Exchange Rates, BOU, Daily                              
+H15 INTDAILY XXXX Uganda: Interbank Average Exchange Rates, BOU/H, DAILY                            
+J43 INTDAILY XXXX Uganda: Policy Rates, BOU                                                         
+V16 INTDAILY XXXX Uganda: Policy Rates, BOU                                                         
+V13 INTDAILY XXXX Uganda: Stock Market Indicators                                                   
+H89 INTDAILY XXXX Uganda: Treasury Bond Yields, DAILY 
+J66 INTDAILY XXXX Zambia: Bank of Zambia Policy Rate, BoZ                                           
+R18 INTDAILY XXXX Zambia: Exchange Rates, BOZ                                                       
+V91 INTDAILY XXXX Zambia: Interbank Rates, BOZ                                                      
+S29 INTDAILY XXXX Zambia: Lusaka Stock Exchange, LSE                                                
+G31 INTDAILY XXXX Zambia: Reserve Money, BOZ                                                        
+V93 INTDAILY XXXX Zambia: Treasury Bills, BOZ
+A24 INTDAILY XXXX Angola: Parallel Middle Exchange Rate, AC
+A23 INTDAILY XXXX Angola: Parallel Exchange Rates, AC
+===================================================================================================
+DBM: Nicholas
+===================================================================================================             
+F83 INTDAILY XXXX Korea: Security Market Credit Supply Balance, KOFIA
+R61 INTDAILY XXXX South Korea: High/Low US Dollar Exchange Rates, BOK
+E66 INTDAILY XXXX Korea: Open Market Operations, BOK/H
+B74 INTDAILY XXXX Australia: Foreign Exchange Interventions, RBA
+X16 INTDAILY XXXX Australia: ASX 200 Volatility Index, Standard & Poor's                            
+X43 INTDAILY XXXX Australia: Cash Rate Total Return Index, RBA                                      
+U93 INTDAILY XXXX Australia: Cash Target Rate                                                       
+R90 INTDAILY XXXX Australia: Exchange Rates, RBA                                                    
+I30 INTDAILY XXXX Australia: Government Bill & Bond Yields                                          
+K09 INTDAILY XXXX Australia: Government Bill & Bond Yields, RBA
+X73 INTDAILY XXXX Australia: Government Bond Returns, RBA/Haver Analytics                           
+H04 INTDAILY XXXX Australia: Indicative Mid Rates of Selected Government Securities, RBA
+J10 INTDAILY XXXX Australia: Interbank Rate                                                         
+U06 INTDAILY XXXX Australia: Interest Rate Paid on Exchange Settlement Balances                     
+K85 INTDAILY XXXX Australia: Open Market Operations, RBA
+G21 INTDAILY XXXX Australia: Open Market Operations, RBA                                            
+W96 INTDAILY XXXX Australia: Overnight Cash Transactions                                            
+C08 INTDAILY XXXX Australia: Reserve Bank of Australia Monetary Policy Change Dates, RBA        
+A49 INTDAILY XXXX Australia: Reserve Bank of Australia Monetary Policy Meeting Dates, RBA
+J54 INTDAILY XXXX Australia: S&P/ASX 300 Index, S&P                                                 
+G25 INTDAILY XXXX Australia: Southern Oscillation Index, BoM                                        
+S17 INTDAILY XXXX Australia: Stock Prices, S&P 
+J65 INTDAILY XXXX Australia: Term Premium Estimates, AOFM                                           
+K15 INTDAILY XXXX Australia: Treasury Bond Yields, RBA/H
+G39 INTDAILY XXXX Australia: Weighted Average Open Market Operations, RBA/Haver Analytics           
+J84 INTDAILY XXXX Australia: Zero-coupon Interest Rates, RBA  
+R28 INTDAILY XXXX Indonesia: Bank Indonesia Reference Rate, BI
+J79 INTDAILY XXXX Indonesia: DNDF Afternoon Auctions, BI                                            
+J76 INTDAILY XXXX Indonesia: DNDF Morning Auctions, BI                                              
+G46 INTDAILY XXXX Indonesia: Daily Liquidity Projection, BSRI                                       
+K98 INTDAILY XXXX Indonesia: Daily Liquidity Projection, BSRI/H
+R96 INTDAILY XXXX Indonesia: Exchange Rates, Bank Indonesia                                         
+H17 INTDAILY XXXX Indonesia: Exchange Rates: Mid Rates, Bank Indonesia/Haver                        
+P44 INTDAILY XXXX Indonesia: Food Price Development, PIHPS                                          
+J68 INTDAILY XXXX Indonesia: Foreign Currency Securities Auction, BI
+K68 INTDAILY XXXX Indonesia: Foreign Currency Sukuk Auction, BI
+N66 INTDAILY XXXX Indonesia: Foreign Currency Swap, BI
+M59 INTDAILY XXXX Indonesia: Foreign Currency Term Deposit Transactions, BI
+M69 INTDAILY XXXX Indonesia: Foreign Currency Term Deposit, BI
+N51 INTDAILY XXXX Indonesia: Government Bond Auctions, DGDM
+N52 INTDAILY XXXX Indonesia: Government Bond Second Auctions, DGDM
+G20 INTDAILY XXXX Indonesia: Government Debt Securities                                             
+F52 INTDAILY XXXX Indonesia: Indonesia Overnight Index Average [IndONIA], BI
+J36 INTDAILY XXXX Indonesia: Interbank Rates (JIBOR), BSRI                                                                                 
+R09 INTDAILY XXXX Indonesia: Interest Rate                                                          
+W87 INTDAILY XXXX Indonesia: Jakarta Foreign Exchange Reference Rate [JISDOR], BI                   
+X48 INTDAILY XXXX Indonesia: Open Market Operations, BI                                             
+V76 INTDAILY XXXX Indonesia: Ownership Position of IDR Tradable Government Securities               
+Y07 INTDAILY XXXX Indonesia: Reserve Requirement Ratios, BI                                         
+H91 INTDAILY XXXX Indonesia: Reverse Repo, BI                                                       
+H57 INTDAILY XXXX Indonesia: Rupiah Security Auction Result, BI
+N53 INTDAILY XXXX Indonesia: Sharia Government Bond Auctions, DGDM
+H93 INTDAILY XXXX Indonesia: Term Deposit [Afternoon], BI                                           
+H92 INTDAILY XXXX Indonesia: Term Deposit [Morning], BI    
+V51 INTDAILY XXXX International Stock Prices 
+V52 INTDAILY XXXX International Stock Prices 
+V54 INTDAILY XXXX International Stock Prices 
+V57 INTDAILY XXXX International Stock Prices 
+V50 INTDAILY XXXX International Stock Prices  
+K30 INTDAILY XXXX Japan: Average Rates of Issuance for Short-Term Corporate Bonds, JASDEC           
+W18 INTDAILY XXXX Japan: Bank of Japan Complementary Deposit Facility Rates, BoJ                    
+F57 INTDAILY XXXX Japan: Bank of Japan Current Account Balances [Projection], BoJ                   
+F58 INTDAILY XXXX Japan: Bank of Japan Current Account Balances [Provisional], BoJ                  
+H02 INTDAILY XXXX Japan: Bank of Japan Current Account Balances, BoJ
+C17 INTDAILY XXXX Japan: Bank of Japan Monetary Policy Change Dates, BoJ                        
+A57 INTDAILY XXXX Japan: Bank of Japan Monetary Policy Meeting Dates, BoJ
+K48 INTDAILY XXXX Japan: Breakeven Inflation Rates, JSDA/H
+H22 INTDAILY XXXX Japan: Call Money Market, BOJ                                                     
+W17 INTDAILY XXXX Japan: Daiwa Stock Indexes, Daiwa Securities Group                                
+R45 INTDAILY XXXX Japan: Exchange Rates, BoJ                                                        
+G16 INTDAILY XXXX Japan: Foreign Exchange Intervention Operations, JMoF                             
+U48 INTDAILY XXXX Japan: Fund-Provisioning Measure to Stimulate Bank Lending, BoJ
+Y83 INTDAILY XXXX Japan: Fund-Supplying Operation against Pooled Collateral, BOJ
+Y27 INTDAILY XXXX Japan: Fund-Supplying Operation against Pooled Collateral, BOJ                                 
+K24 INTDAILY XXXX Japan: Goverment Securities' Yields, JSDA/Haver Analytics
+J22 INTDAILY XXXX Japan: Government Bond Yields, JMoF                                               
+H01 INTDAILY XXXX Japan: Government Bond Yields: Returns, JMoF/H                                    
+K56 INTDAILY XXXX Japan: Index Arbitrage, JPX
+I42 INTDAILY XXXX Japan: Interest Rates                                                             
+K60 INTDAILY XXXX Japan: JGB's On & off the Run Yields, JSDA/H
+S30 INTDAILY XXXX Japan: JPX Stock Indexes, JPX                                                     
+S38 INTDAILY XXXX Japan: JPX Stock Indexes, JPX                                                     
+Y77 INTDAILY XXXX Japan: OMO Disaster Areas Support, BOJ                                            
+Y52 INTDAILY XXXX Japan: OMO Facilitate Corporate Financing, BOJ
+Y74 INTDAILY XXXX Japan: OMO Purchases of CP, BOJ                                                   
+Y75 INTDAILY XXXX Japan: OMO Purchases of Corporate Bonds, BOJ                                      
+Y72 INTDAILY XXXX Japan: OMO Purchases of Floating-rate/Inflation-indexed JGBs, BOJ                 
+Y71 INTDAILY XXXX Japan: OMO Purchases of JGBs, BOJ                                                 
+Y93 INTDAILY XXXX Japan: OMO Purchases of JGSs/CP, BOJ                                            
+Y70 INTDAILY XXXX Japan: OMO Purchases of Treasury Discount Bills, BOJ                              
+Y73 INTDAILY XXXX Japan: OMO USD Funds-Supplying Ops against JGS, BOJ                               
+Y76 INTDAILY XXXX Japan: OMO USD Funds-Supplying Ops against Pooled Collateral, BOJ                 
+K07 INTDAILY XXXX Japan: OTC Bond Transactions Reference Prices/Yields, JSDA
+K74 INTDAILY XXXX Japan: Off-Auction Own Share Repurchase, JPX
+K75 INTDAILY XXXX Japan: Off-Auction Own Share Repurchase, JPX/H
+I12 INTDAILY XXXX Japan: Postal Rates, JPB                                                          
+V14 INTDAILY XXXX Japan: Prime Lending Rates                                                        
+Y85 INTDAILY XXXX Japan: Repo Transactions in Japanese Yen, BoJ                                     
+Y12 INTDAILY XXXX Japan: Securities Lending Facility, BoJ                                           
+U20 INTDAILY XXXX Japan: Supplementary Finance for Climate Change Operations, BoJ                   
+F93 INTDAILY XXXX Japan: Tokyo Repurchase Agreement Rate, BoJ                                       
+U92 INTDAILY XXXX Japan: Uncollateralized Call Rates                                                
+W07 INTDAILY XXXX Japan: Yen Index, BOJ 
+U29 INTDAILY XXXX Korea:  KOSPI 200 Volatility Index, KRX
+D51 INTDAILY XXXX Korea: Bank of Korea Monetary Policy Change Dates, BOK
+A78 INTDAILY XXXX Korea: Bank of Korea Monetary Policy Meeting Dates, BOK
+E60 INTDAILY XXXX Korea: Interest Rates, BOK
+M28 INTDAILY XXXX Korea: Money Market Fund Assets Under Management, KOFIA
+E46 INTDAILY XXXX Korea: OMO Currency Stabilization Account Operations, BOK
+E61 INTDAILY XXXX Korea: OMO Monetary Stabilization Bond Operations, BOK
+E53 INTDAILY XXXX Korea: OMO RP Purchases Operations, BOK
+E52 INTDAILY XXXX Korea: OMO RP Sales Operations, BOK
+T28 INTDAILY XXXX Korea: US-Dollar Autions  
+O08 INTDAILY XXXX Korea: Wholesale Prices of Agricultural Products, KAMIS
+O03 INTDAILY XXXX Malaysia: Non-Resident Bond Holdings, BNM
+O04 INTDAILY XXXX Malaysia: Non-Resident Bond Holdings, BNM
+O06 INTDAILY XXXX Malaysia: Non-Resident Bond Holdings, BNM
+W94 INTDAILY XXXX Malasyia: MYR Reference Exchange Rates, BNM                                       
+R65 INTDAILY XXXX Malaysia: BNM Assets and Liabilities/Intl Reserves, BNM                           
+P82 INTDAILY XXXX Malaysia: Closing Rubber Prices, MRB/MRE                                          
+C58 INTDAILY XXXX Malaysia: Conventional & Islamic Treasury Bill Auctions, BNM                      
+W49 INTDAILY XXXX Malaysia: Daily Trading Gold Prices
+H49 INTDAILY XXXX Malaysia: Daily Trading Gold Prices                                               
+R51 INTDAILY XXXX Malaysia: Exchange Rates, BNM                                                     
+W13 INTDAILY XXXX Malaysia: Foreign Exchange Volume, BNM                                            
+W11 INTDAILY XXXX Malaysia: Government Bonds Volume, BNM                                            
+G72 INTDAILY XXXX Malaysia: Government Bonds, BNM                                                   
+W14 INTDAILY XXXX Malaysia: Interbank Swap Volume, BNM                                              
+W12 INTDAILY XXXX Malaysia: Interbank Transactions, BNM                                             
+W15 INTDAILY XXXX Malaysia: Interest Rates, BNM                                                     
+W21 INTDAILY XXXX Malaysia: Islamic Interbank Rates                                                 
+C67 INTDAILY XXXX Malaysia: Islamic Overnight Rate [MYOR-I], BNM 
+T95 INTDAILY XXXX Malaysia: KLIBOR Rates, BNM                                                       
+E38 INTDAILY XXXX Malaysia: Money Market Liquidity Position, BNM
+W10 INTDAILY XXXX Malaysia: Money Market Operations, BNM                                            
+E37 INTDAILY XXXX Malaysia: Open Market Operations, BNM
+C66 INTDAILY XXXX Malaysia: Overnight Rate [MYOR], BNM                                              
+X70 INTDAILY XXXX Malaysia: Palm Oil Price, MPOB                                                    
+I55 INTDAILY XXXX Malaysia: Policy Rates, BNM                                                       
+J40 INTDAILY XXXX Malaysia: Reserve Requirement Ratios, BNM                                         
+S74 INTDAILY XXXX Malaysia: Stock Market Indexes, BM/Haver  
+G82 INTDAILY XXXX New Zealand: Bond Lending Facility, RBNZ                                          
+K35 INTDAILY XXXX New Zealand: Bond Market Liquidity Support, RBNZ
+I73 INTDAILY XXXX New Zealand: Call Money Market Rate, RBNZ                                         
+I16 INTDAILY XXXX New Zealand: Exchange Rates, RBNZ                                                 
+P26 INTDAILY XXXX New Zealand: Global Dairy Trade Auction, GDT                                      
+K33 INTDAILY XXXX New Zealand: Government Bond Repurchases, RBNZ
+E08 INTDAILY XXXX New Zealand: Interest Rate Swaps, RBNZ
+E09 INTDAILY XXXX New Zealand: Interest Rates, RBNZ
+I38 INTDAILY XXXX New Zealand: Interest Rates, RBNZ                                                 
+I86 INTDAILY XXXX New Zealand: Interest Rates, RBNZ                                                 
+I93 INTDAILY XXXX New Zealand: Interest Rates, RBNZ                                                 
+K32 INTDAILY XXXX New Zealand: Large Scale Asset Purchases, RBNZ
+G57 INTDAILY XXXX New Zealand: Large Scale Asset Purchases, RBNZ                                    
+K36 INTDAILY XXXX New Zealand: Open Market Operations [Sat], RBNZ
+K37 INTDAILY XXXX New Zealand: Open Market Operations [Sun], RBNZ
+K34 INTDAILY XXXX New Zealand: Open Market Operations, RBNZ
+A46 INTDAILY XXXX New Zealand: RBNZ Monetary Policy Announcement Dates, RBNZ
+G88 INTDAILY XXXX New Zealand: Repo Facility, RBNZ                                                  
+G56 INTDAILY XXXX New Zealand: Repo and Reverse Repo OMOs, RBNZ                                     
+C09 INTDAILY XXXX New Zealand: Reserve Bank of New Zealand Monetary Policy Change Dates, RBNZ     
+A50 INTDAILY XXXX New Zealand: Reserve Bank of New Zealand Monetary Policy Meeting Dates, RBNZ
+G81 INTDAILY XXXX New Zealand: Standing Facility, RBNZ                                              
+S31 INTDAILY XXXX New Zealand: Stock Prices, S&P
+G89 INTDAILY XXXX New Zealand: Term Lending Facility, RBNZ                                          
+I44 INTDAILY XXXX Singapore: Daily Bond Rates, MAS                                                  
+I02 INTDAILY XXXX Singapore: Daily Interest Rates, MAS                                              
+T35 INTDAILY XXXX Singapore: Daily Interest Rates, MAS                                              
+T36 INTDAILY XXXX Singapore: Daily Interest Rates, MAS                                              
+V79 INTDAILY XXXX Singapore: Daily Pollutant Standards Index, NEA                                   
+H16 INTDAILY XXXX Singapore: Daily Pollutant Standards Index, NEA/H                                 
+R52 INTDAILY XXXX Singapore: Exchange Rates, MAS                                                    
+K28 INTDAILY XXXX Singapore: MAS Bills Auction Result, MAS
+T90 INTDAILY XXXX Singapore: MAS Bills, MAS  
+K29 INTDAILY XXXX Singapore: T-Bills and CMTBs Auction Result, MAS
+K31 INTDAILY XXXX Singapore: T-Bills and CMTBs Auction Result, MAS/Haver Analytics
+I54 INTDAILY XXXX South Korea: Base Rate, BOK                                                       
+K10 INTDAILY XXXX South Korea: Bond Trading, KRX                                                    
+V99 INTDAILY XXXX South Korea: Equity Foreign Ownership, KRX                                        
+K20 INTDAILY XXXX South Korea: Equity Trading, KRX                                                  
+R39 INTDAILY XXXX South Korea: Exchange Rates, BOK                                                  
+R80 INTDAILY XXXX South Korea: Exchange Rates, BOK                                                  
+I61 INTDAILY XXXX South Korea: Interest Rates                                                       
+F65 INTDAILY XXXX South Korea: Interest Rates and Yields, BOK                                       
+U31 INTDAILY XXXX South Korea: International Securities Market Activity, KSD                        
+U32 INTDAILY XXXX South Korea: International Securities Net and Gross Statistics, KSD/Haver         
+U33 INTDAILY XXXX South Korea: International Securities in KSD Custody, KSD                         
+K90 INTDAILY XXXX South Korea: KOFR Interest Rate Distribution, KSD                                 
+I74 INTDAILY XXXX South Korea: KORIBOR, KFB                                                         
+V74 INTDAILY XXXX South Korea: KRX Market Transactions, BOK                                         
+Y58 INTDAILY XXXX South Korea: Korea Overnight Financing Repo Rate (KOFR) [LEADING], KSD            
+Y20 INTDAILY XXXX South Korea: Korea Overnight Financing Repo Rate (KOFR), KSD                      
+A09 INTDAILY XXXX South Korea: News Psychology Index, Bank of Korea
+S96 INTDAILY XXXX South Korea: Stock Exchange, KSE                                                  
+V56 INTDAILY XXXX South Korea: Stock Exchange, KSE                                                  
+Y59 INTDAILY XXXX South Korea: Treasury Bill Auctions, MoSF                                         
+J33 INTDAILY XXXX South Korea: Treasury Bond Yields, MoSF                                           
+K11 INTDAILY XXXX South Korea: Treasury Bond Yields, MoSF/H 
+K02 INTDAILY XXXX South Korea: Treasury Bond Yields, MoSF/H                                          
+===================================================================================================
+DBM: Gibson
+=================================================================================================== 
+E78 INTDAILY XXXX Latin America: Exchange Monitor Rates, EM
+E79 INTDAILY XXXX Latin America: Exchange Monitor Rates 7day Series, EM
+E98 INTDAILY XXXX Latin America: Exchange Monitor Rates Saturday Series, EM
+E99 INTDAILY XXXX Latin America: Exchange Monitor Rates Sunday Series, EM
+G26 INTDAILY XXXX Uruguay: Monetary Base, BCU
+A83 INTDAILY XXXX Banco Central de Chile Policy Rate Meetings, BCC
+O43 INTDAILY XXXX Peru: Daily Readjustment Index, BCRP
+O63 INTDAILY XXXX Peru: Daily Readjustment Index, Saturdays, BCRP
+O64 INTDAILY XXXX Peru: Daily Readjustment Index, Sundays, BCRP
+O66 INTDAILY XXXX Chile: Public Debt Auctions (MINHDA)
+M97 INTDAILY XXXX Colombia: Treasury Balance, BANREP
+L06 INTDAILY XXXX Argentina: Exchange Rate Band Regime, BCRA
+K84 INTDAILY XXXX Mexico: Holdings of IPAB Securities, BMEX
+O40 INTDAILY XXXX Mexico: Economic Reference Unit, INEGI
+O11 INTDAILY XXXX Uruguay: Foreign Exchange Spot Market TUBOs, BCU
+O93 INTDAILY XXXX Peru: Reference Tax Unit, MEF
+Y25 INTDAILY XXXX Mexico: Semimonthly Headline Consumer Price Indexes, INEGI
+G61 INTDAILY XXXX Costa Rica: Development Unit: BCCR
+N44 INTDAILY XXXX Argentina: Rental Contract Index [ICL], BCRA
+N45 INTDAILY XXXX Argentina: Rental Contract Index [ICL] [SAT], BCRA
+N46 INTDAILY XXXX Argentina: Rental Contract Index [ICL] [SUN], BCRA
+O70 INTDAILY XXXX Honduras: Weekly Financial System Indicators: Foreign Exchange Operations, BCH
+O13 INTDAILY XXXX Chile: SPC 3 Month Swap, BCC
+K64 INTDAILY XXXX Chile: Breakeven Inflation Rates, BCC/H
+K65 INTDAILY XXXX Colombia: Breakeven Inflation Rates, BANREP/H
+M57 INTDAILY XXXX Peru: 10 Year Bond Yields, BCRP
+R92 INTDAILY XXXX Nicaragua: Monetary Policy Rates, BCN
+T94 INTDAILY XXXX Mexico: PM Central Bank Intervention in Money Market, Bank of Mexico
+K73 INTDAILY XXXX Peru: Breakeven Inflation Rates, SBS/H
+K57 INTDAILY XXXX Dominican Republic: Monetary Policy Rates[SAT], CBDR
+K58 INTDAILY XXXX Dominican Republic: Monetary Policy Rates[SUN], CBDR
+W71 INTDAILY XXXX Jamaica: Standing Liquidity Facility, BoJ
+A97 INTDAILY XXXX Banco Central de Reserva del Peru Policy Rate Meetings, BCRP
+M98 INTDAILY XXXX Colombia: Money Supply
+T67 INTDAILY XXXX Chile: Swap Derivatives, BCC
+N94 INTDAILY XXXX Venezuela: Lending Rates, Banco Central de Venezuela
+K99 INTDAILY XXXX Colombia: Effective Interest Rates, BANREP
+T70 INTDAILY XXXX Chile: Currency Derivatives, BCC
+K26 INTDAILY XXXX Brazil: Public Debt Issuance, STN
+K27 INTDAILY XXXX Brazil: Public Debt Issuance, Round Aggregates, STN
+K38 INTDAILY XXXX Brazil: Public Debt Issuance, Bond Aggregates, STN
+K39 INTDAILY XXXX Brazil: Public Debt Issuance, Auction Aggregates, STN
+K44 INTDAILY XXXX Brazil: Top 5 Forecasters SELIC FOCUS Survey, BCB
+K45 INTDAILY XXXX Brazil: Daily Annual SELIC Expectations, BCB
+K49 INTDAILY XXXX Argentina: Crypto Dollar Exchange Rate,Weekends AMB
+K50 INTDAILY XXXX Argentina: Crypto Dollar Exchange Rate,Sunday AMB
+M53 INTDAILY XXXX Brazil: Financial Institutions Deposits with Central Bank, BCB
+A67 INTDAILY XXXX Banco Central do Brasil Policy Rate Meetings, BCB
+A68 INTDAILY XXXX Banco Central de Mexico Policy Rate Meetings, BMEX
+M25 INTDAILY XXXX Brazil: Factors Conditioning the Monetary Base, BCB
+O48 INTDAILY XXXX Mexico: USD Exchange Rate Date of Determination and Date of Settlement, BMEX
+R22 INTDAILY XXXX Chile: Foreign Exchange Rates, BCC
+M52 INTDAILY XXXX Brazil: M1 and Components, BCB
+Q36 INTDAILY XXXX Chile: FX Turnover Calculation, BCC
+N48 INTDAILY XXXX Mexico: Equilibrium Interbank Rates, BMEX
+W39 INTDAILY XXXX Brazil: Reference and Savings Rates, BCB
+N49 INTDAILY XXXX Mexico: Equilibrium Interbank Rates [Saturday], BMEX
+N50 INTDAILY XXXX Mexico: Equilibrium Interbank Rates [Sunday], BMEX
+Y78 INTDAILY XXXX Colombia: Interest Rates, BANREP   
+H09 INTDAILY XXXX Argentina: Crypto Dollar Exchange Rate, AMB
+H79 INTDAILY XXXX Argentina: Official Euro Exchange Rate Mid Rate, AMB
+K03 INTDAILY XXXX Brazil: Open Market Operations: Foreign Exchange Swap Auctions, BCB
+O88 INTDAILY XXXX Mexico: Active Listed Securities, BMEX
+O89 INTDAILY XXXX Mexico: Matured Listed Securities, BMEX
+C44 INTDAILY XXXX Mexico: Amount operated through cards, BMEX, 7-Day                                
+C45 INTDAILY XXXX Mexico: Amount operated through cards [Saturdays], BMEX, 7-Day                    
+C46 INTDAILY XXXX Mexico: Amount operated through cards [Sundays], BMEX, 7-Day                        
+F18 INTDAILY XXXX Chile: Government Bonds and Interbank Rates, BCC                     
+H41 INTDAILY XXXX Argentina: Informal Euro Exchange Rate, AMB                                      
+J72 INTDAILY XXXX Argentina: BAIBAR Interest Rates, BCRA                                            
+I52 INTDAILY XXXX Argentina: Badlar Interest Rates on Deposits, BCRA                                
+H43 INTDAILY XXXX Argentina: Banco Naci¢n Dollar Exchange Rate, AMB
+H44 INTDAILY XXXX Argentina: Banco Naci¢n Dollar Exchange Rate, Mid Rate, AMB/H               
+H48 INTDAILY XXXX Argentina: Official Euro Exchange Rate, AMB                                    
+P76 INTDAILY XXXX Argentina: Commodity Price Index Weights, BCRA                                    
+P75 INTDAILY XXXX Argentina: Commodity Price Index, BCRA                                            
+Y04 INTDAILY XXXX Argentina: Contributions to International Reserves, BCRA                          
+Y05 INTDAILY XXXX Argentina: Contributions to Monetary Base, BCRA                                   
+Y01 INTDAILY XXXX Argentina: Effective Exchange Rate, BCRA                                          
+R67 INTDAILY XXXX Argentina: Exchange Rates, BCRA                                                   
+X57 INTDAILY XXXX Argentina: Housing and Construction Indicators, BCRA                              
+P22 INTDAILY XXXX Argentina: Informal Exchange Rate, AMB                                            
+H66 INTDAILY XXXX Argentina: Informal US$ Exchange Rate, Mid Rate, AMB/H                            
+J56 INTDAILY XXXX Argentina: Interest Rate on Time Deposits with Banks, BCRA                        
+T80 INTDAILY XXXX Argentina: Interest Rates on Personal Loans, BCRA                                 
+I50 INTDAILY XXXX Argentina: International Reserves, BCRA                                           
+Y19 INTDAILY XXXX Argentina: Loans to Private Sector Non-Financials, BCRA                           
+H42 INTDAILY XXXX Argentina: Lujo Dollar Exchange Rate, AMB                                         
+X74 INTDAILY XXXX Argentina: Main Assets of Financial Institutions, BCRA                            
+X78 INTDAILY XXXX Argentina: Main Liabilities of Financial Institutions, BCRA                       
+H63 INTDAILY XXXX Argentina: Official US$ Exchange Rate, AMB                                        
+H62 INTDAILY XXXX Argentina: Official US$ Exchange Rate, Mid Rate, AMB/H                            
+H47 INTDAILY XXXX Argentina: Informal Dollar Exchange Rate Mid Rate, AMB/H                                       
+X58 INTDAILY XXXX Argentina: Real Value Stabilization Indicators, BCRA                              
+J64 INTDAILY XXXX Argentina: Repurchase Rates, BCRA                                                 
+V18 INTDAILY XXXX Argentina: Stock Market Indexes, FT                                               
+M71 INTDAILY XXXX Argentina: Third Party Transactions, BCRA                                         
+H61 INTDAILY XXXX Argentina: Tourist Dollar, AMB                                                    
+H60 INTDAILY XXXX Argentina: US$ Exchange Rate [MEP], AMB                                           
+H65 INTDAILY XXXX Argentina: Wholesale US$ Exchange Rate, AMB                                       
+H64 INTDAILY XXXX Argentina: Wholesale US$ Exchange Rate, Mid Rate, AMB/H                      
+R97 INTDAILY XXXX Bolivia: Exchange Rates, BCBol/ Haver                                             
+Y53 INTDAILY XXXX Bolivia: Exchange Rates, BCBol/ Haver                                             
+G28 INTDAILY XXXX Bolivia: International Reserves, BCB                                   
+V30 INTDAILY XXXX Brazil: BM&F Bovespa Real Estate Index, BM&F                                      
+Y43 INTDAILY XXXX Brazil: Bovespa Stock Market Index, FT                                            
+Y41 INTDAILY XXXX Brazil: Bovespa Stock Market Total Volume                                         
+Y44 INTDAILY XXXX Brazil: CDI Rates, BCB                                                            
+P17 INTDAILY XXXX Brazil: Daily Annual Inflation Expectations, BCB                                  
+U89 INTDAILY XXXX Brazil: Daily Annual Inflation Expectations, BCB                                  
+H32 INTDAILY XXXX Brazil: Exchange Rate Mid Rates, BCB/H                                            
+Y08 INTDAILY XXXX Brazil: Exchange Rate, BCB                                                        
+H25 INTDAILY XXXX Brazil: Exchange Rates Mid Rates, BCB/H                                           
+W50 INTDAILY XXXX Brazil: Exchange Rates, BCB                                                       
+W09 INTDAILY XXXX Brazil: FX Operations, BCB                                                        
+W51 INTDAILY XXXX Brazil: FX Operations, BCB                                                        
+Y10 INTDAILY XXXX Brazil: Foreign Exchange Swaps, BCB                                               
+J30 INTDAILY XXXX Brazil: Inflation Expectations, BCB                                               
+U88 INTDAILY XXXX Brazil: Inflation Expectations, BCB                                               
+I51 INTDAILY XXXX Brazil: Interest Rates                                                            
+Y03 INTDAILY XXXX Brazil: International Reserves [Net Interventions], BCB                           
+J98 INTDAILY XXXX Brazil: International Reserves, BCB                                               
+O09 INTDAILY XXXX Brazil: International Trade Detail, MDIC                                          
+Y09 INTDAILY XXXX Brazil: International Trade, MDIC                                                 
+V88 INTDAILY XXXX Brazil: Long Term Interest Rates, BNDES                                           
+Y63 INTDAILY XXXX Brazil: Market Indices, ANBIMA                                                    
+X56 INTDAILY XXXX Brazil: Money Supply, BCB                                                         
+V83 INTDAILY XXXX Brazil: Official Rates, BNDES                                                     
+T76 INTDAILY XXXX Brazil: Open Market Operations, BCB                                               
+Y42 INTDAILY XXXX Brazil: Selic Rates, BCB                                                          
+Y40 INTDAILY XXXX Brazil: Swap Reference Rates                                                      
+U44 INTDAILY XXXX Brazil: Top 5 Forecasters FOCUS Survey, BCB                                       
+Y57 INTDAILY XXXX Brazil: Treasury Reference Rate, BCB
+Y69 INTDAILY XXXX Chile: Central Bank FX Forward Sales, BCC                                         
+Y67 INTDAILY XXXX Chile: Central Bank FX Purchases, BCC                                             
+Y68 INTDAILY XXXX Chile: Central Bank FX Sales, BCC                                                 
+U34 INTDAILY XXXX Chile: Daily Retail Sales [Saturday] , BCC                                        
+U35 INTDAILY XXXX Chile: Daily Retail Sales [Sunday] , BCC                                          
+U28 INTDAILY XXXX Chile: Daily Retail Sales, BCC                                                    
+W45 INTDAILY XXXX Chile: Deposit Rates                                                              
+R81 INTDAILY XXXX Chile: Exchange Rates, BCC                                                        
+X37 INTDAILY XXXX Chile: FX Outstanding, BCC                                                        
+X36 INTDAILY XXXX Chile: FX Turnover, BCC                                                           
+T61 INTDAILY XXXX Chile: FXI, BCC                                                                   
+R19 INTDAILY XXXX Chile: Foreign Exchange Rates, BCC                                                
+W46 INTDAILY XXXX Chile: Interbank Rates                                                            
+I27 INTDAILY XXXX Chile: Interest Rates                                                             
+Y88 INTDAILY XXXX Chile: Interest Rates on Term Deposits                                            
+X31 INTDAILY XXXX Chile: Money Supply, BCC                                                          
+X35 INTDAILY XXXX Chile: Multilateral Exchange Rates, BCC                                           
+H56 INTDAILY XXXX Chile: Net FX Positions of Domestic Banks FCY/CLP, BCC                            
+I15 INTDAILY XXXX Chile: Onshore, BCC                                                               
+P92 INTDAILY XXXX Chile: Prices                                                                     
+I14 INTDAILY XXXX Chile: SPC Swaps-Long Term, BCC                                                   
+I13 INTDAILY XXXX Chile: SPC Swaps-Short Term, BCC                                                  
+Y89 INTDAILY XXXX Chile: Spot Turnover of Domestic Banks CLP/FCY, BCC                               
+Y86 INTDAILY XXXX Chile: Spot Turnover of Domestic Banks USD/CLP, BCC                               
+Y81 INTDAILY XXXX Chile: Spot Turnover of the Formal Exchange Market CLP/FCY, BCC                   
+O20 INTDAILY XXXX Chile: Term SWAPS, BCC                                                            
+O21 INTDAILY XXXX Chile: Term SWAPS, BCC                                                            
+T83 INTDAILY XXXX Chile: Total Turnover of Domestic Banks CLP/FCY, BCC                              
+Y46 INTDAILY XXXX Chile: USD IPSA Index, BCC                                                        
+O22 INTDAILY XXXX Chile: USD Purchases (MINHDA)
+X12 INTDAILY XXXX Colombia: Exchange Rates Detail, BANREP                                           
+X13 INTDAILY XXXX Colombia: Exchange Rates, BANREP                                                  
+Y82 INTDAILY XXXX Colombia: FX Operations, BANREP                                                   
+X19 INTDAILY XXXX Colombia: Interbank Lending Rate, BANREP                                          
+I99 INTDAILY XXXX Colombia: Interest Rates, BANREP                                                  
+I25 INTDAILY XXXX Colombia: Interest Rates, BanRep                                                  
+G98 INTDAILY XXXX Colombia: International Reserves                                                  
+X20 INTDAILY XXXX Colombia: Real Value Unit [UVR], BANREP                                           
+V19 INTDAILY XXXX Colombia: Stock Price Index COLCAP, FT                                            
+X15 INTDAILY XXXX Colombia: Zero Coupon Yields, BANREP
+W28 INTDAILY XXXX Costa Rica: Central Rates, BCCR                                                   
+Y38 INTDAILY XXXX Costa Rica: Deposit Basic Rate                                                    
+W30 INTDAILY XXXX Costa Rica: Domestic Currency Money Markets, BCCR                                 
+R29 INTDAILY XXXX Costa Rica: Exchange Rates, BCCR                                                  
+Y64 INTDAILY XXXX Costa Rica: Exchange Rates, BCCR                                                  
+W29 INTDAILY XXXX Costa Rica: Interest Rate at the Liquidity Integrated Market, BCCR                
+I49 INTDAILY XXXX Costa Rica: Interest Rates                                                        
+G13 INTDAILY XXXX Costa Rica: International Reserves, BCCR                                          
+W54 INTDAILY XXXX Costa Rica: Stock Market Indexes, BCCR                                            
+W31 INTDAILY XXXX Costa Rica: USD Money Markets, BCCR  
+R14 INTDAILY XXXX Dominican Republic: Exchange Rates, CBDR                                          
+X07 INTDAILY XXXX Dominican Republic: Monetary Policy Rates, CBDR
+X53 INTDAILY XXXX Ecuador: Central Bank Interest Rates, BCE                                         
+U63 INTDAILY XXXX Ecuador: Interbank Market, BCE  
+X59 INTDAILY XXXX Guatemala: Central Bank Interest Rates, BDG                                       
+G27 INTDAILY XXXX Guatemala: International Reserves, BDG                                            
+X50 INTDAILY XXXX Guatemala: Reference Exchange Rate, BDG                                           
+W60 INTDAILY XXXX Honduras: Average Dollar Price, BCH                                               
+U82 INTDAILY XXXX Honduras: Average Dollar Price: Mid Rates, BCH/H                                  
+W58 INTDAILY XXXX Honduras: Monetary Policy Rate, BCH                                               
+W73 INTDAILY XXXX Honduras: Reference Exchange Rate, BCH  
+S92 INTDAILY XXXX International Stock Prices, FT 
+S91 INTDAILY XXXX International Stock Prices, WSJ 
+G36 INTDAILY XXXX Jamaica: Exchange Rates, BoJ                                                      
+H36 INTDAILY XXXX Jamaica: Exchange Rates, Mid Rates, BoJ/H                                         
+W97 INTDAILY XXXX Jamaica: Monetary Policy Rates, BoJ                                               
+X04 INTDAILY XXXX Jamaica: Reference Exchange Rate, BOJ                                             
+V10 INTDAILY XXXX Jamaica: Stock Market Indicators   
+X02 INTDAILY XXXX Mexico: Central Bank Intervention in Money Market, Bank of Mexico                 
+P13 INTDAILY XXXX Mexico: Core CPI: Complementary Weights, INEGI                                    
+Y49 INTDAILY XXXX Mexico: Equilibrium Interbank Rates, BMEX                                         
+X01 INTDAILY XXXX Mexico: Exchange Rates                                                            
+R77 INTDAILY XXXX Mexico: Exchange Rates Mid Rate Calculation, BMEX/H                               
+R87 INTDAILY XXXX Mexico: Exchange Rates, BoM                                                       
+G37 INTDAILY XXXX Mexico: Foreign Exchange Operations & Swaps, Bank of Mexico                       
+Y47 INTDAILY XXXX Mexico: Government and Bank Funding Rates, BMEX                                   
+G84 INTDAILY XXXX Mexico: Holdings of Government Securities, BMEX                                   
+I56 INTDAILY XXXX Mexico: Interest Rates                                                            
+J18 INTDAILY XXXX Mexico: Interest Rates, BMEX                                                      
+G85 INTDAILY XXXX Mexico: Investment Unit {UDIS}, BMEX                                              
+G80 INTDAILY XXXX Mexico: Monetary and Financial Aggregates, BoM                                                                             
+Y92 INTDAILY XXXX Mexico: Overnight TIIE Rates, BMEX                                                
+Y45 INTDAILY XXXX Mexico: Programmed Intervention in the Money Market, BMEX                         
+P25 INTDAILY XXXX Mexico: Semimonthly Consumer Price Indexes, INEGI                                 
+S87 INTDAILY XXXX Mexico: Stock Market Indicators, BoM                                              
+H55 INTDAILY XXXX Mexico: Trimmed Mean CPI and Other Price Indicators, BMEX                         
+T29 INTDAILY XXXX Mexico: US-Dollar Auctions                                                        
+Y48 INTDAILY XXXX Mexico: USD Exchange Rate Date of Determination and Date of Settlement, BMEX  
+Y13 INTDAILY XXXX Nicaragua: Exchange Rates, BCN                                                    
+Y14 INTDAILY XXXX Nicaragua: International Reserves, BCN    
+R98 INTDAILY XXXX Paraguay: Exchange Rates, BCP                                                     
+V77 INTDAILY XXXX Paraguay: Monetary Policy Rates, BCP                                              
+M47 INTDAILY XXXX Peru: Central Bank Foreign Exchange Operations, BCRP                              
+M46 INTDAILY XXXX Peru: Central Bank Net Foreign Exchange Operations, BCRP                          
+R43 INTDAILY XXXX Peru: Exchange Rates, BCRP                                                        
+R88 INTDAILY XXXX Peru: Exchange Rates, BCRP/H                                                      
+Y17 INTDAILY XXXX Peru: Exchange Rates, SBS                                                         
+M48 INTDAILY XXXX Peru: Interbank Interest Rate Index, BCRP                                         
+I57 INTDAILY XXXX Peru: Interest Rates, BCRP                                                        
+G23 INTDAILY XXXX Peru: International Reserves, BCRP                                                
+X03 INTDAILY XXXX Peru: Monetary Operations, BCRP                                                   
+M29 INTDAILY XXXX Peru: Payment System Operations, BCRP                                             
+J15 INTDAILY XXXX Peru: Policy Rates, BCRP                                                          
+V21 INTDAILY XXXX Peru: Stock Price Index                                                           
+Y29 INTDAILY XXXX Peru: Zero Coupon Yields, SBS   
+Y37 INTDAILY XXXX Suriname: Calculated Mid Rates, CBvS/H                                            
+Y36 INTDAILY XXXX Suriname: Exchange Rates, CBvS   
+Y39 INTDAILY XXXX Trinidad & Tobago: Exchange MidRates, CBTT/Haver Analytics                        
+W77 INTDAILY XXXX Trinidad & Tobago: Exchange Rates, CBTT                                           
+W76 INTDAILY XXXX Trinidad & Tobago: Monetary Policy Rate, CBTT                                     
+W79 INTDAILY XXXX Trinidad & Tobago: Stock Market Index, TTSE  
+P28 INTDAILY XXXX US$ Settlement Exchange Rate for Argentina Peso  
+G69 INTDAILY XXXX Uruguay: Exchange Rates, BCU                                                      
+U91 INTDAILY XXXX Uruguay: Foreign Exchange MidRates, BCU/H                                         
+U90 INTDAILY XXXX Uruguay: Foreign Exchange Rates, BCU                                              
+Y11 INTDAILY XXXX Uruguay: Foreign Exchange Spot Market, BCU                                        
+M40 INTDAILY XXXX Uruguay: Interest Rates, BCU                                                      
+R48 INTDAILY XXXX Uruguay: International Reserves, BCU                                              
+X49 INTDAILY XXXX Uruguay: Monetary Base, BCU                                                       
+I17 INTDAILY XXXX Uruguay: Policy Rate, BCU                                                         
+Y61 INTDAILY XXXX Uruguay: Spot Curve, BEVSA                                                        
+V40 INTDAILY XXXX Uruguay: Stock Index, BVM                                                         
+G71 INTDAILY XXXX Uruguay: Unit Index Value Peso, BCU  
+W38 INTDAILY XXXX International Stock Prices, FT                                           
+I94 INTDAILY XXXX Venezuela: Commerical Bank Loans, Banco Central de Venezuela                                                                 
+R53 INTDAILY XXXX Venezuela: Exchange Rates, BCV                                                    
+H30 INTDAILY XXXX Venezuela: Exchange Rates, BCV/H                                                  
+W68 INTDAILY XXXX Venezuela: Interbank Rates, BCV                                                   
+J78 INTDAILY XXXX Venezuela: International Reserves, BCV                                            
+Y33 INTDAILY XXXX Venezuela: Reference Exchange Mid Rates, BCV/H                                    
+Y35 INTDAILY XXXX Venezuela: Reference Exchange Rates, BCV  
+E14 INTDAILY XXXX Colombia: Exchange Rate: Brazil, BANREP
+E15 INTDAILY XXXX Colombia: Exchange Rate: Peru, BANREP
+E16 INTDAILY XXXX Colombia: Exchange Rate: Brazil: Mid-Rate, BANREP
+E17 INTDAILY XXXX Colombia: Exchange Rate: Peru: Mid-Rate, BANREP
+===================================================================================================
+DBM: Himani
+===================================================================================================                                             
+L31 INTDAILY XXXX Bangladesh: Interbank FX Market Saturday, BB
+L32 INTDAILY XXXX Bangladesh: Interbank FX Market Sunday, BB
+L33 INTDAILY XXXX Bangladesh: Morning Reference Rate Saturday, BB
+L34 INTDAILY XXXX Bangladesh: Morning Reference Rate Sunday, BB
+L37 INTDAILY XXXX Bangladesh: Afternoon Reference Rate Saturday, BB
+L38 INTDAILY XXXX Bangladesh: Afternoon Reference Rate Sunday, BB
+N18 INTDAILY XXXX Bangladesh: Interbank FX Market, BB
+N19 INTDAILY XXXX Bangladesh: Morning Reference Rate, BB
+N21 INTDAILY XXXX Bangladesh: Afternoon Reference Rate, BB
+N40 INTDAILY XXXX Lao PDR: Treasury Bill Auction, BOL
+N57 INTDAILY XXXX India: Total Foreign Exchange Turnover, RBI/H
+N91 INTDAILY XXXX Bangladesh: Money Market Reference Rate, BB
+N92 INTDAILY XXXX Bangladesh: Money Market Reference Rate Saturday, BB
+N93 INTDAILY XXXX Bangladesh: Money Market Reference Rate Sunday, BB
+N95 INTDAILY XXXX India: Call/Notice Money Market Statistics Saturday, RBI
+N96 INTDAILY XXXX India: Call/Notice Money Market Statistics Sunday, RBI
+N30 INTDAILY XXXX Lao PDR: LAK Index, BOL
+N16 INTDAILY XXXX Lao PDR: Parallel Rates & Commercial Bank Rates, BOL
+H58 INTDAILY XXXX Bangladesh: 91 Days Compounded Rate [Saturday], BB                                
+H59 INTDAILY XXXX Bangladesh: 91 Days Compounded Rate [Sunday], BB                                  
+W24 INTDAILY XXXX Bangladesh: 91 Days Compounded Rate, BB                                           
+U64 INTDAILY XXXX Bangladesh: Call Money Rate [Saturday], BB                                        
+U65 INTDAILY XXXX Bangladesh: Call Money Rate [Sunday], BB                                          
+W69 INTDAILY XXXX Bangladesh: Call Money Rate, BB                                                   
+M06 INTDAILY XXXX Bangladesh: Dhaka Stock Market Index, DSEBD                                       
+M07 INTDAILY XXXX Bangladesh: Dhaka Stock Market Index, DSEBD                                       
+W70 INTDAILY XXXX Bangladesh: Dhaka Stock Market Index, DSEBD                                       
+N81 INTDAILY XXXX Bangladesh: Exchange Rates Mid Rates [Sunday], BB
+U80 INTDAILY XXXX Bangladesh: Exchange Rates [Saturday], BB                                         
+U81 INTDAILY XXXX Bangladesh: Exchange Rates [Sunday], BB                                           
+H34 INTDAILY XXXX Bangladesh: Exchange Rates, BB                                                    
+R17 INTDAILY XXXX Bangladesh: Exchange Rates, BB                                                    
+J23 INTDAILY XXXX Bangladesh: Policy Rates, BB                                      
+N54 INTDAILY XXXX India: Bank of India MCLR Rates Saturday, BOI
+N55 INTDAILY XXXX India: Bank of India MCLR Rates Sunday, BOI
+N23 INTDAILY XXXX India: Bank of India MCLR Rates, BOI
+Y16 INTDAILY XXXX India: Bombay Stock Exchange, BSE                                                 
+X92 INTDAILY XXXX India: Call/Notice Money Market Statistics, RBI                                   
+G86 INTDAILY XXXX India: Cash Balances of Scheduled Commercial Banks, RBI                           
+N42 INTDAILY XXXX India: Cash Reserve Ratio Saturday, RBI
+N43 INTDAILY XXXX India: Cash Reserve Ratio Sunday, RBI
+N41 INTDAILY XXXX India: Cash Reserve Ratio, RBI
+K86 INTDAILY XXXX India: Client Categorywise Total Turnover Calculation, SEBI
+X86 INTDAILY XXXX India: Client Categorywise Turnover, SEBI                                         
+J62 INTDAILY XXXX India: Commercial Paper, RBI                                                      
+D38 INTDAILY XXXX India: Daily Air Quality Indexes by City [SATURDAY], CPCB
+D39 INTDAILY XXXX India: Daily Air Quality Indexes by City [SUNDAY], CPCB
+D44 INTDAILY XXXX India: Daily Air Quality Indexes by City, CPCB
+N86 INTDAILY XXXX India: Daily Money Market Operations Press Release [Saturday], RBI
+N87 INTDAILY XXXX India: Daily Money Market Operations Press Release [Sunday], RBI
+N85 INTDAILY XXXX India: Daily Money Market Operations Press Release, RBI
+N76 INTDAILY XXXX India: Daily Money Market Operations Total Volume [Saturday], RBI/H
+N77 INTDAILY XXXX India: Daily Money Market Operations Total Volume [Sunday], RBI/H
+N75 INTDAILY XXXX India: Daily Money Market Operations Total Volume, RBI/H
+H53 INTDAILY XXXX India: Daily Payments [Saturday], RBI                                             
+H54 INTDAILY XXXX India: Daily Payments [Sunday], RBI                                               
+H52 INTDAILY XXXX India: Daily Payments, RBI                                                        
+X67 INTDAILY XXXX India: Domestic Rubber Price, IRB                                                 
+R84 INTDAILY XXXX India: Exchange Rates, RBI                                                        
+S76 INTDAILY XXXX India: FII Derivative Statistics, NSE                                             
+P45 INTDAILY XXXX India: Food Prices, DCA                                                           
+N33 INTDAILY XXXX India: Foreign Currency Non-Resident Deposit Ceiling Rate Saturday, RBI
+N34 INTDAILY XXXX India: Foreign Currency Non-Resident Deposit Ceiling Rate Sunday, RBI
+N32 INTDAILY XXXX India: Foreign Currency Non-Resident Deposit Ceiling Rate, RBI
+W52 INTDAILY XXXX India: Foreign Exchange Turnover, RBI                                             
+O98 INTDAILY XXXX India: Foreign Portfolio Investors, CDSL
+S39 INTDAILY XXXX India: Foreign Portfolio Investors, CDSL                                          
+S98 INTDAILY XXXX India: Foreign Portfolio Investors, CDSL                                          
+X30 INTDAILY XXXX India: Foreign Re-Investment of Central Depository Services India Ltd, CDSL       
+V41 INTDAILY XXXX India: Foreign Re-Investment of Coupons in Government Securities, CCIL            
+N08 INTDAILY XXXX India: Fortnightly Sectorwise FPI Investment Data Saturday, NSDL
+N09 INTDAILY XXXX India: Fortnightly Sectorwise FPI Investment Data Sunday, NSDL
+N07 INTDAILY XXXX India: Fortnightly Sectorwise FPI Investment Data, NSDL
+R89 INTDAILY XXXX India: Forward Rates/Premium, RBI                                                 
+N65 INTDAILY XXXX India: Government of India Surplus Cash Balance, RBI/H
+J53 INTDAILY XXXX India: Historical Prime Lending Rates, SBI                                        
+W88 INTDAILY XXXX India: Interbank Forward Premia, RBI                                              
+N72 INTDAILY XXXX India: Liquidity Adjustment Facility Auction [Saturday], RBI/H
+N73 INTDAILY XXXX India: Liquidity Adjustment Facility Auction [Sunday], RBI/H
+J71 INTDAILY XXXX India: Liquidity Adjustment Facility Auction, RBI/H                               
+N58 INTDAILY XXXX India: Liquidity Adjustment Facility Auctions [Saturday], RBI
+N59 INTDAILY XXXX India: Liquidity Adjustment Facility Auctions [Sunday], RBI
+N71 INTDAILY XXXX India: Liquidity Adjustment Facility Auctions, RBI
+N68 INTDAILY XXXX India: Liquidity Operations by RBI [Saturday], RBI
+N69 INTDAILY XXXX India: Liquidity Operations by RBI [Sunday], RBI
+J67 INTDAILY XXXX India: Liquidity Operations by RBI, RBI                             
+J51 INTDAILY XXXX India: Money Market Operations                                                    
+J63 INTDAILY XXXX India: Money Market Operations                                                    
+N79 INTDAILY XXXX India: Money Market Operations Average Cash Reserve Requirement, RBI
+P79 INTDAILY XXXX India: Money Market Operations Net Liquidity Injected                             
+M68 INTDAILY XXXX India: Money Market Operations Press Release                                      
+N82 INTDAILY XXXX India: Money Market Operations Press Release [Saturday], RBI
+N83 INTDAILY XXXX India: Money Market Operations Press Release [Sunday], RBI
+N88 INTDAILY XXXX India: Money Market Operations Press Series [Saturday], RBI
+N89 INTDAILY XXXX India: Money Market Operations Press Series [Sunday], RBI
+N84 INTDAILY XXXX India: Money Market Operations Press Series, RBI
+N63 INTDAILY XXXX India: Mutual Funds Derivatives [Saturday], SEBI
+N64 INTDAILY XXXX India: Mutual Funds Derivatives [Sunday], SEBI
+N61 INTDAILY XXXX India: Mutual Funds [Saturday], SEBI
+N62 INTDAILY XXXX India: Mutual Funds [Sunday], SEBI
+Y28 INTDAILY XXXX India: Mutual Funds, SEBI                                                         
+Y99 INTDAILY XXXX India: Mutual Funds, SEBI                                                         
+Y15 INTDAILY XXXX India: National Stock Exchange of India, NSE                                      
+N38 INTDAILY XXXX India: Policy Rates Saturday, RBI
+N39 INTDAILY XXXX India: Policy Rates Sunday, RBI
+I78 INTDAILY XXXX India: Policy Rates, RBI                                                          
+S95 INTDAILY XXXX India: Stock Market Indicators, BSE                                               
+O85 INTDAILY XXXX India: Stock Market Indicators, NSE                                               
+S85 INTDAILY XXXX India: Stock Market Indicators, NSE                                               
+P46 INTDAILY XXXX India: Weekly Food Prices [Saturday] , DCA                                        
+P47 INTDAILY XXXX India: Weekly Food Prices [Sunday] , DCA                           
+V55 INTDAILY XXXX International Stock Prices          
+V53 INTDAILY XXXX International Stock Prices                            
+V58 INTDAILY XXXX International Stock Prices                                                 
+M32 INTDAILY XXXX Lao PDR: Exchange Rates, BOL                                                      
+H72 INTDAILY XXXX Lao PDR: Interest Rate Swap, BOL                                                  
+M33 INTDAILY XXXX Lao PDR: Middle Exchange Rates, BOL                                               
+X45 INTDAILY XXXX Lao PDR: Monetary Policy Rates, BOL                                               
+N22 INTDAILY XXXX Lao PDR: Reserve Requirement Ratio, BOL
+X46 INTDAILY XXXX Lao PDR: Stock Market Indicators, LSX                                             
+X44 INTDAILY XXXX Lao PDR: US$ Reference Rate, BOL                          
+U05 INTDAILY XXXX Maldives: Exchange Rates                                                          
+U46 INTDAILY XXXX Maldives: Exchange Rates [Saturday], MMA                                          
+U47 INTDAILY XXXX Maldives: Exchange Rates [Sunday], MMA         
+W16 INTDAILY XXXX Mongolia: Exchange Rates, BOM                                                     
+J77 INTDAILY XXXX Mongolia: Policy Rate, BoM                                                        
+N99 INTDAILY XXXX Mongolia: Reserve Requirement Rate, BoM
+W74 INTDAILY XXXX Mongolia: Stock Market Index, MSE                                       
+M81 INTDAILY XXXX Nepal: Exchange Mid Rates [SATURDAY], Nepal Rastra Bank/Haver Analytics           
+M83 INTDAILY XXXX Nepal: Exchange Mid Rates [SUNDAY], Nepal Rastra Bank/Haver Analytics             
+M79 INTDAILY XXXX Nepal: Exchange Mid Rates, Nepal Rastra Bank/Haver Analytics                      
+M80 INTDAILY XXXX Nepal: Exchange Rates [SATURDAY], Nepal Rastra Bank                               
+M82 INTDAILY XXXX Nepal: Exchange Rates [SUNDAY], Nepal Rastra Bank                                 
+M78 INTDAILY XXXX Nepal: Exchange Rates, Nepal Rastra Bank                                          
+M73 INTDAILY XXXX Nepal: Nepal Stock Exchange Index [SATURDAY], NEPSE                               
+M74 INTDAILY XXXX Nepal: Nepal Stock Exchange Index [SUNDAY], NEPSE                                 
+M72 INTDAILY XXXX Nepal: Nepal Stock Exchange Index, NEPSE                                                             
+G30 INTDAILY XXXX Pakistan: Access to Overnight Repo/Reverse Repo Facilities, SBP                   
+S27 INTDAILY XXXX Pakistan: Daily Market Capitalization, PSEL                                       
+R55 INTDAILY XXXX Pakistan: Exchange Rates, SBP                                                     
+T37 INTDAILY XXXX Pakistan: Foreign and Local Investments, NCCPL                                    
+I47 INTDAILY XXXX Pakistan: Interbank Offer Rates                                                   
+K47 INTDAILY XXXX Pakistan: Interbank Offer Rates Mid-Rate Calculation                              
+J01 INTDAILY XXXX Pakistan: Repurchase Rates                                                        
+W84 INTDAILY XXXX Pakistan: State Oil, PSO                                                          
+Y23 INTDAILY XXXX Pakistan: Stock Market Indexes, SBP                                               
+S25 INTDAILY XXXX Pakistan: Stock Prices, PSEL                                                      
+V92 INTDAILY XXXX Pakistan: Weighted Average Overnight Repo Rate, SBP                                 
+N26 INTDAILY XXXX Papua New Guinea: Central Bank Bills Auction, BPNG
+R40 INTDAILY XXXX Papua New Guinea: Exchange Rates, BPNG                                            
+F68 INTDAILY XXXX Papua New Guinea: Kina Facility Rate (KFR), BPNG                 
+N29 INTDAILY XXXX Papua New Guinea: Treasury Bills Auction, BPNG
+N35 INTDAILY XXXX Philippines: Agricultural Prices, DOA
+N14 INTDAILY XXXX Philippines: Discount Window Facility Interest Rates, CBP
+F64 INTDAILY XXXX Philippines: Exchange Rates, CBP                                                  
+N56 INTDAILY XXXX Philippines: Interbank Rates, CBP
+F67 INTDAILY XXXX Philippines: Interest Rates, CBP                                                  
+F66 INTDAILY XXXX Philippines: Prices, CBP                    
+N67 INTDAILY XXXX Philippines: Reserve Requirement Ratio, CBP
+N20 INTDAILY XXXX Samoa: Indicative Exchange Rates, CBS
+N31 INTDAILY XXXX Sri Lanka: Bank Rate, CBSL
+W62 INTDAILY XXXX Sri Lanka: Commercial Bank Exchange Rates, CBSL                                   
+H12 INTDAILY XXXX Sri Lanka: Commercial Bank Exchange Rates: Mid Rates, CBSL/Haver                  
+K12 INTDAILY XXXX Sri Lanka: Governmnet Security Secondary Market Transactions, CBSL                
+N11 INTDAILY XXXX Sri Lanka: Indicative Exchange Rates, CBSL
+J35 INTDAILY XXXX Sri Lanka: Money Market Rates, CBSL                                               
+F80 INTDAILY XXXX Sri Lanka: Open Market Operations                                                 
+J31 INTDAILY XXXX Sri Lanka: Policy Rates, CBSL                                                     
+K17 INTDAILY XXXX Sri Lanka: Treasury Bill Mid Prices and Yields, CBSL                              
+K16 INTDAILY XXXX Sri Lanka: Treasury Bill Prices and Yields, CBSL                                  
+K14 INTDAILY XXXX Sri Lanka: Treasury Bonds and Bills Mid Yield, CBSL                               
+K13 INTDAILY XXXX Sri Lanka: Treasury Bonds and Bills Yield, CBSL                           
+V69 INTDAILY XXXX Vietnam: 3 Months VND Deposit Interest Rate, BIDV                                 
+H14 INTDAILY XXXX Vietnam: Exchange Rate: Mid Rates, VCB/H                                          
+R76 INTDAILY XXXX Vietnam: Exchange Rates, VcB                                                      
+H94 INTDAILY XXXX Vietnam: Government Bond Auctions, Hanoi Stock Exchange                           
+G96 INTDAILY XXXX Vietnam: Ho Chi Minh Stock Exchange, VI Index, HSE                                
+W23 INTDAILY XXXX Vietnam: Interbank Interest Rates, SBV                                            
+I53 INTDAILY XXXX Vietnam: Interest Rates, SBV                                                      
+K62 INTDAILY XXXX Vietnam: Open Market Operations [SAT], SBV
+K63 INTDAILY XXXX Vietnam: Open Market Operations [SUN], SBV
+K61 INTDAILY XXXX Vietnam: Open Market Operations, SBV
+W20 INTDAILY XXXX Vietnam: Reference Exchange Rate at SBV Operations Centre, SBV                    
+H07 INTDAILY XXXX Vietnam: Reference Exchange Rate at SBV Operations Centre, SBV/Haver              
+H67 INTDAILY XXXX Vietnam: Trading by Foreign Investors, HNX                                        
+H68 INTDAILY XXXX Vietnam: Trading by Foreign Investors, HNX/Haver Analytics                        
+W19 INTDAILY XXXX Vietnam: VND vs USD Central Rate, State Bank of Vietnam                           
+I90 INTDAILY XXXX Vietnam: Zero Coupon Yield, HSE                                  
+===================================================================================================
+DBM: Jiebing
+===================================================================================================
+F91 INTDAILY XXXX WSJ Bank Prime Loan Rate
+K08 INTDAILY XXXX US: Federal Funds Target Rate on Announcement Date
+K18 INTDAILY XXXX US: Federal Funds Target Rate on Announcement Date, Saturday
+K19 INTDAILY XXXX US: Federal Funds Target Rate on Announcement Date, Sunday
+A55 INTDAILY XXXX US: Federal Reserve Boad FOMC Meeting Dates, FRB
+X61 INTDAILY XXXX Overnight Bank Funding Rate & Federal Funds Effective Rate, FRBNY
+P57 INTDAILY XXXX DOE Daily Spot Energy Prices
+Y21 INTDAILY XXXX Effective Fed Funds & Prime Rate [FRBNY]
+R72 INTDAILY XXXX WSJ Exchange Rates                                                                
+P94 INTDAILY XXXX Wall Street Journal 
+G91 INTDAILY XXXX Dow Jones Global Indexes
+R37 INTDAILY XXXX Exchange Rates Cross Rates 
+R91 INTDAILY XXXX FRB US$ Exchange Rates Trade Weighted Exchange [FRB H.10]                         
+R82 INTDAILY XXXX FRB US$ Exchange Rates [FRB H.10]
+F85 INTDAILY XXXX Interest Rates [FRB H.15] 
+F86 INTDAILY XXXX Long-Term Treasury Securities 
+R73 INTDAILY XXXX NYT Exchange Rates 
+G63 INTDAILY XXXX Russell Total Return Indexes
+S84 INTDAILY XXXX Stock Indexes - NYT  
+S82 INTDAILY XXXX Stock Price Indexes - WSJ   
+X98 INTDAILY XXXX Treasury Repo Benchmark Rates, FRBNY 
+C15 INTDAILY XXXX U.S.: Federal Reserve Board FOMC Policy Change Dates, FRB
+C48 INTDAILY XXXX Federal Reserve Board FOMC Policy Meetings & Changes [Saturday]                   
+C49 INTDAILY XXXX Federal Reserve Board FOMC Policy Meetings & Changes [Sunday]  
+G03 INTDAILY XXXX US Treasuries Constant Maturity Yields  
+R83 INTDAILY XXXX US$ Exchange Rates calculated by Haver  
+X99 INTDAILY XXXX United States: CBOE Market Volatility Indexes, WSJ                                
+X88 INTDAILY XXXX United States: Oil Price Indicators, EIA/CME    
+Y02 INTDAILY XXXX Volatility Index, CBOE   
+P81 INTDAILY XXXX Libor Futures Prices, CME
+G07 INTDAILY XXXX Interest Rate Futures Prices  
+V31 INTDAILY XXXX S&P Global Index, S&P                                                             
+V29 INTDAILY XXXX S&P Stock Market Indexes, S&P
+===================================================================================================
+DBM: Ruijing
+===================================================================================================
+L44 INTDAILY XXXX Russia: Federal Treasury Operations, Daily, FTRF
+L45 INTDAILY XXXX Russia: Federal Treasury Operations, Saturday, FTRF
+L46 INTDAILY XXXX Russia: Federal Treasury Operations, Sunday, FTRF
+Q28 INTDAILY XXXX Cambodia: Retail Pump Prices, MOC, Daily
+Q29 INTDAILY XXXX Cambodia: Retail Pump Prices, MOC, Saturday
+Q30 INTDAILY XXXX Cambodia: Retail Pump Prices, MOC, Sunday
+B95 INTDAILY XXXX Russia: Secured Funding Average Rate [RUSFAR], MOEX
+B96 INTDAILY XXXX Russia: Secured Funding Average Rate [RUSFAR][Sat], MOEX
+B97 INTDAILY XXXX Russia: Secured Funding Average Rate [RUSFAR][Sun], MOEX
+L17 INTDAILY XXXX Discontinued CBR Series, Daily, CBR
+Q04 INTDAILY XXXX Russia: Precious Metals, Daily, CBRF
+Q05 INTDAILY XXXX Russia: Precious Metals, Saturday, CBRF
+Q06 INTDAILY XXXX Russia: Precious Metals, Sunday, CBRF
+C33 INTDAILY XXXX Russia: Secured Funding Average Rate [RUSFAR] Accrued Yield Index [SAT], MOEX
+C34 INTDAILY XXXX Russia: Secured Funding Average Rate [RUSFAR] Accrued Yield Index [SUN], MOEX
+C32 INTDAILY XXXX Russia: Secured Funding Average Rate [RUSFAR] Accrued Yield Index, MOEX
+L14 INTDAILY XXXX Russia: Volume of Foreign Currency/Ruble Sell/Buy FX Swaps, Daily, CBR
+L15 INTDAILY XXXX Russia: Volume of Foreign Currency/Ruble Sell/Buy FX Swaps, Saturday, CBR
+L16 INTDAILY XXXX Russia: Volume of Foreign Currency/Ruble Sell/Buy FX Swaps, Sunday, CBR
+G73 INTDAILY XXXX Ukraine: Average Weighted Exchange Rate on the Interbank Market, NBU              
+R01 INTDAILY XXXX Ukraine: Bank Balance on Transit Accounts                                         
+I95 INTDAILY XXXX Ukraine: Discount Rate, NBU                                                       
+R69 INTDAILY XXXX Ukraine: Exchange Rates, NBU                                                      
+G95 INTDAILY XXXX Ukraine: Government Securities in Circulation, NBU                                
+P80 INTDAILY XXXX Ukraine: Precious Metal Prices                                                    
+S71 INTDAILY XXXX Ukraine: Stock Market Index, PFTS                                                 
+U04 INTDAILY XXXX Ukraine: UONIA, NBU                                                               
+X96 INTDAILY XXXX Ukraine: Ukrainian Index of Retail Deposit Rates, NBU                             
+X94 INTDAILY XXXX Ukraine: Ukranian OverNight Index Average (UONIA), NBU  
+G87 INTDAILY XXXX Russia: Bank of Russia FX Operations, CBR                                         
+G38 INTDAILY XXXX Russia: Banking Sector Structural Liquidity, CBR                                  
+A11 INTDAILY XXXX Russia: Banking Sector Structural Liquidity, CBR [SAT]
+A12 INTDAILY XXXX Russia: Banking Sector Structural Liquidity, CBR [SUN]
+A93 INTDAILY XXXX Russia: Credit Institutions [SATURDAY], CBRF
+A79 INTDAILY XXXX Russia: Credit Institutions [SUNDAY], CBRF
+P77 INTDAILY XXXX Russia: Credit Institutions, CBRF                                                 
+P88 INTDAILY XXXX Russia: Credit Institutions, CBRF                                                 
+A98 INTDAILY XXXX Russia: Credit Institutions, CBRF [SATURDAY]
+A99 INTDAILY XXXX Russia: Credit Institutions, CBRF [SUNDAY]
+E25 INTDAILY XXXX Russia: Deposit Auctions [SAT], CBR
+E26 INTDAILY XXXX Russia: Deposit Auctions [SUN], CBR
+X17 INTDAILY XXXX Russia: Deposit Auctions, CBR                                                     
+R71 INTDAILY XXXX Russia: Exchange Rates, CBRF                                                      
+T17 INTDAILY XXXX Russia: FX Market Turnover, CBR                                                   
+J81 INTDAILY XXXX Russia: FX Swap Volumes, CBR                                                      
+B53 INTDAILY XXXX Russia: Factors Affecting Banking Sector Liquidity, CBR
+B54 INTDAILY XXXX Russia: Factors Affecting Banking Sector Liquidity, CBR
+V27 INTDAILY XXXX Russia: Factors Affecting Banking Sector Liquidity, CBR                           
+I66 INTDAILY XXXX Russia: Interbank Rates, CBR                                                      
+A28 INTDAILY XXXX Russia: Interbank Rates, CBR [SAT]
+A29 INTDAILY XXXX Russia: Interbank Rates, CBR [SUN]
+F90 INTDAILY XXXX Russia: Interest Rates                                                            
+I58 INTDAILY XXXX Russia: Interest Rates                                                            
+A13 INTDAILY XXXX Russia: Interest Rates [SAT], CBRF
+A19 INTDAILY XXXX Russia: Interest Rates [SUN], CBRF
+U45 INTDAILY XXXX Russia: Interest Rates [Saturday], CBR
+U55 INTDAILY XXXX Russia: Interest Rates [Sunday], CBR
+V94 INTDAILY XXXX Russia: Maximum Interest Rates on Household Deposits, CBR                                             
+A14 INTDAILY XXXX Russia: Oil Prices, MOEX
+A15 INTDAILY XXXX Russia: Oil Prices, MOEX
+P86 INTDAILY XXXX Russia: Oil Prices, MOEX                                                          
+R57 INTDAILY XXXX Russia: Overnight Buy/Sell Swap                                                   
+P89 INTDAILY XXXX Russia: Precious Metals, CBRF                                                     
+K95 INTDAILY XXXX Russia: REPO Transactions Outstanding [SAT], CBR
+K96 INTDAILY XXXX Russia: REPO Transactions Outstanding [SUN], CBR
+J94 INTDAILY XXXX Russia: REPO Transactions Outstanding, CBR                                        
+B93 INTDAILY XXXX Russia: ROISfix [RUONIA Overnight Interest Rate Swap], CBR
+B94 INTDAILY XXXX Russia: ROISfix [RUONIA Overnight Interest Rate Swap], CBR
+V89 INTDAILY XXXX Russia: ROISfix [RUONIA Overnight Interest Rate Swap], CBR                        
+N27 INTDAILY XXXX Russia: RUONIA Index & Compounded Rates [SATURDAY], CBRF
+N28 INTDAILY XXXX Russia: RUONIA Index & Compounded Rates [SUNDAY], CBRF
+I26 INTDAILY XXXX Russia: RUONIA Index & Compounded Rates, CBRF
+A39 INTDAILY XXXX Russia: Repo Auctions, CBR
+A43 INTDAILY XXXX Russia: Repo Auctions, CBR
+J85 INTDAILY XXXX Russia: Repo Auctions, CBR                                                        
+J26 INTDAILY XXXX Russia: Repo Rates                                                                
+D98 INTDAILY XXXX Russia: Repo Rates [SAT], CBRF
+D99 INTDAILY XXXX Russia: Repo Rates [SUN], CBRF
+G14 INTDAILY XXXX Russia: Ruble Overnight Index Average, CBR                                        
+B78 INTDAILY XXXX Russia: Ruble Overnight Index Average[Saturday], CBR
+B79 INTDAILY XXXX Russia: Ruble Overnight Index Average[Sunday], CBR
+J87 INTDAILY XXXX Russia: Standing Facilities and Open Market Operations, CBR                       
+P40 INTDAILY XXXX Russia: Stock Market Indexes, Moscow Exchange
+P48 INTDAILY XXXX Russia: Stock Market Indexes, Moscow Exchange
+P87 INTDAILY XXXX Russia: Stock Market Indexes, Moscow Exchange                                     
+G17 INTDAILY XXXX Russia: Value of CBR Claims on Loans Extended to Credit Institutions, CBR                          
+A95 INTDAILY XXXX Russia: Value of CBR Claims on Loans Extended to Credit Institutions, CBR [SAT]
+A96 INTDAILY XXXX Russia: Value of CBR Claims on Loans Extended to Credit Institutions, CBR [SUN]
+A21 INTDAILY XXXX Russia: Value of Extended Intraday Loans, CBR
+A22 INTDAILY XXXX Russia: Value of Extended Intraday Loans, CBR
+G08 INTDAILY XXXX Russia: Value of Extended Intraday Loans, CBR                                     
+P93 INTDAILY XXXX Russia: Volatility Index, MOEX                                                    
+K66 INTDAILY XXXX Russia: Volatility Index, MOEX, Saturday
+K67 INTDAILY XXXX Russia: Volatility Index, MOEX, Sunday
+J42 INTDAILY XXXX Russia: Zero Coupon Yield Curve, CBR 
+E24 INTDAILY XXXX Sri Lanka: Fuel Prices [Sunday], CPC
+E23 INTDAILY XXXX Sri Lanka: Fuel Prices [Saturday], CPC
+W33 INTDAILY XXXX South Africa: Basic Fuel Prices, DMRE
+B71 INTDAILY XXXX Papua New Guinea: Pump Prices, ICCC, Daily
+B72 INTDAILY XXXX Papua New Guinea: Pump Prices, ICCC, Saturday
+B73 INTDAILY XXXX Papua New Guinea: Pump Prices, ICCC, Sunday
+B66 INTDAILY XXXX South Korea: Pump Prices, Daily
+B67 INTDAILY XXXX South Korea: Pump Prices, SAT
+B68 INTDAILY XXXX South Korea: Pump Prices, SUN
+B69 INTDAILY XXXX South Korea: Pump Prices, Daily HIST
+B75 INTDAILY XXXX Hong Kong: Pump Prices, HKCC, Daily
+B76 INTDAILY XXXX Hong Kong: Pump Prices, HKCC, Saturday
+B77 INTDAILY XXXX Hong Kong: Pump Prices, HKCC, Sunday
+B86 INTDAILY XXXX Hong Kong: Pump Prices, HKCC, HIST
+K79 INTDAILY XXXX Cambodia: Fuel Prices, Daily
+E71 INTDAILY XXXX Israel: Gasoline Price, MOE
+E72 INTDAILY XXXX Israel: Gasoline Price, MOE
+E73 INTDAILY XXXX Israel: Gasoline Price, MOE
+O94 INTDAILY XXXX Laos: Regional Pump Prices, Daily HIST
+O95 INTDAILY XXXX Laos: Regional Pump Prices, Daily
+O96 INTDAILY XXXX Laos: Regional Pump Prices, Saturday
+O97 INTDAILY XXXX Laos: Regional Pump Prices, Sunday
+O86 INTDAILY XXXX India: Gasoline and Diesel Prices, Daily
+O87 INTDAILY XXXX India: Gasoline and Diesel Prices, Daily HIST
+O77 INTDAILY XXXX Colombia: Consumer Fuel Prices, CREG                                              
+Y26 INTDAILY XXXX Colombia: Consumer Fuel Prices, Comisi¢n de Regulaci¢n de Energ¡a y Gas
+P12 INTDAILY XXXX Mexico: Gas and Diesel Prices, CRE
+Y06 INTDAILY XXXX Mexico: Spot Petroleum Prices, Bank of Mexico  
+P61 INTDAILY XXXX Vietnam: Daily Pump Prices, MOIT
+P71 INTDAILY XXXX Thailand: Pump Prices, EPPO                                                       
+P91 INTDAILY XXXX Canada: Retail Pump Price      
+P78 INTDAILY XXXX Turkey: Pump Prices, EMRA  
+P27 INTDAILY XXXX Mexico: Regional Gas and Diesel Prices, CRE [SUSPENDED]  
+P29 INTDAILY XXXX Egypt: Petroleum Products Prices, MoPT  
+O99 INTDAILY XXXX Indonesia: Pertamina Fuel Price   
+P43 INTDAILY XXXX Sri Lanka: Fuel Prices, CPC
+Q07 INTDAILY XXXX Nepal: Retail Selling Prices, NOC, Daily
+Q10 INTDAILY XXXX Nepal: Retail Selling Prices, NOC, HIST
+Q08 INTDAILY XXXX Nepal: Retail Selling Prices, NOC, Saturday
+Q09 INTDAILY XXXX Nepal: Retail Selling Prices, NOC, Sunday
+===================================================================================================
+Historical and Test/Automation Groups
+===================================================================================================                                                             
+Q48 INTDAILY XXXX Test Country: Test update for automation
+Q49 INTDAILY XXXX Test Country: Test update for automation
+Q50 INTDAILY XXXX Test Country: Test update for automation
+Q51 INTDAILY XXXX Test Country: Test update for automation
+Q52 INTDAILY XXXX Test Country: Test update for automation
+Q53 INTDAILY XXXX Test Conutry: Test Update for Automation
+Q54 INTDAILY XXXX Test Conutry: Test Update for Automation
+Q55 INTDAILY XXXX Test Conutry: Test Update for Automation AGG
+T98 INTDAILY XXXX Historical London Interbank Offered Rates
+T99 INTDAILY XXXX Historical LSEG Series

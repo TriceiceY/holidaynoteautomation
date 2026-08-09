@@ -1,0 +1,867 @@
+,Team,EDM
+Argentina,Americas,Simone
+Argentina Energy,Americas,Simone
+Aruba,Americas,Kat
+AS1REPNA,Americas,Max
+AS4CAST,Americas,Max
+ASMR,Americas,Joao
+ASREPGDP,Americas,Max
+ATUS,Americas,Timothy
+BANKRUPT,Americas,Joao
+BBVA4CST,Americas,Max
+BCI,Americas,Joao
+BEAEMPL,Americas,Joao
+BEAEMPM,Americas,Joao
+Belize,Americas,Juan
+Bolivia,Americas,Juan
+Brazil,Americas,Juan
+Brazil TRANSPRT,Americas,Juan
+CANADA,Americas,Max
+Canada ENERGY,Americas,Max
+Canada GLSECTOR,Americas,Max
+Canada TRANSPRT,Americas,Max
+CANADAR,Americas,Max
+CAPSTOCK,Americas,Max
+CBDB,Americas,Max
+CEW,Americas,Timothy
+CEWC,Americas,Joao
+CEWR,Americas,Joao
+Chile,Americas,Kat
+Chile Glsector,Americas,Kat
+Colombia,Americas,Simone
+Colombia ENERGY,Americas,Simone
+COREHPI,Americas,Joao
+Costa Rica,Americas,Simone
+CPIDATA,Americas,Timothy
+CREA,Americas,Max
+CREALTOR,Americas,Joao
+DLINQ/DLINQR,Americas,Joao
+Dominican Republic,Americas,Kat
+ECCU,Americas,Juan
+Ecuador,Americas,Simone
+EEI,Americas,timothy
+El Salvador,Americas,Simone
+EMERGELA,Americas,
+EMPL,Americas,Timothy
+EMPLR,Americas,Joao
+EMPLR/EMPLC,Americas,Joao
+EMPLR/LABORR,Americas,Joao
+EXPORTSR,Americas,Joao
+FDIC,Americas,Timothy
+FDICR,Americas,Joao
+FFUNDS,Americas,Timothy
+FIBER,Americas,Max
+FMRCOIND,Americas,Timothy
+FMRCOIND,Americas,Timothy
+GDPMSA,Americas,Joao
+GOVFIN,Americas,Timothy
+GOVFINR,Americas,Joao
+GSP,Americas,Joao
+Guatemala,Americas,Kat
+Honduras,Americas,Kat
+HOUSING,Americas,Joao
+ICI,Americas,Timothy
+INDUSCIG,Americas,Timothy
+INDUSTRY,Americas,Timothy
+IP,Americas,Timothy
+Jamaica,Americas,Simone
+JODI,Americas,Timothy
+LABOR,Americas,Timothy
+LABORR,Americas,Joao
+Latin America,Americas,
+MA4CAST,Americas,Max
+MA4CSTL,Americas,Max
+MBAMTG,Americas,Joao
+Mexico,Americas,Juan
+Mexico TRANSPRT,Americas,Juan
+Mexico CMDTY,DWB,Mike
+MMSAMER,Americas,Max
+MMSASIA,Americas,Max
+MMSEUR,Americas,Max
+NARRCI,Americas,Joao
+NGW,Americas,Timothy
+Nicaragua,Americas,Simone
+OES,Americas,Timothy
+OMI,Americas,Timothy
+Panama,Americas,Juan
+Panama ENERGY,Americas,Juan
+Paraguay,Americas,Simone
+PERMITS,Americas,Joao
+Peru,Americas,Kat
+Peru Energy,Americas,Kat
+Peru GLSECTOR,Americas,Kat
+PICOUNTY,Americas,Joao
+PIQR,Americas,Joao
+PIR,Americas,Joao
+PIRMSA,Americas,Joao
+PORTS,Americas,Joao
+PPI/PPIR,Americas,Timothy
+PREALTOR,Americas,Joao
+QFR,Americas,Timothy
+RAILSHAR,Americas,Timothy
+REALTOR,Americas,Joao
+REGIONAL,Americas,Joao
+Suriname,Americas,Juan
+SURVEYS,Americas,Max
+SURVEYW,Americas,Max
+Trinidad & Tobago,Americas,Kat
+UMSCA,Americas,Sean
+United States,Americas,Sean
+Uruguay,Americas,Kat
+US,Americas,Sean
+US GLSECTOR,Americas,Sean
+US Revisions,Americas,Sean
+USDA,Americas,Timothy
+USECON,Americas,Sean
+USENERGY,Americas,Timothy
+USGS,Americas,Max
+USINT,Americas,Max
+USNA,Americas,Max
+USPOP,Americas,Joao
+USPOPC,Americas,Joao
+USTRADE,Americas,Max
+Venezuela,Americas,Juan
+WARDS,Americas,Timothy
+WARDSINT,Americas,Timothy
+WGI,Americas,Timothy
+Brune,AsianB,Mee Chin
+Brunei ASEANR,AsianB,Mee Chin
+Brunei TOURISM,AsianB,Mee Chin
+China,AsianB,KateMeeChin
+China ENERGY,AsianB,KateMeeChin
+China GLSECTOR,AsianB,KateMeeChin
+China TOURISM,AsianB,KateMeeChin
+China TRANSPRT,AsianB,KateMeeChin
+CHINAFT,none,none
+CHINAR,AsianB,KateMeeChin
+India,AsianB,Alex
+India ENERGY,AsianB,Alex
+India TOURISM,AsianB,Alex
+India TRANSPRT,AsianB,Alex
+INDIAR,AsianB,Alex
+New Zealand,AsianB,Leah
+New Zealand ANZR,AsianB,Leah
+New Zealand GLSECTOR,AsianB,Leah
+New Zealand TRANSPRT,AsianB,Leah
+Pakistan,AsianA,William
+Pakistan ASIASR,AsianA,William
+Pakistan ENERGY,AsianA,William
+Pakistan TRANSPRT,AsianA,William
+Australia,AsianB,Leah
+Australia,AsianB,Leah
+Australia ANZR,AsianB,Leah
+Australia ENERGY,AsianB,Leah
+Australia GLSECTOR,AsianB,Leah
+Australia TRANSPRT,AsianB,Leah
+Bangladesh,AsianB,Kate
+Bangladesh AsianA,AsianB,Kate
+EIU,AsianA,WilliamGlen
+EIU databases,AsianA,WilliamGlen
+EIUCHINA,none,none
+Korea,AsianA,Glen
+Korea ASIAER,AsianA,Glen
+Korea ENERGY,AsianA,Glen
+Korea GLSECTOR,AsianA,Glen
+Korea TOURISM,AsianA,Glen
+Korea TRANSPRT,AsianA,Glen
+Laos,Singapore,sherry
+Laos ENERGY,Singapore,sherry
+Malaysia,AsianB,Mee Chin
+Malaysia ASEANR,AsianB,Mee Chin
+Malaysia ENERGY,AsianB,Mee Chin
+Malaysia GLSECTOR,AsianB,Mee Chin
+Malaysia TOURISM,AsianB,Mee Chin
+Malaysia TRANSPRT,AsianB,Mee Chin
+Myanmar,AsianA,William
+Myanmar ENERGY,AsianA,William
+Nepal,AsianA,Vincent
+Thailand,Singapore,lorraine
+Thailand ASEANR,Singapore,lorraine
+Thailand ENERGY,Singapore,lorraine
+Thailand GLSECTOR,Singapore,lorraine
+Thailand TOURISM,Singapore,lorraine
+Thailand TRANSPRT,Singapore,lorraine
+Vietnam,AsianA,William
+Vietnam ASEANR,AsianA,William
+Vietnam ENERGY,AsianA,William
+TESTDB,automation,Erand
+INTDAILY,ByGroup,ByGroup
+INTWKLY,ByGroup,ByGroup
+EXPRQ1-9,DISCONTINUED,DISCONTINUED
+HWOL,DISCONTINUED,DISCONTINUED
+OGJ,Discontinued,Discontinued
+OILWKLY,Discontinued,Discontinued
+PIRC1,Discontinued,Discontinued
+CRYPTO,DWA,Ruijing
+WBMSS,DWA,Florence
+BALTIC,DWA,Florence
+BONDINDX,DWB,Babalwa
+CMDTY,DWB,Mike
+DAILY,DWB,Jiebing
+EMBI,DWB,Babalwa
+EPFRBCA,DWB,Babalwa
+EPFRBCF,DWB,Babalwa
+EPFRBEM,DWB,Babalwa
+EPFRBIN,DWB,Babalwa
+EPFRBMM,DWB,Babalwa
+EPFRDF,DWB,Babalwa
+EPFRECA,DWB,Babalwa
+EPFRECF,DWB,Babalwa
+EPFREEM,DWB,Babalwa
+EPFREIN,DWB,Babalwa
+EPFRESA,DWB,Babalwa
+EPFRESF,DWB,Babalwa
+FFUTURES,DWB,Mike
+FX4CASTS/FX4CE,DWB,Jiebing
+FXRATES,DWB,binru
+MSCI,DWB,Babalwa
+MSCID,DWB,Babalwa
+MSCIE,DWB,Babalwa
+SPM,DWB,Jiebing
+SPMEARN,DWB,Jiebing
+SPMRATG,DWB,Jiebing
+WEEKLY,DWB,Jiebing
+Albania,Euro,StevenM
+Albania ENERGY,Euro,StevenM
+Algeria,Euro,StevenM
+Angola,Euro,Karen
+Azerbaijan,Euro,StevenM
+Azerbaijan ENERGY,Euro,StevenM
+Azerbaijan GLSECTOR,Euro,StevenM
+Azerbaijan TOURISM,Euro,StevenM
+Botswana,Euro,Sharon
+Bulgaria,Euro,Sharon
+Bulgaria Energy,Euro,Sharon
+Croatia,Euro,Naveed
+Croatia ENERGY,Euro,Naveed
+Georgia,Euro,Naveed
+Georgia ENERGY,Euro,Naveed
+Georgia TOURISM,Euro,Naveed
+Ivory Coast,Euro,KaiQi
+Kosovo,Euro,Sharon
+Kosovo ENERGY,Euro,Sharon
+Kosovo TOURISM,Euro,Sharon
+Kosovo TRANSPRT,Euro,Sharon
+Kyrgyz Republic,Euro,Naveed
+Latvia,Euro,Sharon
+Latvia ENERGY,Euro,Sharon
+Latvia TRANSPRT,Euro,Sharon
+Lithuania,Euro,Sharon
+Lithuania ENERGY,Euro,Sharon
+Lithuania TRANSPRT,Euro,Sharon
+Mauritius,Euro,StevenM
+Namibia,Euro,KaiQi
+Namibia TOURISM,Euro,KaiQi
+Nigeria,Euro,KaiQi
+Nigeria SUBAFR,Euro,KaiQi
+North Macedonia,Euro,Naveed
+North Macedonia ENERGY,Euro,Naveed
+North Macedonia TRANSPRT,Euro,Naveed
+Rwanda,Euro,Karen
+Seychelles,Euro,KaiQi
+Seychelles TOURISM,Euro,KaiQi
+South Africa,Euro,Karen
+South Africa GLSECTOR,Euro,Karen
+South Africa SUBAFR,Euro,Karen
+South Africa Tourism,Euro,Karen
+South Africa TRANSPRT,Euro,Karen
+Taiwan,Euro,KaiQi
+Taiwan ASIAER,Euro,KaiQi
+Taiwan ENERGY,Euro,KaiQi
+Taiwan GLSECTOR,Euro,KaiQi
+Taiwan TRANSPRT,Euro,KaiQi
+Tajikistan,Euro,StevenM
+Tanzania,Euro,Karen
+Tunisia,Euro,Karen
+Uzbekistan,Euro,Naveed
+Uzbekistan TRANSPRT,Euro,Naveed
+Zambia,Euro,Sharon
+Zambia SUBAFR,Euro,Sharon
+AFDB,IntDay,Vella
+Bahrain,IntDay,Soufiane
+Bahrain TOURISM,IntDay,Soufiane
+Bahrain TRANSPRT,IntDay,Soufiane
+Belarus,IntDay,Prithul
+Belarus CWR,IntDay,Prithul
+Belarus ENERGY,IntDay,Prithul
+BIS,IntDay,Muye
+Bosnia,IntDay,Prithul
+CDIS,IntDay,Muye
+CEMAC,IntDay,Wendy
+"Congo, Democratic Republic",IntDay,Wendy
+CPIS,IntDay,Muye
+Czech CWR,IntDay,Justin
+Czech ENERGY,IntDay,Justin
+Czech GLSECTOR,IntDay,Justin
+Czech Republic,IntDay,Justin
+Czech Republic CWR,IntDay,Justin
+Czech Republic CWR,IntDay,Justin
+Czech TRANSPRT,IntDay,Justin
+Egypt,IntDay,Jun
+EMERGE,IntDay,Jun
+EMERGECW,IntDay,Prithul
+EMERGEMA,IntDay,Jun
+ENERGY,IntDay,Wendy
+ESG,IntDay,Vella
+G10,IntDay,Prithul
+GLSECTOR,IntDay,Wendy
+Hungary,Euro,StevenM
+Hungary CWR,Euro,StevenM
+Hungary TRANSPRT,Euro,StevenM
+IFS,IntDay,Muye
+IFS GLSECTOR,IntDay,Muye
+IFSANN,IntDay,Muye
+IIFDATA,IntDay,Muye
+IMFBOP,IntDay,Muye
+IMFREO,IntDay,Muye
+IMFWEO,IntDay,Muye
+INTPOP,IntDay,Vella
+Iran,IntDay,Jun
+Iran TRANSPRT,IntDay,Jun
+Iraq,IntDay,Jun
+Israel,IntDay,Wendy
+Israel GLSECTOR,IntDay,Wendy
+Israel MENAR,IntDay,Wendy
+Jordan,IntDay,Soufiane
+Jordan Energy,IntDay,Soufiane
+Jordan MENAR,IntDay,Soufiane
+Jordan TRANSPRT,IntDay,Soufiane
+Kenya,IntDay,Vella
+Kenya ENERGY,IntDay,Vella
+Kenya SUBAFR,IntDay,Vella
+Kuwait,IntDay,Soufiane
+Kuwait TRANSPRT,IntDay,Soufiane
+Lebanon,IntDay,Jun
+Lebanon TRANSPRT,IntDay,Jun
+Lesotho,IntDay,Wendy
+Montenegro,IntDay,Prithul
+Montenegro TRANSPRT,IntDay,Prithul
+Morocco,IntDay,Soufiane
+Morocco MENAR,IntDay,Soufiane
+Mozambique,IntDay,Vella
+Malawi,IntDay,Vella
+OECDFAO,IntDay,Vella
+OECDFDI,IntDay,Vella
+OECDFIN,IntDay,Vella
+OECDGOV,IntDay,Vella
+OECDLFS,IntDay,Vella
+OECDMEI,IntDay,Vella
+OECDNA,IntDay,Vella
+OECDNAQ,IntDay,Vella
+Oman,IntDay,Soufiane
+OUTLOOK,IntDay,Vella
+Palestine,IntDay,Jun
+Poland,IntDay,Prithul
+Poland CWR,IntDay,Prithul
+Poland ENERGY,IntDay,Prithul
+Poland TRANSPRT,IntDay,Prithul
+Qatar,IntDay,Soufiane
+Qatar MENAR,IntDay,Soufiane
+Qatar TOURISM,IntDay,Soufiane
+QEDS,IntDay,Justin
+Russia,IntDay,Wendy
+Russia CWR,IntDay,Wendy
+Russia ENERGY,IntDay,Wendy
+Russia GLSECTOR,IntDay,Wendy
+Russia TRANSPRT,IntDay,Wendy
+Saudi Arabia,IntDay,Jun
+Saudi Arabia MENAR,IntDay,Jun
+Serbia,IntDay,Justin
+Slovakia,IntDay,Justin
+Slovakia CWR,IntDay,Justin
+Slovakia ENERGY,IntDay,Justin
+Slovakia TOURISM,IntDay,Justin
+Slovenia,IntDay,Justin
+Slovenia CWR,IntDay,Justin
+Slovenia ENERGY,IntDay,Justin
+Slovenia TOURISM,IntDay,Justin
+Sudan,IntDay,Jun
+TIVA,IntDay,Vella
+TOURISM,IntDay,Wendy
+TRANSPRT,IntDay,Wendy
+U.A.E. ENERGY,IntDay,Soufiane
+U.A.E. MENAR,IntDay,Soufiane
+U.A.E. TRANSPRT,IntDay,Soufiane
+UAE,IntDay,Soufiane
+UEMOA/BCEAO,IntDay,Wendy
+Uganda,IntDay,Vella
+Ukraine,IntDay,Justin
+Ukraine CWR,IntDay,Justin
+Ukraine TRANSPRT,IntDay,Justin
+UNPOP,IntDay,Vella
+UNWIDER,IntDay,Vella
+WBDEBT,IntDay,Prithul
+WBGFD,IntDay,Soufiane
+WBPRICES,IntDay,Prithul
+WDI,IntDay,Prithul
+WFE,IntDay,Wendy
+Japan,AsianA,Vincent
+Japan ENERGY,AsianA,Vincent
+Japan GLSECTOR,AsianA,Vincent
+Japan TOURISM,AsianA,Vincent
+Japan TRANSPRT,AsianA,Vincent
+JAPANR,AsianA,Vincent
+Andorra,LondonC,Hana
+Andorra ENERGY,LondonC,Hana
+Andorra GLSECTOR,LondonC,Hana
+Andorra TOURISM,LondonC,Hana
+Austria,LondonC,Hana
+Austria TRANSPRT,LondonC,Hana
+Belgium,LondonB,Matt
+Belgium BENLR,LondonB,Matt
+Belgium TOURISM,LondonB,Matt
+Belgium TRANSPRT,LondonB,Matt
+BENELUX,LondonB,Matt
+Cyprus,LondonC,Hana
+CyprusR,LondonC,Hana
+Denmark,LondonA,Hongfan
+Denmark TRANSPRT,LondonA,Hongfan
+FEAANZ,LondonA,Stel
+FEAANZH,LondonA,Stel
+FECMDTH,LondonA,Stel
+FECMDTY,LondonA,Stel
+FEEEUR,LondonA,Stel
+FEEEURH,LondonA,Stel
+FELATA,LondonA,Stel
+FELATAH,LondonA,Stel
+FEMAJR,LondonA,Stel
+FEMAJRH,LondonA,Stel
+FEMEAF,LondonA,Stel
+FEMEAFH,LondonA,Stel
+Finland,LondonA,Hongfan
+Finland TRANSPRT,LondonA,Hongfan
+Greece,LondonC,Hana
+Greece TRANSPRT,LondonC,Hana
+Iceland,LondonA,Hongfan
+INTSRVYS,LondonB,Matt
+Ireland,LondonA,Thomas
+Ireland TRANSPRT,LondonA,Thomas
+Italy,LondonB,Matt
+Italy GLSECTOR,LondonB,Matt
+Italy TRANSPRT,LondonB,Matt
+ItalyR,LondonB,Matt
+Luxembourg,LondonB,Matt
+Malta,LondonC,Hana
+MINING,LondonA,Stel
+MKTPMI,LondonA,Stel
+MKTPMI Australia,LondonA,Stel
+MKTPMI Europe,LondonA,Stel
+MKTPMI Mexico,LondonA,Stel
+MKTPMI NZ,LondonA,Stel
+MKTPMI US/Canada,LondonA,Stel
+Netherlands,LondonB,Matt
+Netherlands BENLR,LondonB,Matt
+Netherlands ENERGY,LondonB,Matt
+Netherlands TRANSPRT,LondonB,Matt
+Norway,LondonA,Hongfan
+Norway TRANSPRT,LondonA,Hongfan
+PMIASIA,LondonA,Stel
+PMIEU,LondonA,Stel
+PMIGL,LondonA,Stel
+PMIGLE,LondonA,Stel
+PMIGLJ,LondonA,Stel
+PMIUS,LondonA,Stel
+Portugal,LondonC,Hana
+Portugal GLSECTOR,LondonC,Hana
+Portugal TRANSPRT,LondonC,Hana
+PortugalR,LondonC,Hana
+SPAIN,LondonA,Thomas
+Spain GLSECTOR,LondonA,Thomas
+Spain TRANSPRT,LondonA,Thomas
+SPAINR,LondonA,Thomas
+Sweden,LondonA,Hongfan
+Sweden TRANSPRT,LondonA,Hongfan
+Switzerland,LondonC,Hana
+Switzerland TRANSPRT,LondonC,Hana
+SwitzerlandR,LondonC,Hana
+UK,LondonA,Stel
+UK ENERGY,LondonA,Stel
+UK GLSECTOR,LondonA,Stel
+UK TRANSPRT,LondonA,Stel
+UKHPI,LondonA,Stel
+UKR,LondonA,Stel
+UKSRVYS,LondonA,Stel
+AMECO,LondonB,EUDATA
+Armenia,LondonC,Kieran
+Armenia ENERGY,LondonC,Kieran
+Cameroon,LondonB,Mahila
+Cameroon SUBAFR,LondonB,Mahila
+Ethiopia,LondonB,Mahila
+EUPOP,LondonB,EUDATA
+Euro area,LondonB,EUDATA
+Euro area GLSECTOR,LondonB,EUDATA
+EUSRVYS,LondonB,EUDATA
+France,LondonA,Ersaly
+France GLSECTOR,LondonA,Ersaly
+France TRANSPRT,LondonA,Ersaly
+FRANCER,LondonA,Ersaly
+GERMANR,LondonC,Harvey
+Germany,LondonC,Harvey
+Germany ENERGY,LondonC,Harvey
+Germany GLSECTOR,LondonC,Harvey
+Germany TRANSPRT,LondonC,Harvey
+Ghana,LondonB,Mahila
+Ghana SUBAFR,LondonB,Mahila
+Kazakhstan,LondonC,Kieran
+Kazakhstan TRANSPRT,LondonC,Kieran
+Moldova,LondonC,Kieran
+Moldova TOURISM,LondonC,Kieran
+OEFAMACR,LondonB,EUDATA
+OEFCASIA,LondonB,EUDATA
+OEFCEUR,LondonB,EUDATA
+OEFCGL,LondonB,EUDATA
+OEFCNA,LondonB,EUDATA
+OEFCOUS,LondonB,EUDATA
+OEFQIND,LondonB,EUDATA
+OEFQMACR,LondonB,EUDATA
+OEFRUS,LondonB,EUDATA
+OEFRUSS,LondonB,EUDATA
+PMALASIA,LondonB,EUDATA
+PMALEUR,LondonB,EUDATA
+PMALUS,LondonB,EUDATA
+PMAOASIA,LondonB,EUDATA
+PMAOEUR,LondonB,EUDATA
+PMAOUS,LondonB,EUDATA
+PMARASIA,LondonB,EUDATA
+PMAREUR,LondonB,EUDATA
+Romania,LondonC,Kieran
+Romania ENERGY,LondonC,Kieran
+Turkey,LondonB,Mahila
+Turkey ENERGY,LondonB,Mahila
+Turkey MENAR,LondonB,Mahila
+Turkey TOURISM,LondonB,Mahila
+Turkey TRANSPRT,LondonB,Mahila
+BLDFAXS,na,na
+DLXDIF,NA,NA
+DLXDLM,NA,NA
+DLXNOCHG,NA,NA
+LTQA,NA,NA
+ASEAN,AsianA,William
+Bhutan,Singapore,lorraine
+Cambodia,Singapore,sherry
+Cambodia ENERGY,Singapore,sherry
+Cambodia TOURISM,Singapore,sherry
+CNSECTOR,AsianB,KateMeeChin
+CNTRADE,AsianB,KateMeeChin
+Estonia,AsianA,Glen
+Estonia ENERGY,AsianA,Glen
+Fiji,Singapore,sherry
+Fiji TOURISM,Singapore,sherry
+Fiji TRANSPRT,Singapore,sherry
+Hong Kong,Singapore,lorraine
+Hong Kong ASIAER,Singapore,lorraine
+Hong Kong TOURISM,Singapore,lorraine
+Hong Kong TRANSPRT,Singapore,lorraine
+IMFDOT,Singapore,sherry
+IMFDOTM,Singapore,sherry
+Indonesia,Singapore,sherry
+Indonesia ASEANR,Singapore,sherry
+Indonesia ENERGY,Singapore,sherry
+Indonesia TOURISM,Singapore,sherry
+Indonesia TRANSPRT,Singapore,sherry
+Macao,Singapore,sherry
+Macao ASIAER,Singapore,sherry
+Macao TRANSPRT,Singapore,sherry
+Macao TOURISM,Singapore,sherry
+Maldives,Singapore,keith
+Mongolia,AsianA,Glen
+Mongolia ASIAER,AsianA,Glen
+Mongolia TRANSPRT,AsianA,Glen
+Papua New Guinea,Singapore,keith
+Philippines,Singapore,keith
+Philippines ASEANR,Singapore,keith
+Philippines TOURISM,Singapore,keith
+Philippines TRANSPRT,Singapore,keith
+Singapore,Singapore,keith
+Singapore ASEANR,Singapore,keith
+Singapore GLSECTOR,Singapore,keith
+Singapore TRANSPRT,Singapore,keith
+Sri Lanka,Singapore,lorraine
+Sri Lanka ASIASR,Singapore,lorraine
+Sri Lanka TRANSPRT,Singapore,lorraine
+Samoa,Singapore,lorraine
+Samoa TRANSPRT,Singapore,lorraine
+Samoa TOURISM,Singapore,lorraine
+Samoa ENERGY,Singapore,lorraine
+ASIASR,None,None
+BONDS,None,None
+CNINT,None,None
+EMERGEPR,None,None
+FT,None,None
+JAPANW,None,None
+Malawi,None,None
+MSCIS,None,None
+Multiple,None,None
+SPAH,None,None
+Various,None,None
+Zimbabwe,None,None
+Albania INTDAILY,DWA,Yukun
+Albania INTWKLY,DWA,Yukun
+Angola INTDAILY,DWB,Mike
+Angola INTWKLY,DWB,Mike
+Argentina INTDAILY,DWB,Gibson
+Argentina INTWKLY,DWB,Gibson
+Armenia INTDAILY,DWA,RyanT
+Armenia INTWKLY,DWA,RyanT
+Australia HF ANZR,DWA,Nicholas
+Australia INTDAILY,DWA,Nicholas
+Australia INTWKLY,DWA,Nicholas
+Austria INTDAILY,DWB,Babalwa
+Austria INTWKLY,DWB,Babalwa
+Azerbaijan INTDAILY,DWA,RyanT
+Azerbaijan INTWKLY,DWA,RyanT
+BCEAO INTDAILY,DWB,Mike
+Bahrain INTDAILY,DWA,RyanT
+Bahrain INTWKLY,DWA,RyanT
+Bangladesh INTDAILY,DWA,Himani
+Bangladesh INTWKLY,DWA,Himani
+Belarus INTDAILY,DWA,Florence
+Belarus INTWKLY,DWA,Florence
+Belgium INTWKLY,DWB,Babalwa
+Botswana INTDAILY,DWB,Mike
+Botswana INTWKLY,DWB,Mike
+Brazil INTDAILY,DWB,Gibson
+Brazil INTWKLY,DWB,Gibson
+Bulgaria INTDAILY,DWA,Yukun
+Bulgaria INTWKLY,DWA,Yukun
+Canada INTDAILY,DWB,Babalwa
+Canada INTWKLY,DWB,Babalwa
+Chile INTDAILY,DWB,Gibson
+Chile INTWKLY,DWB,Gibson
+China INTDAILY,DWB,binru
+China INTWKLY,DWB,binru
+Colombia INTDAILY,DWB,Gibson
+Colombia INTWKLY,DWB,Gibson
+Costa Rica INTDAILY,DWB,Gibson
+Costa Rica INTWKLY,DWB,Gibson
+Czech Republic INTDAILY,DWA,Yukun
+Czech Republic INTWKLY,DWA,Yukun
+Dem Rep of Congo INTDAILY,DWB,Mike
+Dem Rep of Congo INTWKLY,DWB,Mike
+Denmark INTDAILY,DWA,Yukun
+Denmark INTWKLY,DWA,Yukun
+Dominican Republic INTDAILY,DWB,Gibson
+Dominican Republic INTWKLY,DWB,Gibson
+Egypt INTDAILY,DWA,RyanT
+Egypt INTWKLY,DWA,RyanT
+Euro Area INTDAILY,DWB,Babalwa
+Euro Area INTWKLY,DWB,Babalwa
+Finland INTDAILY,DWA,Yukun
+Finland INTWKLY,DWA,Yukun
+France INTDAILY,DWB,Babalwa
+France INTWKLY,DWB,Babalwa
+Georgia INTDAILY,DWA,Florence
+Georgia INTWKLY,DWA,Florence
+Germany CMDTY,DWB,Mike
+Germany INTDAILY,DWB,Babalwa
+Ghana INTDAILY,DWB,Mike
+Ghana INTWKLY,DWB,Mike
+Greece INTDAILY,DWB,Babalwa
+Guatemala INTDAILY,DWB,Gibson
+Guatemala INTWKLY,DWB,Gibson
+Honduras INTDAILY,DWB,Gibson
+Honduras INTWKLY,DWB,Gibson
+Hong Kong INTDAILY,DWA,RyanT
+Hong Kong INTWKLY,DWA,RyanT
+Hungary INTDAILY,DWA,Yukun
+Hungary INTWKLY,DWA,Yukun
+Iceland INTDAILY,DWA,Yukun
+Iceland INTWKLY,DWA,Yukun
+India INTDAILY,DWA,Himani
+India INTWKLY,DWA,Himani
+Indonesia ENERGY,DWA,Ruijing
+Indonesia INTDAILY,DWA,Nicholas
+Indonesia INTWKLY,DWA,Nicholas
+Israel INTDAILY,DWA,Yukun
+Israel INTWKLY,DWA,Yukun
+Italy CMDTY,DWB,Mike
+Italy INTDAILY,DWB,Babalwa
+Italy INTWKLY,DWB,Babalwa
+Jamaica INTDAILY,DWB,Gibson
+Jamaica INTWKLY,DWB,Gibson
+Japan CMDTY,DWB,Mike
+Japan FFUTURES,DWB,Mike
+Japan INTDAILY,DWA,Nicholas
+Japan INTWKLY,DWA,Nicholas
+Jordan INTDAILY,DWA,RyanT
+Jordan INTWKLY,DWA,RyanT
+Kazakhstan INTDAILY,DWA,RyanT
+Kazakhstan INTWKLY,DWA,RyanT
+Kenya INTDAILY,DWB,Mike
+Kenya INTWKLY,DWB,Mike
+Korea INTDAILY,DWA,Nicholas
+Korea INTWKLY,DWA,Nicholas
+Kuwait INTDAILY,DWA,RyanT
+Kuwait INTWKLY,DWA,RyanT
+Kyrgyzstan INTDAILY,DWA,RyanT
+Kyrgyzstan INTWKLY,DWA,RyanT
+Laos INTDAILY,DWA,Himani
+Laos INTWKLY,DWA,Himani
+Lebanon intdaily,DWA,RyanT
+Malaysia INTDAILY,DWA,Nicholas
+Malaysia INTWKLY,DWA,Nicholas
+Mexico INTDAILY,DWB,Gibson
+Mexico INTWKLY,DWB,Gibson
+Moldova INTDAILY,DWA,RyanT
+Moldova INTWKLY,DWA,RyanT
+Mongolia INTDAILY,DWA,Himani
+Mongolia INTWKLY,DWA,Himani
+Morocco INTDAILY,DWA,Florence
+Morocco INTWKLY,DWA,Florence
+Namibia INTDAILY,DWB,Mike
+Namibia INTWKLY,DWB,Mike
+Netherlands INTDAILY,DWB,Babalwa
+Netherlands INTWKLY,DWB,Babalwa
+New Zealand CMDTY,DWB,Mike
+New Zealand INTDAILY,DWA,Nicholas
+New Zealand INTWKLY,DWA,Nicholas
+Nicaragua INTDAILY,DWB,Gibson
+Nicaragua INTWKLY,DWB,Gibson
+Nigeria INTDAILY,DWB,Mike
+Nigeria INTWKLY,DWB,Mike
+North Macedonia INTDAILY,DWA,Yukun
+North Macedonia INTWKLY,DWA,Yukun
+Norway INTDAILY,DWA,Yukun
+Norway INTWKLY,DWA,Yukun
+oman\t intwkly,DWA,RyanT
+Pakistan INTDAILY,DWA,Himani
+Pakistan INTWKLY,DWA,Himani
+Papua New Guinea INTDAILY,DWA,Himani
+Papua New Guinea INTWKLY,DWA,Himani
+Paraguay INTDAILY,DWB,Gibson
+Paraguay INTWKLY,DWB,Gibson
+Peru INTDAILY,DWB,Gibson
+Peru INTWKLY,DWB,Gibson
+Philippines INTDAILY,DWA,Himani
+Philippines INTWKLY,DWA,Himani
+Poland INTDAILY,DWA,Yukun
+Poland INTWKLY,DWA,Yukun
+qatar\t intdaily,DWA,RyanT
+qatar\t intwkly,DWA,RyanT
+Romania INTDAILY,DWA,Yukun
+Romania INTWKLY,DWA,Yukun
+Russia INTDAILY,DWA,Ruijing
+Russia INTWKLY,DWA,Ruijing
+Rwanda INTDAILY,DWB,Mike
+Rwanda INTWKLY,DWB,Mike
+Serbia INTDAILY,DWA,Yukun
+Serbia INTWKLY,DWA,Yukun
+Singapore INTWKLY,DWA,Nicholas
+Slovakia INTDAILY,DWA,Yukun
+Slovakia INTWKLY,DWA,Yukun
+South Africa INTDAILY,DWB,Mike
+South Africa INTWKLY,DWB,Mike
+Spain INTDAILY,DWB,Babalwa
+Spain INTWKLY,DWB,Babalwa
+Sri Lanka INTDAILY,DWA,Himani
+Sri Lanka INTWKLY,DWA,Himani
+sweden\t intdaily,DWA,Yukun
+sweden\t intwkly,DWA,Yukun
+Switzerland CMDTY,DWB,Mike
+Switzerland INTDAILY,DWA,Yukun
+Switzerland INTWKLY,DWA,Yukun
+Taiwan HF ENERGY,DWA,Ruijing
+Taiwan INTDAILY,DWA,RyanT
+Taiwan INTWKLY,DWA,RyanT
+Tajikistan INTDAILY,DWA,RyanT
+Tajikistan INTWKLY,DWA,RyanT
+Thailand INTDAILY,DWA,RyanT
+Thailand INTWKLY,DWA,RyanT
+Trinidad & Tobago INTDAILY,DWB,Gibson
+Trinidad & Tobago INTWKLY,DWB,Gibson
+Turkey INTDAILY,DWA,Yukun
+Turkey INTWKLY,DWA,Yukun
+UAE INTWKLY,DWA,RyanT
+UK CMDTY,DWB,Mike
+UK INTDAILY,DWA,Yukun
+UK INTWKLY,DWA,Yukun
+US CMDTY,DWB,Mike
+US FFUTURES,DWB,Mike
+Uganda INTDAILY,DWB,Mike
+Uganda INTWKLY,DWB,Mike
+Ukraine INTDAILY,DWA,Ruijing
+Ukraine INTWKLY,DWA,Ruijing
+Uruguay INTDAILY,DWB,Gibson
+Uruguay INTWKLY,DWB,Gibson
+Uzbekistan INTDAILY,DWA,RyanT
+Uzbekistan INTWKLY,DWA,RyanT
+Zambia INTDAILY,DWB,Mike
+Zambia INTWKLY,DWB,Mike
+Eswatini INTDAILY,DWB,Mike
+Eswatini INTWKLY,DWB,Mike
+Kuwait  INTDAILY,DWA,RyanT
+Kuwait  INTWKLY,DWA,RyanT
+Kyrgystan INTDAILY,DWA,RyanT
+Kyrgystan INTWKLY,DWA,RyanT
+Lebanon INTDAILY,DWA,RyanT
+Lebanon INTDAILY,DWA,RyanT
+Maldives INTWKLY,DWA,Himani
+Mauritius INTDAILY,DWA,Himani
+Mauritius INTDAILY,DWB,Mike
+Mauritius INTDAILY,DWB,Mike
+Morocco INTDAILY,DWA,Florence
+Morocco INTWKLY,DWA,Florence
+Mozambique INTDAILY,DWB,Mike
+Mozambique INTWKLY,DWB,Mike
+Myanmar INTDAILY,DWA,Himani
+Myanmar INTWKLY,DWA,Himani
+Oman INTDAILY,DWA,RyanT
+Oman INTWKLY,DWA,RyanT
+Qatar INTDAILY,DWA,RyanT
+Qatar INTDAILY,DWA,RyanT
+Qatar INTWKLY,DWA,RyanT
+Saudi Arabia INTDAILY,DWA,RyanT
+Saudi Arabia INTDAILY,DWA,RyanT
+Saudi Arabia INTWKLY,DWA,RyanT
+Saudi Arabia INTWKLY,DWA,RyanT
+Sweden INTDAILY,DWA,Yukun
+Sweden INTWKLY,DWA,Yukun
+Tunisia INTDAILY,DWA,Florence
+Tunisia INTWKLY,DWA,Florence
+UAE INTDAILY,DWA,RyanT
+UAE INTDAILY,DWA,RyanT
+Algeria INTDAILY ,DWA,Florence
+Algeria INTWKLY,DWA,Florence
+Australia HF ENERGY,DWA,Ruijing
+Australia HF TRANSPRT,DWA,Florence
+Brunei INTDAILY,DWA,RyanT
+Brunei INTWKLY,DWA,RyanT
+Cambodia HF TOURISM,DWA,Florence
+Canada HF TRANSPRT,DWA,Florence
+China CMDTY,DWB,Mike
+China HF TRANSPRT,DWA,Florence
+DNBCNTRY ,DWA,Florence
+DNBIND,DWA,Florence
+Egypt HF ENERGY,DWA,Ruijing
+Ethiopia INTDAILY,DWB,Mike
+Ethiopia INTWKLY ,DWB,Mike
+HF INSECTOR,DWA,Himani
+HF USENERGY,DWA,Ruijing
+India HF ENERGY,DWA,Ruijing
+Indonesia HF ENERGY,DWA,Ruijing
+Iraq INTDAILY,DWA,RyanT
+Iraq INTWKLY,DWA,RyanT
+Mexico HF ENERGY ,DWA,Ruijing
+NCAST,DWA,Ruijing
+INSECTOR,AsianB,Alex
+Oman INTDAILY,DWA,RyanT
+Oman INTWKLY,DWA,RyanT
+Papua New Guinea HF ENERGY,DWA,Ruijing
+Qatar INTDAILY,DWA,RyanT
+Qatar INTWKLY,DWA,RyanT
+SQMASK,DWA,Nicholas
+SQMLIST,DWA,Nicholas
+Saudi Arabia INTDAILY,DWA,RyanT
+Saudi Arabia INTWKLY,DWA,RyanT
+South Africa HF ENERGY,DWA,Ruijing
+Sweden INTDAILY,DWA,Yukun
+Sweden INTWKLY,DWA,Yukun
+Tanzania INTDAILY,DWB,Mike
+Tanzania INTWKLY ,DWB,Mike
+Tunisia INTDAILY ,DWA,Florence
+Tunisia INTWKLY,DWA,Florence
+UAE INTDAILY,DWA,RyanT
+UK HF TRANSPRT,DWA,Florence
+Various HF TRANSPRT,DWA,Florence
+Venezuela INTWKLY,DWB,Gibson
+                                ,,

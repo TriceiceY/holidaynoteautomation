@@ -1,0 +1,92 @@
+database,country,group,update,team,edm
+INTWKLY,Multiple,Various groups,INTWKLY/WEEKLY Comp,na,na
+INTDAILY,Various,various,MIDDLE RATES BAT FILE,na,na
+INTDAILY,Various,H05,OpenTable Restaurant Stats Transfer to INTDAILY,dwa,Ruijing
+INTDAILY,Various,H06,OpenTable Restaurant Stats Transfer to INTDAILY,dwa,Ruijing
+INTDAILY,Multiple,Various groups,Aggregation,na,na
+INTWKLY,Multiple,various groups,WEEKLY/INTWKLY Transfer,na,na
+INTWKLY,Euro area,Various,EUROPEAN MKTS,dwb,Babalwa
+INTWKLY,Various,Various,Aggregation for Bond Yields Total Return,dwb,Babalwa
+INTDAILY,INTDAILY,Various groups,RETURNS EVIEWS CHECK,na,na
+INTDAILY,Euro area,Various,Anne Picker Check [AP],na,na
+INTDAILY,US,Various groups,Depos (Reuters),dwb,binru
+INTDAILY,Various,Various,Tullett Prebon Backup,dwb,binru
+INTDAILY,Various,Various,Tullett Prebon EMEA  & Americas Backup,dwb,binru
+INTDAILY,Various,Various,S&P/Dow Jones SDL file backup,dwb,binru
+INTDAILY,Various,Various,MIDDLE RATES BAT FILE,na,na
+INTDAILY,Various,Various,POLICY RATE BATCH FILE (ALL COUNTRIES),na,na
+INTWKLY,Various,Various,POLICY RATES AGGREGATION (ALL COUNTRIES),na,na
+INTDAILY,Various,Various,COMP OF POLICY RATES TO DAILY,na,na
+INTDAILY,Various,Various,POLICY RATE 7DAY BATCH FILE,na,na
+INTDAILY,Vietnam,n/a,HNX ZYC Backup,dwb,binru
+INTDAILY,China,Various,BACKUP China CFETS to K,dwb,binru
+INTDAILY,DLXDLM,Various,INTDAILY DLXDLM,na,na
+INTWKLY,Multiple,Various groups,Aggregations,na,na
+INTWKLY,DLXDLM,various groups,INTWKLY DLXDLM,na,na
+INTDAILY,Various,Various,End of Day DIFS,na,na
+INTDAILY,Various,Various,DLXCOMP DAILY VS INTDAILY,na,na
+EUDATA,Euro area,Various,EUDATA Batch A -PM,na,na
+INTDAILY,Various,Various,End of Day Calc8 Check,na,na
+INTDAILY,Various,Various,Asian Transfer Checks,na,na
+INTDAILY,Various,Various,Asian Shift Transfer Checks,na,na
+INTDAILY,Various,Various,Asian Shift Transfer,na,na
+INTDAILY,Various,Various,Beginning of Day DIFS,na,na
+INTDAILY,Various,Various,DLXCALC8 Check,na,na
+CHINA,China,Various groups,China CEIC Check,na,na
+INTDAILY,Various,Various,Friday DIFs,na,na
+INTDAILY,G10,Various,G10 Changes,na,na
+INTDAILY,Various,Various,TP/Reuters Bond,na,na
+INTDAILY,Various,Various,INTDAILY DLXDLMD,na,na
+INTWKLY,Various,Various,INTWKLY DLXDLMD,na,na
+INTDAILY,Various,Various,INTDAILY DLXCALC8 Check,na,na
+INTDAILY,Various,Various,INTDAILY DLXGAPS Check,na,na
+INTDAILY,Various,Various,INTDAILY DLXCALC8 CheckD,na,na
+INTDAILY,Various,Various,INTDAILY DLXGAPS CheckD,na,na
+INTWKLY,Various,Various,INTWKLY DLXCALC8 Check,na,na
+INTWKLY,Various,Various,INTWKLY DLXCALC8 CheckD,na,na
+INTDAILY/DAILY,Various,Various,D/W Checks,na,na
+INTDAILY/DAILY,Various,Various,D/W Check,na,na
+INTWKLY,Various,Various,Global INTWKLY Aggregation,na,na
+INTDAILY,Various,Various,Update Times,na,na
+EMERGEPR,Various,Various,Asian Shift manager's EOD Check,na,na
+EMERGEPR,China,Various,CHINA to EMERGEPR Compare,na,na
+INTDAILY,Various,Various,D/W Checks,na,na
+INTDAILY,Various,Various,Global Aggregation,na,na
+INTDAILY,Various,various,MIDDLE Rates Bat,na,na
+INTDAILY,Various,various,DIF INTDAILY,na,na
+INDIA,India,Various,INDIA/CHINA QA Feedback,na,na
+INTDAILY,Various,Various,Autocalendar Create Records,na,na
+INTDAILY,DLXDLM,Various,New DLXDLM (End of Day),na,na
+INTDAILY,Various,Various,Asian Shift Transfer Check,na,na
+INTWKLY,DLXDLM,Various,INTWKLY DLXDLM,na,na
+INTDAILY,Various,Various,CB Meetings Check,na,na
+INTDAILY,Various,numerous,Holiday Check for all countries next day,na,na
+INTWKLY,Multiple,Numerous,WEEKLY/INTWKLY Transfer,na,na
+INTDAILY,Various,Numerous,DLXGAPS Check,na,na
+INTDAILY,Various,Numerous,DLXCALC8,na,na
+EMERGEPR,Korea,Multiple,BOK Check,na,na
+DAILY,Euro Area,Various,Run Panic,dwb,binru
+INTWKLY,Canada,"P84, P98",Canola oil price aggregation,dwb,Mike
+daily,canada,j50,treasury bills [cmp],dwb,Babalwa
+daily,canada,j69,overnight money market financing [cmp],dwb,Babalwa
+daily,canada,j73,marketable bond average yields [cmp],dwb,Babalwa
+daily,canada,j83,benchmark bond yields [cmp],dwb,Babalwa
+daily,canada,t39,canada stock market,dwb,Babalwa
+weekly,canada,i04,cmp chartered bank rates,dwb,Babalwa
+weekly,canada,i10,canada tuesday agg comp,dwb,Babalwa
+weekly,canada,p22,boc commodity price indexes,dwb,Babalwa
+daily,euro area,p41,brent & dubai crude oil transfer,dwb,Binru
+daily,euro area,various,european stk mkt transfer [ap],dwb,Babalwa
+daily,euro area,various,run panic,dwb,Binru
+weekly,euro area,p43,ft commodity weekly aggregation,dwb,Binru
+weekly,italy,s19,stk mkt transfer to weekly,dwb,Babalwa
+daily,mexico,s06,mexico stock market transfer,dwb,Gibson
+weekly,jordan,w12,amman stock exchange transfer,dwa,Yukun
+daily,new zealand,s31,new zealand stock indexes transfer,dwa,Nicholas
+daily,uk,i24,uk daily yield transfer,dwa,Yukun
+daily,uk,"p10, p11",lme daily base metals & warehouse stocks,dwb,Mike
+weekly,uk,p11,lme daily prices,dwb,Mike
+daily,australia,s23,australia stock indexes transfer,dwa,Nicholas
+daily,australia,various,anne picker check,dwa,Nicholas
+TRANSPRT,Germany,P54,TRANSFER Rhine Water Level,dwb,Babalwa
+GLSECTOR,Germany,U15,GLSECTOR Rhine Water Level,dwb,Babalwa

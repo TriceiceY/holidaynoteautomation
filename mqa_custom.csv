@@ -1,0 +1,23 @@
+country,group,update,Team,EDM
+EMERGEPR,Z90,JP Morgan Effective Exchange Rates,Americas,Sean
+EMERGE,J80,JP Morgan Effective Exchange Rates,Americas,Sean
+EMERGEPR,U99,Sentix Economic Index: Asia,IntDay,Olena
+INTDAILY,Various,INTDAILY/INTDAILYH.GAP Split,na,na
+TRANSPRT,"W53, W54, W55",Australia NSW Toll Road,AsianB,Sharon
+TRANSPRT,"W56, W57, W58",Australia NSW Toll Road Eviews,AsianB,Sharon
+TRANSPRT,D67,Australia: Flinders Ports Statistics,AsianB,Sharon
+TRANSPRT,Y51,Australia Airport Index,AsianB,Sharon
+TRANSPRT,B07,Australia: Port of Newcastle Trade Report,AsianB,Sharon
+TRANSPRT,Y52,Australia Airport Traffic,AsianB,Sharon
+Mexico INTDAILY,P12,Mexico: Gas and Diesel Prices INTDAILY TRANSFER,dwa,Ruijing
+Mexico INTWKLY,P28,Mexico Gas and Diesel Agg,dwa,Ruijing
+Mexico CMDTY,L08,Mexico Gas and Diesel Prices CMDTY TRANSFER,dwa,Ruijing
+HF GLSECTOR,"W71, W72, W73",Indeed Remote Job Postings Transfer,dwb,Binru
+Israel INTDAILY,"E71, E72, E73",Israel Gasoline INTDAILY Transfer,dwa,Ruijing
+DAILY,I01,Interest Rates COMP to DAILY,dwb,Babalwa
+HF CNSECTOR,"A07, A08, A09",Key Enterprises Steel Production and Inventory CNSECTOR Comp,dwb,Binru
+HF CNSECTOR,"V28, V66, V86",Steel Industry Inventory CNSECTOR Comp,dwb,Binru
+New Zealand INTDAILY,P26,New Zealand Global Dairy Trade Auctions Comp to Intdaily,dwb,Mike
+New Zealand INTDAILY,X28,Int'l Yield Curve Decomposition,dwb,Binru
+New Zealand INTWKLY,X29,Int'l Yield Curve Decomposition AGG,dwb,Binru
+UK INTDAILY,"J21, J11",Citigroup Indexes EOM Check,dwb,Binru
